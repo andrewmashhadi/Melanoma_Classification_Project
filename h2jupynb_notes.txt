@@ -20,9 +20,12 @@ python -m ipykernel install --user --name=MYCONDAENV --display-name "MYCONDAENV"
 ############################## RUN EVERY TIME #############################
 ###########################################################################
 
-./h2jupynb --help # any preferences
-./h2jupynb -u andrewma -v anaconda3
-# select virtual environment in drop down when creating script 
+./h2jupynb --help # any preferences # try this
+./h2jupynb -u andrewma -v anaconda3 # try this
+python h2jupynb -u andrewma -t 2 -m 32 -g yes
+
+
+# make sure to select virtual environment in drop down when creating script 
 
 
 
