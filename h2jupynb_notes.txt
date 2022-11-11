@@ -1,0 +1,28 @@
+###########################################################################
+############################## ONLY RUN ONCE ##############################
+###########################################################################
+
+ssh andrewma@hoffman2.idre.ucla.edu # login
+
+qrsh -l h_data=6G,h_rt=1:00:00 # any specific preferences 
+module load anaconda3
+conda create --name MYCONDAENV
+conda activate MYCONDAENV  # activate previously created environment
+# install everything you want in this venv
+
+
+# for usage in h2jupynp
+conda install ipykernel
+python -m ipykernel install --user --name=MYCONDAENV --display-name "MYCONDAENV"
+
+
+###########################################################################
+############################## RUN EVERY TIME #############################
+###########################################################################
+
+./h2jupynb --help # any preferences
+./h2jupynb -u andrewma -v anaconda3
+# select virtual environment in drop down when creating script 
+
+
+
