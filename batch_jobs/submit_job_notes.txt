@@ -1,0 +1,6 @@
+* place batch job shell script in directory with training python file
+* For example run:
+
+chmod u+x cnn2_gpu_train.sh
+qsub cnn2_gpu_train.sh
+
