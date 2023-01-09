@@ -1,0 +1,789 @@
+Job 5702944 started on:    g6
+Job 5702944 started on:    Sun Jan 8 17:48:15 PST 2023
+ 
+Device: cuda:0
+Number of devices: 2
+['melanoma_cnn2_4e_10368b.pth', 'melanoma_cnn2_0e_12000b.pth', 'melanoma_cnn2_0e_24000b.pth', 'melanoma_cnn2_1e_11592b.pth', 'melanoma_cnn2_1e_23592b.pth', 'melanoma_cnn2_2e_11184b.pth', 'melanoma_cnn2_2e_23184b.pth', 'melanoma_cnn2_3e_10776b.pth', 'melanoma_cnn2_3e_22776b.pth', 'melanoma_cnn2_4e_22368b.pth', 'melanoma_cnn2_5e_9960b.pth', 'melanoma_cnn2_5e_21960b.pth', 'melanoma_cnn2_6e_9552b.pth', 'melanoma_cnn2_6e_21552b.pth']
+Loading: melanoma_cnn2_4e_10368b.pth
+
+	 Processing Image #1 ... Running Time 3.0152029991149902
+	 Current Testing Loss: 0.7742103338241577
+
+	 Processing Image #201 ... Running Time 72.17968916893005
+	 Current Testing Loss: 0.5031500269870947
+
+	 Processing Image #401 ... Running Time 139.43690133094788
+	 Current Testing Loss: 0.5209988515397802
+
+	 Processing Image #601 ... Running Time 208.66800022125244
+	 Current Testing Loss: 0.5239646319497958
+
+	 Processing Image #801 ... Running Time 276.75232553482056
+	 Current Testing Loss: 0.5249086576014609
+
+	 Processing Image #1001 ... Running Time 345.76005458831787
+	 Current Testing Loss: 0.5181778554698664
+
+	 Processing Image #1201 ... Running Time 416.53834986686707
+	 Current Testing Loss: 0.512514313825479
+
+	 Processing Image #1401 ... Running Time 480.8672444820404
+	 Current Testing Loss: 0.5172774882272375
+
+	 Processing Image #1601 ... Running Time 557.3989889621735
+	 Current Testing Loss: 0.5120737743279089
+
+	 Processing Image #1801 ... Running Time 629.2053065299988
+	 Current Testing Loss: 0.512826494959397
+
+	 Processing Image #2001 ... Running Time 701.5406112670898
+	 Current Testing Loss: 0.5125299450065884
+
+	 Processing Image #2201 ... Running Time 771.4840092658997
+	 Current Testing Loss: 0.5134906279875624
+
+	 Processing Image #2401 ... Running Time 838.423374414444
+	 Current Testing Loss: 0.5202633323850456
+
+	 Processing Image #2601 ... Running Time 905.208065032959
+	 Current Testing Loss: 0.5199510345949887
+
+	 Processing Image #2801 ... Running Time 972.5398440361023
+	 Current Testing Loss: 0.5229254739610298
+
+	 Processing Image #3001 ... Running Time 1041.0424823760986
+	 Current Testing Loss: 0.5215217336431532
+
+	 Processing Image #3201 ... Running Time 1107.546627998352
+	 Current Testing Loss: 0.5209999224072152
+
+	 Processing Image #3401 ... Running Time 1178.2041943073273
+	 Current Testing Loss: 0.5163772297319
+
+	 Processing Image #3601 ... Running Time 1247.5634670257568
+	 Current Testing Loss: 0.5162382152620321
+
+	 Processing Image #3801 ... Running Time 1319.2286369800568
+	 Current Testing Loss: 0.5127602970763563
+
+	 Processing Image #4001 ... Running Time 1387.7299172878265
+	 Current Testing Loss: 0.5121833558246933
+
+	 Processing Image #4201 ... Running Time 1464.253540277481
+	 Current Testing Loss: 0.5120977146691975
+
+	 Processing Image #4401 ... Running Time 1536.477118730545
+	 Current Testing Loss: 0.5115561658403972
+
+	 Processing Image #4601 ... Running Time 1604.3491299152374
+	 Current Testing Loss: 0.5111439987363011
+
+	 Processing Image #4801 ... Running Time 1667.8279840946198
+	 Current Testing Loss: 0.5135791913250531
+
+	 Processing Image #5001 ... Running Time 1737.362565279007
+	 Current Testing Loss: 0.5126277675240731
+
+	 Processing Image #5201 ... Running Time 1810.658621788025
+	 Current Testing Loss: 0.5114223572938649
+
+	 Processing Image #5401 ... Running Time 1879.2240800857544
+	 Current Testing Loss: 0.5110419444920498
+
+	 Processing Image #5601 ... Running Time 1948.7231001853943
+	 Current Testing Loss: 0.5116546445342313
+
+	 Processing Image #5801 ... Running Time 2016.7870905399323
+	 Current Testing Loss: 0.5099858693079943
+
+	 Processing Image #6001 ... Running Time 2086.9960482120514
+	 Current Testing Loss: 0.5097111830086271
+
+	 Processing Image #6201 ... Running Time 2153.5553896427155
+	 Current Testing Loss: 0.5122048839967565
+
+	 Processing Image #6401 ... Running Time 2223.2907843589783
+	 Current Testing Loss: 0.5104823411523514
+
+	 Processing Image #6601 ... Running Time 2290.888177394867
+	 Current Testing Loss: 0.5101609743592126
+
+	 Processing Image #6801 ... Running Time 2359.819894552231
+	 Current Testing Loss: 0.50921819121099
+
+	 Processing Image #7001 ... Running Time 2432.3732481002808
+	 Current Testing Loss: 0.5077735478491
+
+	 Processing Image #7201 ... Running Time 2499.7945721149445
+	 Current Testing Loss: 0.5083747868527269
+
+	 Processing Image #7401 ... Running Time 2569.191888332367
+	 Current Testing Loss: 0.5093691642900692
+
+	 Processing Image #7601 ... Running Time 2636.3480343818665
+	 Current Testing Loss: 0.5085764791472465
+
+	 Processing Image #7801 ... Running Time 2704.4261083602905
+	 Current Testing Loss: 0.5099443450691387
+
+	 Processing Image #8001 ... Running Time 2773.945179462433
+	 Current Testing Loss: 0.5091023827034499
+
+	 Processing Image #8201 ... Running Time 2841.856615781784
+	 Current Testing Loss: 0.5085426990139909
+
+******* Final Testing Loss: 0.5085129616307524 *******
+
+Loading: melanoma_cnn2_4e_22368b.pth
+
+	 Processing Image #1 ... Running Time 1.4654951095581055
+	 Current Testing Loss: 0.7335585355758667
+
+	 Processing Image #201 ... Running Time 68.44791841506958
+	 Current Testing Loss: 0.5633067153209802
+
+	 Processing Image #401 ... Running Time 132.9194097518921
+	 Current Testing Loss: 0.5730523070533625
+
+	 Processing Image #601 ... Running Time 199.25251150131226
+	 Current Testing Loss: 0.5810497516574357
+
+	 Processing Image #801 ... Running Time 263.43154644966125
+	 Current Testing Loss: 0.5808653298561041
+
+	 Processing Image #1001 ... Running Time 328.2013695240021
+	 Current Testing Loss: 0.5733280219249204
+
+	 Processing Image #1201 ... Running Time 394.63451313972473
+	 Current Testing Loss: 0.5671883901974772
+
+	 Processing Image #1401 ... Running Time 455.98326301574707
+	 Current Testing Loss: 0.5709268845240459
+
+	 Processing Image #1601 ... Running Time 526.7090771198273
+	 Current Testing Loss: 0.5665625183588445
+
+	 Processing Image #1801 ... Running Time 593.9171118736267
+	 Current Testing Loss: 0.5646179980752405
+
+	 Processing Image #2001 ... Running Time 662.2143695354462
+	 Current Testing Loss: 0.5657745383821287
+
+	 Processing Image #2201 ... Running Time 729.5981042385101
+	 Current Testing Loss: 0.5653427588388824
+
+	 Processing Image #2401 ... Running Time 794.7899844646454
+	 Current Testing Loss: 0.5724967429995983
+
+	 Processing Image #2601 ... Running Time 858.719898223877
+	 Current Testing Loss: 0.5720382212352675
+
+	 Processing Image #2801 ... Running Time 922.2981472015381
+	 Current Testing Loss: 0.5736001885797214
+
+	 Processing Image #3001 ... Running Time 987.5436923503876
+	 Current Testing Loss: 0.5728764398858636
+
+	 Processing Image #3201 ... Running Time 1050.4525122642517
+	 Current Testing Loss: 0.5718229273433036
+
+	 Processing Image #3401 ... Running Time 1118.0745477676392
+	 Current Testing Loss: 0.5668348582469142
+
+	 Processing Image #3601 ... Running Time 1183.102602481842
+	 Current Testing Loss: 0.5674611268216524
+
+	 Processing Image #3801 ... Running Time 1250.2510740756989
+	 Current Testing Loss: 0.5635138385415249
+
+	 Processing Image #4001 ... Running Time 1314.6422190666199
+	 Current Testing Loss: 0.5638599782271766
+
+	 Processing Image #4201 ... Running Time 1387.208445072174
+	 Current Testing Loss: 0.5637637319478576
+
+	 Processing Image #4401 ... Running Time 1454.6788489818573
+	 Current Testing Loss: 0.5632028644874875
+
+	 Processing Image #4601 ... Running Time 1519.9293241500854
+	 Current Testing Loss: 0.5624597727773191
+
+	 Processing Image #4801 ... Running Time 1580.1156659126282
+	 Current Testing Loss: 0.5641588981293207
+
+	 Processing Image #5001 ... Running Time 1645.8986847400665
+	 Current Testing Loss: 0.5626105992618751
+
+	 Processing Image #5201 ... Running Time 1715.8646540641785
+	 Current Testing Loss: 0.5624446027984886
+
+	 Processing Image #5401 ... Running Time 1780.8471353054047
+	 Current Testing Loss: 0.5622716748604937
+
+	 Processing Image #5601 ... Running Time 1847.479064464569
+	 Current Testing Loss: 0.5625823491400255
+
+	 Processing Image #5801 ... Running Time 1912.4622189998627
+	 Current Testing Loss: 0.5611346534972446
+
+	 Processing Image #6001 ... Running Time 1979.638763666153
+	 Current Testing Loss: 0.560858595853759
+
+	 Processing Image #6201 ... Running Time 2042.6915080547333
+	 Current Testing Loss: 0.5631773663280482
+
+	 Processing Image #6401 ... Running Time 2108.213244199753
+	 Current Testing Loss: 0.5613439888296249
+
+	 Processing Image #6601 ... Running Time 2173.059144258499
+	 Current Testing Loss: 0.5606459444927622
+
+	 Processing Image #6801 ... Running Time 2237.6919865608215
+	 Current Testing Loss: 0.559754093611102
+
+	 Processing Image #7001 ... Running Time 2306.6274411678314
+	 Current Testing Loss: 0.5580450519286277
+
+	 Processing Image #7201 ... Running Time 2370.0865561962128
+	 Current Testing Loss: 0.5585316933450459
+
+	 Processing Image #7401 ... Running Time 2435.507344007492
+	 Current Testing Loss: 0.5593730448972926
+
+	 Processing Image #7601 ... Running Time 2500.086174726486
+	 Current Testing Loss: 0.5583867856115887
+
+	 Processing Image #7801 ... Running Time 2564.2826356887817
+	 Current Testing Loss: 0.559818999711935
+
+	 Processing Image #8001 ... Running Time 2630.2610280513763
+	 Current Testing Loss: 0.558906858729213
+
+	 Processing Image #8201 ... Running Time 2694.182957172394
+	 Current Testing Loss: 0.5586527817112967
+
+******* Final Testing Loss: 0.5586762061125341 *******
+
+Loading: melanoma_cnn2_5e_21960b.pth
+
+	 Processing Image #1 ... Running Time 1.5362985134124756
+	 Current Testing Loss: 0.4939301609992981
+
+	 Processing Image #201 ... Running Time 68.75935292243958
+	 Current Testing Loss: 0.4840103039093832
+
+	 Processing Image #401 ... Running Time 133.03246688842773
+	 Current Testing Loss: 0.49968719556557006
+
+	 Processing Image #601 ... Running Time 199.10258865356445
+	 Current Testing Loss: 0.5039395630990845
+
+	 Processing Image #801 ... Running Time 262.6165978908539
+	 Current Testing Loss: 0.5036434077720466
+
+	 Processing Image #1001 ... Running Time 327.546019077301
+	 Current Testing Loss: 0.4972748200998394
+
+	 Processing Image #1201 ... Running Time 394.46223545074463
+	 Current Testing Loss: 0.4921495696582433
+
+	 Processing Image #1401 ... Running Time 456.28527307510376
+	 Current Testing Loss: 0.49529928081109587
+
+	 Processing Image #1601 ... Running Time 527.4277303218842
+	 Current Testing Loss: 0.49238476004642195
+
+	 Processing Image #1801 ... Running Time 595.2977259159088
+	 Current Testing Loss: 0.491392858640666
+
+	 Processing Image #2001 ... Running Time 663.2017483711243
+	 Current Testing Loss: 0.49102669464169324
+
+	 Processing Image #2201 ... Running Time 730.3200061321259
+	 Current Testing Loss: 0.49225141810122996
+
+	 Processing Image #2401 ... Running Time 794.740788936615
+	 Current Testing Loss: 0.5002571373873954
+
+	 Processing Image #2601 ... Running Time 858.2463920116425
+	 Current Testing Loss: 0.4990995524896396
+
+	 Processing Image #2801 ... Running Time 922.1995253562927
+	 Current Testing Loss: 0.5003357762703506
+
+	 Processing Image #3001 ... Running Time 986.8634834289551
+	 Current Testing Loss: 0.49793274548254673
+
+	 Processing Image #3201 ... Running Time 1049.3955795764923
+	 Current Testing Loss: 0.49689665925849014
+
+	 Processing Image #3401 ... Running Time 1115.2949056625366
+	 Current Testing Loss: 0.492571196188687
+
+	 Processing Image #3601 ... Running Time 1180.3713290691376
+	 Current Testing Loss: 0.4931987051834983
+
+	 Processing Image #3801 ... Running Time 1248.278076171875
+	 Current Testing Loss: 0.4897578742613782
+
+	 Processing Image #4001 ... Running Time 1313.1882588863373
+	 Current Testing Loss: 0.48964783088441405
+
+	 Processing Image #4201 ... Running Time 1385.4796476364136
+	 Current Testing Loss: 0.48953707438620114
+
+	 Processing Image #4401 ... Running Time 1453.6195659637451
+	 Current Testing Loss: 0.48885535278265746
+
+	 Processing Image #4601 ... Running Time 1518.820294380188
+	 Current Testing Loss: 0.48789591975882485
+
+	 Processing Image #4801 ... Running Time 1579.4937512874603
+	 Current Testing Loss: 0.489811983545222
+
+	 Processing Image #5001 ... Running Time 1645.688997745514
+	 Current Testing Loss: 0.48904863116247616
+
+	 Processing Image #5201 ... Running Time 1715.3954319953918
+	 Current Testing Loss: 0.4888826276131636
+
+	 Processing Image #5401 ... Running Time 1780.014647245407
+	 Current Testing Loss: 0.48872930885757043
+
+	 Processing Image #5601 ... Running Time 1846.0788705348969
+	 Current Testing Loss: 0.48948610117821895
+
+	 Processing Image #5801 ... Running Time 1910.8820955753326
+	 Current Testing Loss: 0.48784664273904094
+
+	 Processing Image #6001 ... Running Time 1977.1633970737457
+	 Current Testing Loss: 0.48776065448770145
+
+	 Processing Image #6201 ... Running Time 2039.7998049259186
+	 Current Testing Loss: 0.4899302817982018
+
+	 Processing Image #6401 ... Running Time 2106.205572605133
+	 Current Testing Loss: 0.4879553936641827
+
+	 Processing Image #6601 ... Running Time 2170.2511072158813
+	 Current Testing Loss: 0.48693817884736584
+
+	 Processing Image #6801 ... Running Time 2235.09424495697
+	 Current Testing Loss: 0.48606696961542345
+
+	 Processing Image #7001 ... Running Time 2303.7135198116302
+	 Current Testing Loss: 0.4847723151302038
+
+	 Processing Image #7201 ... Running Time 2368.1687998771667
+	 Current Testing Loss: 0.48543254491143495
+
+	 Processing Image #7401 ... Running Time 2434.0774643421173
+	 Current Testing Loss: 0.48633432475423705
+
+	 Processing Image #7601 ... Running Time 2498.439567089081
+	 Current Testing Loss: 0.4853355615980231
+
+	 Processing Image #7801 ... Running Time 2562.515923976898
+	 Current Testing Loss: 0.4868127162024184
+
+	 Processing Image #8001 ... Running Time 2628.992163658142
+	 Current Testing Loss: 0.4859130399753692
+
+	 Processing Image #8201 ... Running Time 2694.351630926132
+	 Current Testing Loss: 0.48565061622946704
+
+******* Final Testing Loss: 0.48554154228355195 *******
+
+Loading: melanoma_cnn2_5e_9960b.pth
+
+	 Processing Image #1 ... Running Time 1.4435760974884033
+	 Current Testing Loss: 0.41021716594696045
+
+	 Processing Image #201 ... Running Time 69.04019594192505
+	 Current Testing Loss: 0.46473053689714117
+
+	 Processing Image #401 ... Running Time 132.95705556869507
+	 Current Testing Loss: 0.47721366666776327
+
+	 Processing Image #601 ... Running Time 198.37348771095276
+	 Current Testing Loss: 0.4860730693486838
+
+	 Processing Image #801 ... Running Time 263.7250339984894
+	 Current Testing Loss: 0.48506177602303296
+
+	 Processing Image #1001 ... Running Time 329.7728123664856
+	 Current Testing Loss: 0.47841463279269053
+
+	 Processing Image #1201 ... Running Time 396.1633768081665
+	 Current Testing Loss: 0.47409004357313356
+
+	 Processing Image #1401 ... Running Time 459.4312787055969
+	 Current Testing Loss: 0.478352261353789
+
+	 Processing Image #1601 ... Running Time 529.1118605136871
+	 Current Testing Loss: 0.4766995105822658
+
+	 Processing Image #1801 ... Running Time 594.6412897109985
+	 Current Testing Loss: 0.475183393450642
+
+	 Processing Image #2001 ... Running Time 663.478182554245
+	 Current Testing Loss: 0.4757079867856367
+
+	 Processing Image #2201 ... Running Time 730.3644433021545
+	 Current Testing Loss: 0.4762853648357912
+
+	 Processing Image #2401 ... Running Time 795.1055734157562
+	 Current Testing Loss: 0.48414202112484284
+
+	 Processing Image #2601 ... Running Time 857.3563001155853
+	 Current Testing Loss: 0.4825427012187325
+
+	 Processing Image #2801 ... Running Time 920.7520713806152
+	 Current Testing Loss: 0.4834031304018805
+
+	 Processing Image #3001 ... Running Time 985.7838695049286
+	 Current Testing Loss: 0.4819617949644579
+
+	 Processing Image #3201 ... Running Time 1049.013478755951
+	 Current Testing Loss: 0.4811438490461551
+
+	 Processing Image #3401 ... Running Time 1116.7531142234802
+	 Current Testing Loss: 0.47687422170105015
+
+	 Processing Image #3601 ... Running Time 1181.6068828105927
+	 Current Testing Loss: 0.4774128452795602
+
+	 Processing Image #3801 ... Running Time 1249.2656350135803
+	 Current Testing Loss: 0.474416687858263
+
+	 Processing Image #4001 ... Running Time 1314.4762585163116
+	 Current Testing Loss: 0.4739048268593874
+
+	 Processing Image #4201 ... Running Time 1383.7386465072632
+	 Current Testing Loss: 0.47379182705186706
+
+	 Processing Image #4401 ... Running Time 1452.076383113861
+	 Current Testing Loss: 0.4737523294856661
+
+	 Processing Image #4601 ... Running Time 1517.6218798160553
+	 Current Testing Loss: 0.473000818163299
+
+	 Processing Image #4801 ... Running Time 1578.078726530075
+	 Current Testing Loss: 0.4746330880181013
+
+	 Processing Image #5001 ... Running Time 1644.772941350937
+	 Current Testing Loss: 0.4735829393099733
+
+	 Processing Image #5201 ... Running Time 1713.832718372345
+	 Current Testing Loss: 0.4735107604000304
+
+	 Processing Image #5401 ... Running Time 1778.039206981659
+	 Current Testing Loss: 0.47362016376848576
+
+	 Processing Image #5601 ... Running Time 1845.0946855545044
+	 Current Testing Loss: 0.4742587772681804
+
+	 Processing Image #5801 ... Running Time 1909.1943202018738
+	 Current Testing Loss: 0.47275362327060527
+
+	 Processing Image #6001 ... Running Time 1977.0443940162659
+	 Current Testing Loss: 0.47242849125095165
+
+	 Processing Image #6201 ... Running Time 2039.127333164215
+	 Current Testing Loss: 0.47444101143418127
+
+	 Processing Image #6401 ... Running Time 2105.413373231888
+	 Current Testing Loss: 0.47224692291859743
+
+	 Processing Image #6601 ... Running Time 2170.0416929721832
+	 Current Testing Loss: 0.4711258921307286
+
+	 Processing Image #6801 ... Running Time 2236.7424268722534
+	 Current Testing Loss: 0.4703262464768508
+
+	 Processing Image #7001 ... Running Time 2304.9356150627136
+	 Current Testing Loss: 0.4689023328471
+
+	 Processing Image #7201 ... Running Time 2369.1572983264923
+	 Current Testing Loss: 0.4693707571688484
+
+	 Processing Image #7401 ... Running Time 2435.780608654022
+	 Current Testing Loss: 0.4701137113108349
+
+	 Processing Image #7601 ... Running Time 2499.640720129013
+	 Current Testing Loss: 0.4691603973995962
+
+	 Processing Image #7801 ... Running Time 2563.6014156341553
+	 Current Testing Loss: 0.47050927604279574
+
+	 Processing Image #8001 ... Running Time 2630.591591358185
+	 Current Testing Loss: 0.4695886223730826
+
+	 Processing Image #8201 ... Running Time 2694.700372695923
+	 Current Testing Loss: 0.46938046494849034
+
+******* Final Testing Loss: 0.4691748221919203 *******
+
+Loading: melanoma_cnn2_6e_21552b.pth
+
+	 Processing Image #1 ... Running Time 1.5193161964416504
+	 Current Testing Loss: 0.52695631980896
+
+	 Processing Image #201 ... Running Time 68.97336506843567
+	 Current Testing Loss: 0.4678721797864626
+
+	 Processing Image #401 ... Running Time 133.79785776138306
+	 Current Testing Loss: 0.4787538581856744
+
+	 Processing Image #601 ... Running Time 199.71283054351807
+	 Current Testing Loss: 0.48874496214982877
+
+	 Processing Image #801 ... Running Time 264.159476518631
+	 Current Testing Loss: 0.4867882324182928
+
+	 Processing Image #1001 ... Running Time 330.00206446647644
+	 Current Testing Loss: 0.4799274443026015
+
+	 Processing Image #1201 ... Running Time 397.43908858299255
+	 Current Testing Loss: 0.472990563108327
+
+	 Processing Image #1401 ... Running Time 459.01189708709717
+	 Current Testing Loss: 0.47985065807076904
+
+	 Processing Image #1601 ... Running Time 530.5960478782654
+	 Current Testing Loss: 0.4764984423683005
+
+	 Processing Image #1801 ... Running Time 598.3118622303009
+	 Current Testing Loss: 0.47385490644355194
+
+	 Processing Image #2001 ... Running Time 666.359203338623
+	 Current Testing Loss: 0.4738409907950626
+
+	 Processing Image #2201 ... Running Time 732.3312966823578
+	 Current Testing Loss: 0.4732891430758569
+
+	 Processing Image #2401 ... Running Time 796.7662923336029
+	 Current Testing Loss: 0.4791704536082966
+
+	 Processing Image #2601 ... Running Time 859.8161313533783
+	 Current Testing Loss: 0.47766103595924736
+
+	 Processing Image #2801 ... Running Time 923.1262109279633
+	 Current Testing Loss: 0.4792793346429343
+
+	 Processing Image #3001 ... Running Time 988.0345487594604
+	 Current Testing Loss: 0.47765857430620445
+
+	 Processing Image #3201 ... Running Time 1051.1800966262817
+	 Current Testing Loss: 0.47728493579923364
+
+	 Processing Image #3401 ... Running Time 1118.0288062095642
+	 Current Testing Loss: 0.4727454241989361
+
+	 Processing Image #3601 ... Running Time 1182.4193646907806
+	 Current Testing Loss: 0.473423442571139
+
+	 Processing Image #3801 ... Running Time 1250.6565909385681
+	 Current Testing Loss: 0.469843184850769
+
+	 Processing Image #4001 ... Running Time 1316.1393246650696
+	 Current Testing Loss: 0.4694034333858846
+
+	 Processing Image #4201 ... Running Time 1389.4919438362122
+	 Current Testing Loss: 0.4694929901370402
+
+	 Processing Image #4401 ... Running Time 1456.7641179561615
+	 Current Testing Loss: 0.46922642073641846
+
+	 Processing Image #4601 ... Running Time 1522.6763439178467
+	 Current Testing Loss: 0.46818825665833846
+
+	 Processing Image #4801 ... Running Time 1582.7722327709198
+	 Current Testing Loss: 0.47023909932304203
+
+	 Processing Image #5001 ... Running Time 1648.6328780651093
+	 Current Testing Loss: 0.4696529041648042
+
+	 Processing Image #5201 ... Running Time 1718.5633652210236
+	 Current Testing Loss: 0.4695145676520491
+
+	 Processing Image #5401 ... Running Time 1783.0707652568817
+	 Current Testing Loss: 0.4696524422208895
+
+	 Processing Image #5601 ... Running Time 1849.823391675949
+	 Current Testing Loss: 0.46960605156263124
+
+	 Processing Image #5801 ... Running Time 1914.0891752243042
+	 Current Testing Loss: 0.4681768560893153
+
+	 Processing Image #6001 ... Running Time 1980.2428727149963
+	 Current Testing Loss: 0.46791973422563543
+
+	 Processing Image #6201 ... Running Time 2042.7225034236908
+	 Current Testing Loss: 0.4700876039851388
+
+	 Processing Image #6401 ... Running Time 2107.9181480407715
+	 Current Testing Loss: 0.4682889250664274
+
+	 Processing Image #6601 ... Running Time 2170.9430434703827
+	 Current Testing Loss: 0.4671990093909107
+
+	 Processing Image #6801 ... Running Time 2235.525923728943
+	 Current Testing Loss: 0.46644032679956055
+
+	 Processing Image #7001 ... Running Time 2304.0480403900146
+	 Current Testing Loss: 0.46492193721583813
+
+	 Processing Image #7201 ... Running Time 2367.917538166046
+	 Current Testing Loss: 0.46541916758289636
+
+	 Processing Image #7401 ... Running Time 2433.2533090114594
+	 Current Testing Loss: 0.46642871856612955
+
+	 Processing Image #7601 ... Running Time 2497.374017715454
+	 Current Testing Loss: 0.4654722202983821
+
+	 Processing Image #7801 ... Running Time 2561.9557118415833
+	 Current Testing Loss: 0.4670342494077337
+
+	 Processing Image #8001 ... Running Time 2629.0951313972473
+	 Current Testing Loss: 0.4662080442994252
+
+	 Processing Image #8201 ... Running Time 2694.0878446102142
+	 Current Testing Loss: 0.46585883990328025
+
+******* Final Testing Loss: 0.46559897757818364 *******
+
+Loading: melanoma_cnn2_6e_9552b.pth
+
+	 Processing Image #1 ... Running Time 1.456754207611084
+	 Current Testing Loss: 0.5320189595222473
+
+	 Processing Image #201 ... Running Time 67.25106382369995
+	 Current Testing Loss: 0.487104230956866
+
+	 Processing Image #401 ... Running Time 132.07850909233093
+	 Current Testing Loss: 0.4988424812086779
+
+	 Processing Image #601 ... Running Time 198.6809000968933
+	 Current Testing Loss: 0.5077541103072934
+
+	 Processing Image #801 ... Running Time 263.03059482574463
+	 Current Testing Loss: 0.5070241486230991
+
+	 Processing Image #1001 ... Running Time 328.8216481208801
+	 Current Testing Loss: 0.49995936617299824
+
+	 Processing Image #1201 ... Running Time 395.48170924186707
+	 Current Testing Loss: 0.49431829921864034
+
+	 Processing Image #1401 ... Running Time 457.57440304756165
+	 Current Testing Loss: 0.499464050466766
+
+	 Processing Image #1601 ... Running Time 529.3847212791443
+	 Current Testing Loss: 0.4965629741414619
+
+	 Processing Image #1801 ... Running Time 597.0691041946411
+	 Current Testing Loss: 0.49433886021433543
+
+	 Processing Image #2001 ... Running Time 666.3742852210999
+	 Current Testing Loss: 0.494678550886435
+
+	 Processing Image #2201 ... Running Time 733.9114458560944
+	 Current Testing Loss: 0.4947350434146882
+
+	 Processing Image #2401 ... Running Time 798.0419480800629
+	 Current Testing Loss: 0.5015096854958233
+
+	 Processing Image #2601 ... Running Time 861.1059782505035
+	 Current Testing Loss: 0.500223063011235
+
+	 Processing Image #2801 ... Running Time 924.7838270664215
+	 Current Testing Loss: 0.5016552184540233
+
+	 Processing Image #3001 ... Running Time 990.2956295013428
+	 Current Testing Loss: 0.49983499554556104
+
+	 Processing Image #3201 ... Running Time 1053.1083512306213
+	 Current Testing Loss: 0.49920460043345893
+
+	 Processing Image #3401 ... Running Time 1120.702359199524
+	 Current Testing Loss: 0.49454126980534585
+
+	 Processing Image #3601 ... Running Time 1185.1274094581604
+	 Current Testing Loss: 0.4953524403704298
+
+	 Processing Image #3801 ... Running Time 1253.4698812961578
+	 Current Testing Loss: 0.49161432573531627
+
+	 Processing Image #4001 ... Running Time 1318.9482758045197
+	 Current Testing Loss: 0.49139789313260374
+
+	 Processing Image #4201 ... Running Time 1389.3415451049805
+	 Current Testing Loss: 0.4912536783832729
+
+	 Processing Image #4401 ... Running Time 1456.9326763153076
+	 Current Testing Loss: 0.49091166699866257
+
+	 Processing Image #4601 ... Running Time 1521.5179171562195
+	 Current Testing Loss: 0.48998216894989116
+
+	 Processing Image #4801 ... Running Time 1582.3636436462402
+	 Current Testing Loss: 0.4920251753742883
+
+	 Processing Image #5001 ... Running Time 1648.153503894806
+	 Current Testing Loss: 0.4911495911837017
+
+	 Processing Image #5201 ... Running Time 1717.5952818393707
+	 Current Testing Loss: 0.49113860083095834
+
+	 Processing Image #5401 ... Running Time 1781.9878606796265
+	 Current Testing Loss: 0.4909221049462318
+
+	 Processing Image #5601 ... Running Time 1848.402473449707
+	 Current Testing Loss: 0.491038376585471
+
+	 Processing Image #5801 ... Running Time 1912.6042077541351
+	 Current Testing Loss: 0.48958029345311005
+
+	 Processing Image #6001 ... Running Time 1979.8073978424072
+	 Current Testing Loss: 0.4890576592093828
+
+	 Processing Image #6201 ... Running Time 2042.8929681777954
+	 Current Testing Loss: 0.4911679708188948
+
+	 Processing Image #6401 ... Running Time 2109.251452922821
+	 Current Testing Loss: 0.4892088829419555
+
+	 Processing Image #6601 ... Running Time 2173.94819521904
+	 Current Testing Loss: 0.4882565463041919
+
+	 Processing Image #6801 ... Running Time 2239.882295370102
+	 Current Testing Loss: 0.4872749838520743
+
+	 Processing Image #7001 ... Running Time 2307.8768389225006
+	 Current Testing Loss: 0.485736974039916
+
+	 Processing Image #7201 ... Running Time 2371.683358669281
+	 Current Testing Loss: 0.4862398464215614
+
+	 Processing Image #7401 ... Running Time 2437.4441525936127
+	 Current Testing Loss: 0.48733295781789027
+
+	 Processing Image #7601 ... Running Time 2502.041752576828
+	 Current Testing Loss: 0.4864776545456348
+
+	 Processing Image #7801 ... Running Time 2564.752730846405
+	 Current Testing Loss: 0.4880525253298202
+
+	 Processing Image #8001 ... Running Time 2631.3038070201874
+	 Current Testing Loss: 0.4872331690451494
+
+	 Processing Image #8201 ... Running Time 2696.2749729156494
+	 Current Testing Loss: 0.4868632428013324
+
+******* Final Testing Loss: 0.4866057256001874 *******
+
+Job 5702944 ended on:    g6
+Job 5702944 ended on:    Sun Jan 8 22:23:08 PST 2023
+ 
