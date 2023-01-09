@@ -8051,3 +8051,3775 @@ CUDA Memory Allocated: 9090220032
 *********************** Performance Update ***********************
 ******************************************************************
 
+Area Under the ROC Curve: 0.8434
+Using max F1-Score threshold, the confusion matrix is:
+ [[68 32]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2414] Loss: 0.46296744668434237
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2439] Loss: 0.462929244126658
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2464] Loss: 0.46287152332674136
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2489] Loss: 0.4628428725617691
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2514] Loss: 0.46280584444115924
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2539] Loss: 0.4627587993594924
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2564] Loss: 0.46278025562962016
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2589] Loss: 0.46275252419402013
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2614] Loss: 0.46269936460377825
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2639] Loss: 0.46266330439591014
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2664] Loss: 0.4626562930122482
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2689] Loss: 0.4626834696463736
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2714] Loss: 0.4626536551075505
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2739] Loss: 0.46263223353378413
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2764] Loss: 0.4626046679616546
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2789] Loss: 0.46264800656324007
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2814] Loss: 0.46265687737181665
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2839] Loss: 0.46265802476814255
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2864] Loss: 0.46267430038464397
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2889] Loss: 0.4626692370643761
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2914] Loss: 0.4627189101775309
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2939] Loss: 0.46271992084340346
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2964] Loss: 0.4626683009531142
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 2989] Loss: 0.4626533918582201
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3014] Loss: 0.46267874955066
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3039] Loss: 0.46271029386444457
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3064] Loss: 0.4626616079517767
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3089] Loss: 0.4626806252391759
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3114] Loss: 0.46270589024881903
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3139] Loss: 0.46263466506245243
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3164] Loss: 0.4626039695461884
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3189] Loss: 0.4626547855853848
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3214] Loss: 0.46267176522234355
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3239] Loss: 0.4626366894034983
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3264] Loss: 0.4626260929865065
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3289] Loss: 0.4626074403942123
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3314] Loss: 0.46264929683253436
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3339] Loss: 0.4626225292196505
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3364] Loss: 0.46259185926460894
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3389] Loss: 0.46257383778063
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8444
+Using max F1-Score threshold, the confusion matrix is:
+ [[66 34]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3414] Loss: 0.4625709907838569
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3439] Loss: 0.4626760539473702
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3464] Loss: 0.4626622996437516
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3489] Loss: 0.4627760584646081
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3514] Loss: 0.46277502543988447
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3539] Loss: 0.4627510579261309
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3564] Loss: 0.4627280325668872
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3589] Loss: 0.4627164298910346
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3614] Loss: 0.4627379623103172
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3639] Loss: 0.4627162492240314
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3664] Loss: 0.4627145198811609
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3689] Loss: 0.4626753185057814
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3714] Loss: 0.4627065577029293
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3739] Loss: 0.46268475298468076
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3764] Loss: 0.4626448558765958
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3789] Loss: 0.46260779810537306
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3814] Loss: 0.4625549307304126
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3839] Loss: 0.4626029755132338
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3864] Loss: 0.46262187045346154
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3889] Loss: 0.46256634797024565
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3914] Loss: 0.46257505362878626
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3939] Loss: 0.46258396142005803
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3964] Loss: 0.4626119248143825
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 3989] Loss: 0.4625982608880011
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4014] Loss: 0.4626066073729044
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4039] Loss: 0.462601778998784
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4064] Loss: 0.4626153780077266
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4089] Loss: 0.46259380757647556
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4114] Loss: 0.46263329298455613
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4139] Loss: 0.4626538317885777
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4164] Loss: 0.4626680346245559
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4189] Loss: 0.4626026035928078
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4214] Loss: 0.4625708198058332
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4239] Loss: 0.4626193062991365
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4264] Loss: 0.462594643463351
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4289] Loss: 0.46260132027115863
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4314] Loss: 0.4626328234709065
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4339] Loss: 0.46257712449055177
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4364] Loss: 0.46258350123336867
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4389] Loss: 0.4625947771173417
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8459
+Using max F1-Score threshold, the confusion matrix is:
+ [[72 28]
+ [16 84]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4414] Loss: 0.4626414629909123
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4439] Loss: 0.4626312110648324
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4464] Loss: 0.4626018060960057
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4489] Loss: 0.46262372556144493
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4514] Loss: 0.4625774385506554
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4539] Loss: 0.46253576721279865
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4564] Loss: 0.46249052810964064
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4589] Loss: 0.46246756533953615
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4614] Loss: 0.4624806542626522
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4639] Loss: 0.4625118706769943
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4664] Loss: 0.46256747791085967
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4689] Loss: 0.4625941889773516
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4714] Loss: 0.46256294549894533
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4739] Loss: 0.46252287692765787
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4764] Loss: 0.4625330358943325
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4789] Loss: 0.46252874463298493
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4814] Loss: 0.4625823249643913
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4839] Loss: 0.46253659150552445
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4864] Loss: 0.4625292487599499
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4889] Loss: 0.462500452663991
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4914] Loss: 0.46250686112822603
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4939] Loss: 0.4624952073161022
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4964] Loss: 0.4625021118713281
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 4989] Loss: 0.46257641332190114
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5014] Loss: 0.46257749525361114
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5039] Loss: 0.46261373960506674
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5064] Loss: 0.4626524996390234
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5089] Loss: 0.46261474495996724
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5114] Loss: 0.46261722554037127
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5139] Loss: 0.4626438099564604
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5164] Loss: 0.4626577602133619
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5189] Loss: 0.46271246104675745
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5214] Loss: 0.46270520558645595
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5239] Loss: 0.46266792685787317
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5264] Loss: 0.4626291858224118
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5289] Loss: 0.4625490459385736
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5314] Loss: 0.46252416241860583
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5339] Loss: 0.46250626745496226
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5364] Loss: 0.46249553598389354
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5389] Loss: 0.4625077758007002
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8419
+Using max F1-Score threshold, the confusion matrix is:
+ [[63 37]
+ [10 90]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5414] Loss: 0.46250989190940606
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5439] Loss: 0.4624980100409632
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5464] Loss: 0.4624484442231842
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5489] Loss: 0.4624680726224632
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5514] Loss: 0.46242608149361825
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5539] Loss: 0.46240710426728127
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5564] Loss: 0.462461530350764
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5589] Loss: 0.46239976264173205
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5614] Loss: 0.46236714126447487
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5639] Loss: 0.4624046782615641
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5664] Loss: 0.46248189631855013
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5689] Loss: 0.4624790100393101
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5714] Loss: 0.46250462365038664
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5739] Loss: 0.46256859616471335
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5764] Loss: 0.4625381797087692
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5789] Loss: 0.4625072515816512
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5814] Loss: 0.4625185669652196
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5839] Loss: 0.462542569013042
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5864] Loss: 0.4624858631759921
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5889] Loss: 0.46244022930806755
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5914] Loss: 0.4624344013184424
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5939] Loss: 0.4624137899530322
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5964] Loss: 0.46244892308731733
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 5989] Loss: 0.4624800010660269
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6014] Loss: 0.462411776326771
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6039] Loss: 0.462401952769795
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6064] Loss: 0.4623407934894284
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6089] Loss: 0.46231571969021057
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6114] Loss: 0.46226923821883426
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6139] Loss: 0.46225991514841647
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6164] Loss: 0.46223149716751954
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6189] Loss: 0.46216771242333077
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6214] Loss: 0.4621528229993598
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6239] Loss: 0.4621433483318498
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6264] Loss: 0.4621029923287538
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6289] Loss: 0.46210680830177564
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6314] Loss: 0.4620995361909795
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6339] Loss: 0.46204815468599825
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6364] Loss: 0.46204895592414247
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6389] Loss: 0.4620568620096399
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8432
+Using max F1-Score threshold, the confusion matrix is:
+ [[65 35]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6414] Loss: 0.46206163864546457
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6439] Loss: 0.4620681496328138
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6464] Loss: 0.4620318728754704
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6489] Loss: 0.4619585823513626
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6514] Loss: 0.4619236718219706
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6539] Loss: 0.46192385764583244
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6564] Loss: 0.4619829247866101
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6589] Loss: 0.46197564864376023
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6614] Loss: 0.46197948680017714
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6639] Loss: 0.4619576134081557
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6664] Loss: 0.4619254736955138
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6689] Loss: 0.46190968598824905
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6714] Loss: 0.46189414969798187
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6739] Loss: 0.46183931135867384
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6764] Loss: 0.4618734334439269
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6789] Loss: 0.46189218178065744
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6814] Loss: 0.4618962319707151
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6839] Loss: 0.46190120682564073
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6864] Loss: 0.4619124726906197
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6889] Loss: 0.46192540074899946
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6914] Loss: 0.4619008666892169
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6939] Loss: 0.46187013364109597
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6964] Loss: 0.4618472051906006
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 6989] Loss: 0.46182574790669734
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7014] Loss: 0.4617964647440892
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7039] Loss: 0.4617720983577352
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7064] Loss: 0.4617612505553136
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7089] Loss: 0.4617889604433468
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7114] Loss: 0.4617737957712683
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7139] Loss: 0.46178747603623294
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7164] Loss: 0.4617834914084384
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7189] Loss: 0.4617986042002549
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7214] Loss: 0.4617305136443798
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7239] Loss: 0.46176145669246227
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7264] Loss: 0.46170793694694445
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7289] Loss: 0.46167046677124085
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7314] Loss: 0.4616857450012442
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7339] Loss: 0.46166833536049484
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7364] Loss: 0.4616750593868683
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7389] Loss: 0.4616996609585998
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8406
+Using max F1-Score threshold, the confusion matrix is:
+ [[67 33]
+ [14 86]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7414] Loss: 0.4617069408342393
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7439] Loss: 0.46175001204656246
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7464] Loss: 0.4617902093652343
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7489] Loss: 0.461749045893368
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7514] Loss: 0.4617055014290267
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7539] Loss: 0.4617080113118165
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7564] Loss: 0.4617077940647435
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7589] Loss: 0.4616987341572281
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7614] Loss: 0.46163561198235176
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7639] Loss: 0.4615944903263403
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7664] Loss: 0.46162125329576664
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7689] Loss: 0.46166015634437846
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7714] Loss: 0.4617141211002428
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7739] Loss: 0.4616802122705708
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7764] Loss: 0.46170620185591826
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7789] Loss: 0.4617144645415259
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7814] Loss: 0.4617209317901962
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7839] Loss: 0.46170272356770586
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7864] Loss: 0.4617327292861547
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7889] Loss: 0.46170967530486645
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7914] Loss: 0.4617033012587808
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7939] Loss: 0.4617037984040839
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7964] Loss: 0.4616610769713531
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 7989] Loss: 0.4616872867677059
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8014] Loss: 0.46163636079493553
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8039] Loss: 0.461656807583728
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8064] Loss: 0.4616045040308311
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8089] Loss: 0.4616450322909411
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8114] Loss: 0.46160334028899996
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8139] Loss: 0.46156261594327935
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8164] Loss: 0.46153199332129324
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8189] Loss: 0.4615256743794098
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8214] Loss: 0.4615319996960412
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8239] Loss: 0.4615516886529535
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8264] Loss: 0.4615445572760731
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8289] Loss: 0.461539911739364
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8314] Loss: 0.4615290668013795
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8339] Loss: 0.4615645915291308
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8364] Loss: 0.46159517636596986
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8389] Loss: 0.46162836574955335
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8403
+Using max F1-Score threshold, the confusion matrix is:
+ [[66 34]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8414] Loss: 0.46163582257535224
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8439] Loss: 0.46164928443811554
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8464] Loss: 0.4616264817427167
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8489] Loss: 0.46159822329525146
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8514] Loss: 0.461551003972286
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8539] Loss: 0.4615568080656607
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8564] Loss: 0.461541161876852
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8589] Loss: 0.46154431967222215
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8614] Loss: 0.46162549390325053
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8639] Loss: 0.46159346970988085
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8664] Loss: 0.46156789116577657
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8689] Loss: 0.4615616537569425
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8714] Loss: 0.4615550191954447
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8739] Loss: 0.4615861508288848
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8764] Loss: 0.46164774844934275
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8789] Loss: 0.46162713683074297
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8814] Loss: 0.4616332402374289
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8839] Loss: 0.46167972555094117
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8864] Loss: 0.4616483310256497
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8889] Loss: 0.46162291643340153
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8914] Loss: 0.4616245081428944
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8939] Loss: 0.46164006419205633
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8964] Loss: 0.4616301743757178
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 8989] Loss: 0.46162586840357145
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9014] Loss: 0.4616488850166482
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9039] Loss: 0.46160957563854715
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9064] Loss: 0.46158854981200337
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9089] Loss: 0.46155480893787887
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9114] Loss: 0.4615938959532307
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9139] Loss: 0.46159420667731665
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9164] Loss: 0.4615657649626489
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9189] Loss: 0.4615303875666623
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9214] Loss: 0.46150757170858553
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9239] Loss: 0.4615022897966562
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9264] Loss: 0.46153223211970384
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9289] Loss: 0.46146593717997975
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9314] Loss: 0.4614373299739714
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9339] Loss: 0.46143753682581207
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9364] Loss: 0.46145776355540535
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9389] Loss: 0.4614724625245163
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8434
+Using max F1-Score threshold, the confusion matrix is:
+ [[74 26]
+ [18 82]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9414] Loss: 0.4614735255202891
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9439] Loss: 0.46143100805997267
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9464] Loss: 0.4613887439498024
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9489] Loss: 0.4613946344436262
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9514] Loss: 0.46136596584381967
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9539] Loss: 0.4613183447072767
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9564] Loss: 0.461258390849125
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9589] Loss: 0.46126771557248775
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9614] Loss: 0.4612143370026058
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9639] Loss: 0.46121544130096503
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9664] Loss: 0.46128968891401856
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9689] Loss: 0.4612737021157324
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9714] Loss: 0.4612512754869025
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9739] Loss: 0.46122530571167647
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9764] Loss: 0.46123498598864254
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9789] Loss: 0.46124511573726423
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9814] Loss: 0.4612293528347918
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9839] Loss: 0.4612394336092372
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9864] Loss: 0.46123685618129073
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9889] Loss: 0.4612114322482631
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9914] Loss: 0.4611750698310767
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9939] Loss: 0.46115361922989145
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9964] Loss: 0.46117480657321475
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 9989] Loss: 0.46112689687359787
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10014] Loss: 0.461179988795832
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10039] Loss: 0.4612038519875565
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10064] Loss: 0.46121344237773837
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10089] Loss: 0.46116657921280724
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10114] Loss: 0.46114585412372255
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10139] Loss: 0.4611113658547723
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10164] Loss: 0.46113008055298255
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10189] Loss: 0.4611742730415735
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10214] Loss: 0.4611495161972081
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10239] Loss: 0.46115120919400837
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10264] Loss: 0.4611405402088597
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10289] Loss: 0.46110996350442607
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10314] Loss: 0.4610651536529638
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10339] Loss: 0.461085576407166
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10364] Loss: 0.4610936978498072
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10389] Loss: 0.46106195800867833
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8442
+Using max F1-Score threshold, the confusion matrix is:
+ [[65 35]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10414] Loss: 0.46108878877639287
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10439] Loss: 0.461063545891443
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10464] Loss: 0.46102858592084606
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10489] Loss: 0.46100606706870373
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10514] Loss: 0.4609868275071259
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10539] Loss: 0.4609789789589832
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10564] Loss: 0.46101667897495147
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10589] Loss: 0.4609961240847046
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10614] Loss: 0.4609916076341329
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10639] Loss: 0.4610225324450184
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10664] Loss: 0.4610013900881226
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10689] Loss: 0.4609823149175035
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10714] Loss: 0.46096504155662554
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10739] Loss: 0.46096646203199504
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10764] Loss: 0.4609523548427155
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10789] Loss: 0.4609726964770779
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10814] Loss: 0.4609396604992054
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10839] Loss: 0.4609099041932494
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10864] Loss: 0.4608566009970717
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10889] Loss: 0.46082971441063697
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10914] Loss: 0.4608724401641659
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10939] Loss: 0.4608303488217744
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10964] Loss: 0.4607507363655538
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 10989] Loss: 0.46077693304914363
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11014] Loss: 0.4607810899899892
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11039] Loss: 0.46075757292573805
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11064] Loss: 0.4607805468287715
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11089] Loss: 0.4607946405295907
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11114] Loss: 0.46078043841871974
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11139] Loss: 0.4607962030623484
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11164] Loss: 0.4607916955194205
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11189] Loss: 0.46076532375830953
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11214] Loss: 0.460714060444032
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11239] Loss: 0.46075983640923496
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11264] Loss: 0.4607948210665419
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11289] Loss: 0.46078208809681914
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11314] Loss: 0.46077272474368786
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11339] Loss: 0.4607570403821072
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11364] Loss: 0.46076778467096313
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11389] Loss: 0.46075273585582843
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8431
+Using max F1-Score threshold, the confusion matrix is:
+ [[66 34]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11414] Loss: 0.4607406500244633
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11439] Loss: 0.46073287759894915
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11464] Loss: 0.4607942193431839
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11489] Loss: 0.46076826894494666
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11514] Loss: 0.460754823423401
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11539] Loss: 0.4607591201810695
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11564] Loss: 0.46073099254512745
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11589] Loss: 0.4607172644324783
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11614] Loss: 0.4607073962634863
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11639] Loss: 0.460686966211141
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11664] Loss: 0.46066387429284233
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11689] Loss: 0.46064938007161293
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11714] Loss: 0.46065229479045866
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11739] Loss: 0.4606489705945433
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11764] Loss: 0.4606632446602087
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11789] Loss: 0.4606476721792261
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11814] Loss: 0.4606760088564282
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11839] Loss: 0.4607228157006547
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11864] Loss: 0.4607726465886624
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11889] Loss: 0.46076364018528565
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11914] Loss: 0.46072535981689167
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11939] Loss: 0.4606784082985523
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11964] Loss: 0.46071915799472746
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 11989] Loss: 0.4606879755766212
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12014] Loss: 0.4607537874114744
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12039] Loss: 0.460735608931575
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12064] Loss: 0.46073785930125266
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12089] Loss: 0.460728638081124
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12114] Loss: 0.4607477607614825
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12139] Loss: 0.46074692854354266
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12164] Loss: 0.46073144362343893
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12189] Loss: 0.46075651658072436
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12214] Loss: 0.4607304785880745
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12239] Loss: 0.46074336130735133
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12264] Loss: 0.4607250461310655
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12289] Loss: 0.46076089573594603
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12314] Loss: 0.4607326185487186
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12339] Loss: 0.4607475593700986
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12364] Loss: 0.4607326351918958
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12389] Loss: 0.460723570137339
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8461
+Using max F1-Score threshold, the confusion matrix is:
+ [[69 31]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12414] Loss: 0.4607161269432006
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12439] Loss: 0.46067012271635144
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12464] Loss: 0.46062740827020204
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12489] Loss: 0.4605989874208241
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12514] Loss: 0.4605543184740509
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12539] Loss: 0.4606020854751652
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12564] Loss: 0.4605831189874875
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12589] Loss: 0.4605362088871637
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12614] Loss: 0.4605189985081754
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12639] Loss: 0.4605034628695454
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12664] Loss: 0.4605074914143414
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12689] Loss: 0.4605204897058929
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12714] Loss: 0.4605365317240045
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12739] Loss: 0.46052508838830325
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12764] Loss: 0.46052210478886507
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12789] Loss: 0.4605266576810903
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12814] Loss: 0.4605180056684902
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12839] Loss: 0.46053384159054694
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12864] Loss: 0.4605530928958952
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12889] Loss: 0.46053931383178365
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12914] Loss: 0.460482982497455
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12939] Loss: 0.4605053997063122
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12964] Loss: 0.46050013087331143
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 12989] Loss: 0.46046764183972877
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13014] Loss: 0.4604255235785817
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13039] Loss: 0.4603956068328139
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13064] Loss: 0.4604312305330285
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13089] Loss: 0.46041957987028603
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13114] Loss: 0.4604144934107167
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13139] Loss: 0.4604255038488092
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13164] Loss: 0.46039826780696547
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13189] Loss: 0.4603815369310144
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13214] Loss: 0.46035867997027996
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13239] Loss: 0.4603845369388922
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13264] Loss: 0.4604448430207086
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13289] Loss: 0.46043563255765113
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13314] Loss: 0.460477538422157
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13339] Loss: 0.4604668508955158
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13364] Loss: 0.46048303196006124
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13389] Loss: 0.4604953853320953
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.845
+Using max F1-Score threshold, the confusion matrix is:
+ [[69 31]
+ [14 86]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13414] Loss: 0.46050165244416164
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13439] Loss: 0.46047225801649155
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13464] Loss: 0.4604687871400994
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13489] Loss: 0.4604939083078444
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13514] Loss: 0.46049414350512824
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13539] Loss: 0.4604759506261883
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13564] Loss: 0.4604820240178253
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13589] Loss: 0.4604569386114404
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13614] Loss: 0.46041809772289266
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13639] Loss: 0.46040616353049674
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13664] Loss: 0.46035822200158977
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13689] Loss: 0.46037142919121504
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13714] Loss: 0.4603803173405579
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13739] Loss: 0.4603910999923454
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13764] Loss: 0.4603657271049943
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13789] Loss: 0.4603224196491704
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13814] Loss: 0.4603519962288277
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13839] Loss: 0.4603419277907877
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13864] Loss: 0.4604075854057352
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13889] Loss: 0.4603435674206477
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13914] Loss: 0.4603382013409332
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13939] Loss: 0.4603288187251089
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13964] Loss: 0.46029706719425595
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 13989] Loss: 0.46029334146847495
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14014] Loss: 0.4602331071011663
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14039] Loss: 0.4602694779923496
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14064] Loss: 0.46027955563232237
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14089] Loss: 0.46029385525661554
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14114] Loss: 0.4602725064401189
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14139] Loss: 0.46029473200660975
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14164] Loss: 0.460252979212162
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14189] Loss: 0.46022966606499427
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14214] Loss: 0.4601621136477159
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14239] Loss: 0.4601357763079582
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14264] Loss: 0.46010864391027123
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14289] Loss: 0.4600933530578778
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14314] Loss: 0.4600811425354007
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14339] Loss: 0.46005492319434105
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14364] Loss: 0.4600605596638088
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14389] Loss: 0.46004439012123716
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8448000000000001
+Using max F1-Score threshold, the confusion matrix is:
+ [[67 33]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14414] Loss: 0.4599776865993791
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14439] Loss: 0.4599934121154128
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14464] Loss: 0.45993561733269056
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14489] Loss: 0.45990657932095536
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14514] Loss: 0.459911945345698
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14539] Loss: 0.4599334110391091
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14564] Loss: 0.46000300542888606
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14589] Loss: 0.4600009970405516
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14614] Loss: 0.45999045403390343
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14639] Loss: 0.46000155136357457
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14664] Loss: 0.4599694839109327
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14689] Loss: 0.459938142801968
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14714] Loss: 0.45991870898529436
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14739] Loss: 0.45989166885225236
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14764] Loss: 0.45983688204925993
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14789] Loss: 0.45982077420616646
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14814] Loss: 0.4597965913542851
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14839] Loss: 0.4598085510877249
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14864] Loss: 0.4597911401700126
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14889] Loss: 0.4597466662591095
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14914] Loss: 0.4597576469315962
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14939] Loss: 0.4597470699544171
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14964] Loss: 0.45968651417821
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 14989] Loss: 0.45967114614797655
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15014] Loss: 0.4596987440640656
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15039] Loss: 0.45968025537068957
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15064] Loss: 0.4596375089093717
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15089] Loss: 0.4596331315237055
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15114] Loss: 0.45960340574606734
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15139] Loss: 0.4595976487856236
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15164] Loss: 0.45960762314892506
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15189] Loss: 0.4596281630328978
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15214] Loss: 0.4596488617244271
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15239] Loss: 0.45965530904010027
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15264] Loss: 0.4596953871037558
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15289] Loss: 0.4596909700079258
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15314] Loss: 0.45966519819945784
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15339] Loss: 0.45970293302274184
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15364] Loss: 0.45972032170834776
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15389] Loss: 0.45967835683936903
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8430999999999998
+Using max F1-Score threshold, the confusion matrix is:
+ [[67 33]
+ [14 86]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15414] Loss: 0.4597573262014178
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15439] Loss: 0.4597471127707045
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15464] Loss: 0.459736255199356
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15489] Loss: 0.4597222431908535
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15514] Loss: 0.4597276451796162
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15539] Loss: 0.4597157205088731
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15564] Loss: 0.45976565783727225
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15589] Loss: 0.45977561063193384
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15614] Loss: 0.4597883466292476
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15639] Loss: 0.45979732607199475
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15664] Loss: 0.45980674474061883
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15689] Loss: 0.45983661060874736
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15714] Loss: 0.45978983808560775
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15739] Loss: 0.45977166484579773
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15764] Loss: 0.45973187444601815
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15789] Loss: 0.4597732714173157
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15814] Loss: 0.4598165455255068
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15839] Loss: 0.4597791296633448
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15864] Loss: 0.4597478497823824
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15889] Loss: 0.45976152782645086
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15914] Loss: 0.45976485875114487
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15939] Loss: 0.4597413714462371
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15964] Loss: 0.45975649007713654
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 15989] Loss: 0.4597968493186482
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16014] Loss: 0.4597958823701459
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16039] Loss: 0.4597501612317637
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16064] Loss: 0.4597136224185706
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16089] Loss: 0.45966529919678567
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16114] Loss: 0.4596709189295256
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16139] Loss: 0.4596448533495194
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16164] Loss: 0.45966125493655846
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16189] Loss: 0.45965117382157356
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16214] Loss: 0.4596353069211686
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16239] Loss: 0.45962308957251774
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16264] Loss: 0.45960631598803187
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16289] Loss: 0.4596148513818983
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16314] Loss: 0.4595770582591683
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16339] Loss: 0.4595262228815935
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16364] Loss: 0.459510989498721
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16389] Loss: 0.45951025402549917
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8444
+Using max F1-Score threshold, the confusion matrix is:
+ [[65 35]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16414] Loss: 0.4595091716750242
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16439] Loss: 0.4595342371489745
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16464] Loss: 0.45952709183361534
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16489] Loss: 0.45950164751269074
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16514] Loss: 0.4594761281943709
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16539] Loss: 0.45944239012435417
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16564] Loss: 0.4594523951826993
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16589] Loss: 0.4594741312355647
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16614] Loss: 0.45948157036669696
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16639] Loss: 0.4594562408162986
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16664] Loss: 0.4594701428555358
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16689] Loss: 0.4594495235289874
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16714] Loss: 0.45944760761259057
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16739] Loss: 0.4594035490650221
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16764] Loss: 0.4593855317569492
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16789] Loss: 0.4593588377650314
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16814] Loss: 0.4593629611149221
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16839] Loss: 0.4593395466983091
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16864] Loss: 0.45932006489602467
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16889] Loss: 0.4592883468806755
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16914] Loss: 0.45929282281663136
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16939] Loss: 0.45927657038604436
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16964] Loss: 0.4592727257922317
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 16989] Loss: 0.45924422605923865
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17014] Loss: 0.4592542452279683
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17039] Loss: 0.45925455514826313
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17064] Loss: 0.4592909605414869
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17089] Loss: 0.4592672833934009
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17114] Loss: 0.4592075391530031
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17139] Loss: 0.45924740379055323
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17164] Loss: 0.4592756854451692
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17189] Loss: 0.45927737217685055
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17214] Loss: 0.45929562738461177
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17239] Loss: 0.45926019164012505
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17264] Loss: 0.4592526061851853
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17289] Loss: 0.45927156771558214
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17314] Loss: 0.45927866983475946
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17339] Loss: 0.45932174004128007
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17364] Loss: 0.4593197436056822
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17389] Loss: 0.4593690030668769
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8425
+Using max F1-Score threshold, the confusion matrix is:
+ [[66 34]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17414] Loss: 0.4594389353470926
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17439] Loss: 0.4594419761646427
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17464] Loss: 0.45940621652183083
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17489] Loss: 0.45942733203297037
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17514] Loss: 0.4594434752688805
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17539] Loss: 0.45943342123574465
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17564] Loss: 0.4594073526084715
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17589] Loss: 0.45940348721319224
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17614] Loss: 0.45937429450733813
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17639] Loss: 0.4593419041036842
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17664] Loss: 0.4593766736880723
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17689] Loss: 0.45937955594169255
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17714] Loss: 0.4593588901805797
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17739] Loss: 0.45936069649785116
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17764] Loss: 0.45935727566989815
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17789] Loss: 0.4593722969847607
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17814] Loss: 0.4593862898728477
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17839] Loss: 0.45934847855669925
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17864] Loss: 0.4593289339623226
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17889] Loss: 0.45933570935352785
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17914] Loss: 0.45932839261354064
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17939] Loss: 0.4593469467029166
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17964] Loss: 0.45934507849085876
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 17989] Loss: 0.4593729527046504
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18014] Loss: 0.4593229562645398
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18039] Loss: 0.45933922715694553
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18064] Loss: 0.4593232131440988
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18089] Loss: 0.459357040537703
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18114] Loss: 0.45932652016448283
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18139] Loss: 0.4593297740783638
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18164] Loss: 0.4593099264109671
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18189] Loss: 0.4592710791783582
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18214] Loss: 0.459276134025191
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18239] Loss: 0.4592481268444542
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18264] Loss: 0.4592201307379528
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18289] Loss: 0.4591964759940154
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18314] Loss: 0.4591804807418289
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18339] Loss: 0.4591937184966747
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18364] Loss: 0.45918404800572615
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18389] Loss: 0.45915112693809074
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8393
+Using max F1-Score threshold, the confusion matrix is:
+ [[72 28]
+ [16 84]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18414] Loss: 0.4591772490939195
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18439] Loss: 0.4591511169444085
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18464] Loss: 0.45913173530278095
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18489] Loss: 0.4590907499970922
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18514] Loss: 0.45911486101797905
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18539] Loss: 0.4591001189470057
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18564] Loss: 0.45908793891532645
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18589] Loss: 0.4590584844354043
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18614] Loss: 0.45905962014540336
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18639] Loss: 0.45904892164058514
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18664] Loss: 0.45905368412808656
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18689] Loss: 0.4590547125792048
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18714] Loss: 0.45908477270931913
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18739] Loss: 0.45905484990156437
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18764] Loss: 0.4590626363665734
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18789] Loss: 0.459140235734403
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18814] Loss: 0.45915288113673863
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18839] Loss: 0.4591611509109807
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18864] Loss: 0.4591472104097874
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18889] Loss: 0.45912375610500455
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18914] Loss: 0.4591531081473388
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18939] Loss: 0.4591424135923504
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18964] Loss: 0.459150535248805
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 18989] Loss: 0.45918785166767095
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19014] Loss: 0.4591699932695698
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19039] Loss: 0.45916440261341807
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19064] Loss: 0.4591345486780475
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19089] Loss: 0.459148288352202
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19114] Loss: 0.4591400020968261
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19139] Loss: 0.45914014513082513
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19164] Loss: 0.45911237699097424
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19189] Loss: 0.45914697590926074
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19214] Loss: 0.4591471090578439
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19239] Loss: 0.45918956118656357
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19264] Loss: 0.4591201687670573
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19289] Loss: 0.4591375870141851
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19314] Loss: 0.4591467946815019
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19339] Loss: 0.4591280795964432
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19364] Loss: 0.4591733155573985
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19389] Loss: 0.4591360622632859
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8434999999999999
+Using max F1-Score threshold, the confusion matrix is:
+ [[64 36]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19414] Loss: 0.4591228840994657
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19439] Loss: 0.45914177554549496
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19464] Loss: 0.4591578318339215
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19489] Loss: 0.4591526137834832
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19514] Loss: 0.45914540090738304
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19539] Loss: 0.4591804538653253
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19564] Loss: 0.4591959472532726
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19589] Loss: 0.4592072939501563
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19614] Loss: 0.4591988523413269
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19639] Loss: 0.4591964868062746
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19664] Loss: 0.45914193857103447
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19689] Loss: 0.45915431363939035
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19714] Loss: 0.4591374902213871
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19739] Loss: 0.4591393947358743
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19764] Loss: 0.4591155518771972
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19789] Loss: 0.45906602167161903
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19814] Loss: 0.4590734205657878
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19839] Loss: 0.4590818530542948
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19864] Loss: 0.45907102365281716
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19889] Loss: 0.4590924221694895
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19914] Loss: 0.45908748273446065
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19939] Loss: 0.4590401759410233
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19964] Loss: 0.4589863411697753
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 19989] Loss: 0.4590218843633184
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20014] Loss: 0.45902365639681275
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20039] Loss: 0.45899156275299924
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20064] Loss: 0.45897762590326857
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20089] Loss: 0.4589632584837485
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20114] Loss: 0.4590332479395316
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20139] Loss: 0.4590140020436172
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20164] Loss: 0.45901944451814264
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20189] Loss: 0.45900942390629784
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20214] Loss: 0.4590206714542813
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20239] Loss: 0.4589919961063301
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20264] Loss: 0.45900797525993037
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20289] Loss: 0.4590129393145974
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20314] Loss: 0.4589963742559445
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20339] Loss: 0.4589487371565175
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20364] Loss: 0.45896874328623183
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20389] Loss: 0.45896693981775105
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8416
+Using max F1-Score threshold, the confusion matrix is:
+ [[72 28]
+ [16 84]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20414] Loss: 0.4589773885015716
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20439] Loss: 0.45898348330649197
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20464] Loss: 0.4590350445629445
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20489] Loss: 0.4590113709973078
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20514] Loss: 0.45898970638998704
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20539] Loss: 0.45897849338022845
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20564] Loss: 0.45898299040955215
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20589] Loss: 0.4589887332165021
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20614] Loss: 0.45896733755174207
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20639] Loss: 0.45895052688257426
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20664] Loss: 0.45893257427443723
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20689] Loss: 0.45893922005858573
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20714] Loss: 0.45894793847321147
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20739] Loss: 0.4589805190857748
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20764] Loss: 0.4589376452218612
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20789] Loss: 0.4589289833860822
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20814] Loss: 0.45892812503484426
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20839] Loss: 0.45892236037306444
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20864] Loss: 0.45894143925868486
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20889] Loss: 0.4589367152020517
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20914] Loss: 0.4589163120384054
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20939] Loss: 0.45891610298828994
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20964] Loss: 0.45891121744673113
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 20989] Loss: 0.4588843736466185
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21014] Loss: 0.4589168664118085
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21039] Loss: 0.45891541512032014
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21064] Loss: 0.4588883249377976
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21089] Loss: 0.45887996079002485
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21114] Loss: 0.45890111746796736
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21139] Loss: 0.45889832157449423
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21164] Loss: 0.4588674223433442
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21189] Loss: 0.4588425867806612
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21214] Loss: 0.45889024056720906
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21239] Loss: 0.45892145067364826
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21264] Loss: 0.4589057351874089
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21289] Loss: 0.45891250590528865
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21314] Loss: 0.4589183801445549
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21339] Loss: 0.458902605945178
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21364] Loss: 0.4588962329858995
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21389] Loss: 0.4589044629577534
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.844
+Using max F1-Score threshold, the confusion matrix is:
+ [[65 35]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21414] Loss: 0.45889985000724953
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21439] Loss: 0.45886991575051933
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21464] Loss: 0.45886478629758626
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21489] Loss: 0.45886472407467505
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21514] Loss: 0.4588614468566334
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21539] Loss: 0.45882834251133175
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21564] Loss: 0.4588272393607424
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21589] Loss: 0.4588272058929096
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21614] Loss: 0.458793759977087
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21639] Loss: 0.45880181169631135
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21664] Loss: 0.4587804873792613
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21689] Loss: 0.45874300678314006
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21714] Loss: 0.45875644916799385
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21739] Loss: 0.45879758744397175
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21764] Loss: 0.4587840814143501
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21789] Loss: 0.4587917074243358
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21814] Loss: 0.45878762151907737
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21839] Loss: 0.4587236991479738
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21864] Loss: 0.4587125844747494
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21889] Loss: 0.45868538433158085
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21914] Loss: 0.4587070232470921
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21939] Loss: 0.4586554557124355
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21964] Loss: 0.4587271804630562
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 21989] Loss: 0.45870324333746604
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22014] Loss: 0.45864860894715653
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22039] Loss: 0.45859725158359893
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22064] Loss: 0.4586073595702864
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22089] Loss: 0.4586281900297609
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22114] Loss: 0.45862046313290694
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22139] Loss: 0.4586390332758813
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22164] Loss: 0.45863380791150943
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22189] Loss: 0.4586808742243363
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22214] Loss: 0.4586451276882274
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22239] Loss: 0.4586513451552712
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22264] Loss: 0.4586656667143568
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22289] Loss: 0.4586621896083307
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22314] Loss: 0.4586604560845755
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22339] Loss: 0.4586523542184115
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22364] Loss: 0.4586736794602707
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22389] Loss: 0.45868455484099746
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.845
+Using max F1-Score threshold, the confusion matrix is:
+ [[65 35]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22414] Loss: 0.4586837462969787
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22439] Loss: 0.45865807959209737
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22464] Loss: 0.458656282308029
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22489] Loss: 0.4586519966276058
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22514] Loss: 0.4586458159179094
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22539] Loss: 0.45868252058458525
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22564] Loss: 0.458647151380768
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22589] Loss: 0.45859104706342757
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22614] Loss: 0.45861263635320215
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22639] Loss: 0.4586139796812766
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22664] Loss: 0.4585855951399172
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22689] Loss: 0.4586151152432406
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22714] Loss: 0.4586095486248663
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22739] Loss: 0.45861869005931166
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22764] Loss: 0.45864719805746984
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22789] Loss: 0.4586659983539546
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22814] Loss: 0.4586381049005311
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22839] Loss: 0.45867794110689664
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22864] Loss: 0.45870774753715443
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22889] Loss: 0.45870545757967013
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22914] Loss: 0.4586760508268477
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22939] Loss: 0.4586337220059755
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22964] Loss: 0.45869570783538566
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 22989] Loss: 0.45870304272749934
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23014] Loss: 0.4586901164194351
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23039] Loss: 0.458700014512544
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23064] Loss: 0.45868832291798634
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23089] Loss: 0.45860999182940765
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23114] Loss: 0.4586671535236781
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23139] Loss: 0.45864088475651904
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23164] Loss: 0.4586511579402329
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23189] Loss: 0.4586765796827503
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23214] Loss: 0.4586636946720448
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23239] Loss: 0.4586493727706531
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23264] Loss: 0.4586445111101753
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23289] Loss: 0.458679089255043
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23314] Loss: 0.4586653325370583
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23339] Loss: 0.458669150039767
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23364] Loss: 0.4586747286295624
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23389] Loss: 0.45870225163965156
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8449
+Using max F1-Score threshold, the confusion matrix is:
+ [[54 46]
+ [ 6 94]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23414] Loss: 0.45868426376853283
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23439] Loss: 0.4586740069421061
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23464] Loss: 0.45873126530365876
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23489] Loss: 0.45872775209905203
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23514] Loss: 0.45872627164635116
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23539] Loss: 0.45871163469057097
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23564] Loss: 0.458718079374851
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23589] Loss: 0.45870342786216495
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23614] Loss: 0.458731283532549
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23639] Loss: 0.4586880900928041
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23664] Loss: 0.4586558315161055
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23689] Loss: 0.45870754262519225
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23714] Loss: 0.4587361351754004
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23739] Loss: 0.4587132664165637
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23764] Loss: 0.4587751215936015
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23789] Loss: 0.458755726021812
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23814] Loss: 0.4587252754403992
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23839] Loss: 0.4587516482046099
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23864] Loss: 0.458752025164285
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23889] Loss: 0.4587683010532056
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23914] Loss: 0.45880277065554514
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23939] Loss: 0.4587912770586224
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23964] Loss: 0.4587601485645773
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 23989] Loss: 0.4587605438551322
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24014] Loss: 0.45877023192661753
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24039] Loss: 0.45878770743344716
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24064] Loss: 0.4587476526693304
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24089] Loss: 0.45868721023677794
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24114] Loss: 0.45866974126852283
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24139] Loss: 0.45862946110344993
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24164] Loss: 0.45860319145627443
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24189] Loss: 0.45864144051472633
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24214] Loss: 0.4586632413944215
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24239] Loss: 0.45867675892604165
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24264] Loss: 0.4586807200217353
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24289] Loss: 0.4586370979273899
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24314] Loss: 0.4586290125757295
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24339] Loss: 0.4586242699839933
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24364] Loss: 0.4586376945188561
+
+CUDA Memory Allocated: 9090220032
+[Epoch 6, Batch 24389] Loss: 0.45862259480790724
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8422000000000001
+Using max F1-Score threshold, the confusion matrix is:
+ [[66 34]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 6] Loss: 0.4586013411084537
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 31] Loss: 0.45857716261230264
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 56] Loss: 0.4585427821342507
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 81] Loss: 0.45853406134231284
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 106] Loss: 0.458519426606249
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 131] Loss: 0.4584811785241088
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 156] Loss: 0.45848535838562776
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 181] Loss: 0.4584663797707415
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 206] Loss: 0.45847687244031804
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 231] Loss: 0.45846308700874605
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 256] Loss: 0.4583957597090782
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 281] Loss: 0.45834954022594004
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 306] Loss: 0.4583267736960632
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 331] Loss: 0.45834657297267634
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 356] Loss: 0.45830415113915923
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 381] Loss: 0.4583196318874079
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 406] Loss: 0.45829506143980775
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 431] Loss: 0.4582761435464845
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 456] Loss: 0.4582373809125788
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 481] Loss: 0.4582328959030618
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 506] Loss: 0.4582147449064366
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 531] Loss: 0.4582423176545622
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 556] Loss: 0.45820020588673943
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 581] Loss: 0.4582066575185675
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 606] Loss: 0.45817708663006945
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 631] Loss: 0.458146765222502
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 656] Loss: 0.4581686681543394
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 681] Loss: 0.45815596969514294
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 706] Loss: 0.4581636627322693
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 731] Loss: 0.4581983953024514
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 756] Loss: 0.4581868509775535
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 781] Loss: 0.45823282959992573
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 806] Loss: 0.45825617437819127
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 831] Loss: 0.4582462551367278
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 856] Loss: 0.4582967225843041
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 881] Loss: 0.4582674813833075
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 906] Loss: 0.45822495887895515
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 931] Loss: 0.4582361448894537
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 956] Loss: 0.4581847485926363
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 981] Loss: 0.4581867858100174
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
