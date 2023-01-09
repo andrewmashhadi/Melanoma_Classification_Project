@@ -11823,3 +11823,211 @@ CUDA Memory Allocated: 9090220032
 *********************** Performance Update ***********************
 ******************************************************************
 
+Area Under the ROC Curve: 0.843
+Using max F1-Score threshold, the confusion matrix is:
+ [[65 35]
+ [11 89]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1006] Loss: 0.4581821678208962
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1031] Loss: 0.45817210421541504
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1056] Loss: 0.45819449082042374
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1081] Loss: 0.45821813900317737
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1106] Loss: 0.4582195093452032
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1131] Loss: 0.4581796994966655
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1156] Loss: 0.45822388091592425
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1181] Loss: 0.4582158746770407
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1206] Loss: 0.4582011000988843
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1231] Loss: 0.45820409716605087
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1256] Loss: 0.4582102045387865
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1281] Loss: 0.45822510519184434
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1306] Loss: 0.45821998413105486
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1331] Loss: 0.4582465736595799
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1356] Loss: 0.4582127735198468
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1381] Loss: 0.45814811844445136
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1406] Loss: 0.45812352542185425
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1431] Loss: 0.4581397522724053
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1456] Loss: 0.4581333646166609
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1481] Loss: 0.4581187941476492
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1506] Loss: 0.4580845043654476
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1531] Loss: 0.4580894685093815
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1556] Loss: 0.45812770647938794
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1581] Loss: 0.4581025254124871
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1606] Loss: 0.458113626554365
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1631] Loss: 0.4581215269708494
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1656] Loss: 0.4581508887110281
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1681] Loss: 0.45812186731049376
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1706] Loss: 0.45812290829386837
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1731] Loss: 0.4580846928062666
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1756] Loss: 0.45809599395409945
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1781] Loss: 0.45807806827536585
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1806] Loss: 0.45807004772200133
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1831] Loss: 0.4580856365308703
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1856] Loss: 0.4580761621833421
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1881] Loss: 0.45806655607321123
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1906] Loss: 0.4580692412441069
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1931] Loss: 0.45808381994924013
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1956] Loss: 0.45807141285839703
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 1981] Loss: 0.45808125761032553
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.8436
+Using max F1-Score threshold, the confusion matrix is:
+ [[66 34]
+ [13 87]]
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2006] Loss: 0.4580743156733501
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2031] Loss: 0.4580612007739768
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2056] Loss: 0.4580381373245057
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2081] Loss: 0.458028873255945
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2106] Loss: 0.45801342819165214
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2131] Loss: 0.45804981033858416
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2156] Loss: 0.458022347048282
+
+CUDA Memory Allocated: 9090220032
+[Epoch 7, Batch 2181] Loss: 0.45799701335976684
+
+*********** Saving network weights and optimizer state *********** 
+
+
+*********** Finished Training this Epoch in 76359.93345737457 seconds ***********
+Job 5692869 ended on:    g6
+Job 5692869 ended on:    Sun Jan 8 17:45:52 PST 2023
+ 
