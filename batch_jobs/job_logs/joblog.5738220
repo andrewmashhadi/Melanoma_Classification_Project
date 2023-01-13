@@ -1,0 +1,2534 @@
+Job 5738220 started on:    n1816
+Job 5738220 started on:    Fri Jan 13 01:17:06 PST 2023
+ 
+Device: cpu
+Number of devices: 36
+Loading the pre-trained CNN weights.
+CUDA Memory Allocated: 0
+Pre-Training CUDA Memory Allocation: 0
+/u/home/a/andrewma/.conda/envs/MAS_pt/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/u/home/a/andrewma/.conda/envs/MAS_pt/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 5] Loss: 0.4818120002746582
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6500000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 105] Loss: 0.4593176316506792
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 205] Loss: 0.46284225968579157
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 305] Loss: 0.461648727522736
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 405] Loss: 0.46203389797276095
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 505] Loss: 0.4589506840991403
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6218
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 605] Loss: 0.4601455165473078
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 705] Loss: 0.4620932308098729
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 805] Loss: 0.46068704468703897
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 905] Loss: 0.4606194924004996
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 1005] Loss: 0.46165869564383655
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.616
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 1105] Loss: 0.46199707099516535
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 1205] Loss: 0.462401112090241
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 1305] Loss: 0.4620304520454524
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 1405] Loss: 0.45829109027503134
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 2, Batch 1505] Loss: 0.45695936088161737
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6109
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 80] Loss: 0.45621324816880415
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 180] Loss: 0.45441267896511495
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 280] Loss: 0.45144121394363923
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 380] Loss: 0.45094221748846697
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 480] Loss: 0.45061750760649155
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6484000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 580] Loss: 0.45062188190655844
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 680] Loss: 0.45048486132315213
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 780] Loss: 0.45076309715028123
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 880] Loss: 0.4499980689385989
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 980] Loss: 0.449822696803904
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6697000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 1080] Loss: 0.4504316247675979
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 1180] Loss: 0.4501389447283807
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 1280] Loss: 0.4504182523689028
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 1380] Loss: 0.4495991258292887
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 3, Batch 1480] Loss: 0.4487996210965742
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6204000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 55] Loss: 0.448319972695477
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 155] Loss: 0.4475412018753074
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 255] Loss: 0.4471360490299362
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 355] Loss: 0.44649379203351797
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 455] Loss: 0.4452238428068311
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6522000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 555] Loss: 0.44410706713890835
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 655] Loss: 0.4436383982730279
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 755] Loss: 0.44338154693209353
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 855] Loss: 0.4435697560492493
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 955] Loss: 0.4433989659476894
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6188000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 1055] Loss: 0.4429389075429461
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 1155] Loss: 0.44315068158783305
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 1255] Loss: 0.44300298113527475
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 1355] Loss: 0.44308474207569104
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 4, Batch 1455] Loss: 0.4428855467176363
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6586000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 30] Loss: 0.4427788939858955
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 130] Loss: 0.44288864620846147
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 230] Loss: 0.4427495161876458
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 330] Loss: 0.44224586825642237
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 430] Loss: 0.4416654495698551
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6138000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 530] Loss: 0.4415571623264727
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 630] Loss: 0.44087361419310916
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 730] Loss: 0.44059910616364667
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 830] Loss: 0.44065891805235446
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 930] Loss: 0.4406886970567781
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6154
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 1030] Loss: 0.44025887798207336
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 1130] Loss: 0.43999391824524564
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 1230] Loss: 0.44006307016999696
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 1330] Loss: 0.43960914356165914
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 5, Batch 1430] Loss: 0.4396873416627095
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.615
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 5] Loss: 0.4395523486914468
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 105] Loss: 0.43952577484123095
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 205] Loss: 0.43922120584105523
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 305] Loss: 0.43877550749141075
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 405] Loss: 0.43864744051504717
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6144000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 505] Loss: 0.4383686840186569
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 605] Loss: 0.43829511790031145
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 705] Loss: 0.43833855331084287
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 805] Loss: 0.4383919771197671
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 905] Loss: 0.43841118597631845
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6129000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 1005] Loss: 0.4386122033761733
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 1105] Loss: 0.43832172315173007
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 1205] Loss: 0.4381808613713613
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 1305] Loss: 0.43797949589300667
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 1405] Loss: 0.43788089988676965
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6146
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 6, Batch 1505] Loss: 0.43775158279931103
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 80] Loss: 0.43767250844633837
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 180] Loss: 0.43749641351532653
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 280] Loss: 0.43716052820706364
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 380] Loss: 0.43682175736519085
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6145
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 480] Loss: 0.43647161838912973
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 580] Loss: 0.43612812496353803
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 680] Loss: 0.43602606179362075
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 780] Loss: 0.43591752687553154
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 880] Loss: 0.4358343814975471
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.615
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 980] Loss: 0.43570723518280496
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 1080] Loss: 0.43560286071941423
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 1180] Loss: 0.43581326173972085
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 1280] Loss: 0.43555205041217665
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 1380] Loss: 0.4354176860480239
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6142000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 7, Batch 1480] Loss: 0.4353055863518097
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 55] Loss: 0.4350719701066741
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 155] Loss: 0.43513991829432824
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 255] Loss: 0.4349515225317057
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 355] Loss: 0.43479979670451774
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6138999999999999
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 455] Loss: 0.43462726320466477
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 555] Loss: 0.43462713987307994
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 655] Loss: 0.4343098466760734
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 755] Loss: 0.43419812835806393
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 855] Loss: 0.4342456109961108
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6141000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 955] Loss: 0.4342971527612442
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 1055] Loss: 0.43426011661672903
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 1155] Loss: 0.4342256162166248
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 1255] Loss: 0.43412761160696073
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 1355] Loss: 0.43407171455074206
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6144000000000002
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 8, Batch 1455] Loss: 0.4340700723561866
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 30] Loss: 0.4337755666568607
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 130] Loss: 0.4336966534555869
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 230] Loss: 0.4336393115681996
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 330] Loss: 0.4336266436787391
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6135
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 430] Loss: 0.4334772591917979
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 530] Loss: 0.43345929959365037
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 630] Loss: 0.4334678495576894
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 730] Loss: 0.43335127116488675
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 830] Loss: 0.4330643914700197
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6134000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 930] Loss: 0.43292238502350977
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 1030] Loss: 0.4328993477265393
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 1130] Loss: 0.43296792064392103
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 1230] Loss: 0.4328214007271467
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 1330] Loss: 0.4326664308586892
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6138
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 9, Batch 1430] Loss: 0.43244968049807564
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 5] Loss: 0.4323538652358705
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 105] Loss: 0.43224770649595284
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 205] Loss: 0.4322267486730724
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 305] Loss: 0.43221632750899625
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6146
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 405] Loss: 0.43194989448298104
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 505] Loss: 0.43169777328907416
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 605] Loss: 0.4316080315368137
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 705] Loss: 0.431421241121009
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 805] Loss: 0.4316359272682431
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6132
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 905] Loss: 0.4316715514313655
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 1005] Loss: 0.4316875708696021
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 1105] Loss: 0.43164038721663317
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 1205] Loss: 0.43175396145848977
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 1305] Loss: 0.4315383551222476
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 1405] Loss: 0.43154182329496715
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 10, Batch 1505] Loss: 0.43158741946699286
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 80] Loss: 0.4314130311800115
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 180] Loss: 0.4312984420793381
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 280] Loss: 0.43125963609211443
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6132
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 380] Loss: 0.43127202588855335
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 480] Loss: 0.43122462236069514
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 580] Loss: 0.4311088896841363
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 680] Loss: 0.43102060318609864
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 780] Loss: 0.4308894710521124
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6135
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 880] Loss: 0.43090291581417745
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 980] Loss: 0.4308040038315782
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 1080] Loss: 0.4306937641738581
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 1180] Loss: 0.4306052216434869
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 1280] Loss: 0.4305942379781051
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6129
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 1380] Loss: 0.43061185881133335
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 11, Batch 1480] Loss: 0.4305655641217709
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 55] Loss: 0.430564825518927
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 155] Loss: 0.43059361968077003
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 255] Loss: 0.43063580104765775
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 355] Loss: 0.4305978168018674
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 455] Loss: 0.4305376925424257
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 555] Loss: 0.4304856572484798
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 655] Loss: 0.43036265875170737
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 755] Loss: 0.4301946894378336
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6132000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 855] Loss: 0.4301933531821955
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 955] Loss: 0.43010872373256587
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 1055] Loss: 0.43002595256793047
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 1155] Loss: 0.42997755966392365
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 1255] Loss: 0.42980278728965643
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 1355] Loss: 0.4298078403533004
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 12, Batch 1455] Loss: 0.4297051528018932
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 30] Loss: 0.42981244367873
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 130] Loss: 0.42982689214665454
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 230] Loss: 0.4298630335928237
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6134000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 330] Loss: 0.42979392913843234
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 430] Loss: 0.42972014736910213
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 530] Loss: 0.42969422944225566
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 630] Loss: 0.4295889997458665
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 730] Loss: 0.42952452358191545
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6133000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 830] Loss: 0.42953626432731595
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 930] Loss: 0.4296361938136613
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 1030] Loss: 0.429603368004556
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 1130] Loss: 0.4295686278424578
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 1230] Loss: 0.4295847875077846
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6130000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 1330] Loss: 0.42946937428255855
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 13, Batch 1430] Loss: 0.42945485041270015
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 5] Loss: 0.4294254543649246
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 105] Loss: 0.42953384335980677
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 205] Loss: 0.4294973731324464
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6132000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 305] Loss: 0.4294012240117407
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 405] Loss: 0.42932788615022505
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 505] Loss: 0.42936019878344084
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 605] Loss: 0.42924142030961715
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 705] Loss: 0.4292165261558166
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6129
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 805] Loss: 0.4292531153224699
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 905] Loss: 0.4292786394286035
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 1005] Loss: 0.42926897562437677
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 1105] Loss: 0.4292574035992949
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 1205] Loss: 0.4292136817019778
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6132
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 1305] Loss: 0.42913269692097117
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 1405] Loss: 0.4290096984777128
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 14, Batch 1505] Loss: 0.42909307913339884
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 80] Loss: 0.42895206825217197
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 180] Loss: 0.4287972424299823
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6134
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 280] Loss: 0.4287587297509235
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 380] Loss: 0.42862662529745915
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 480] Loss: 0.428656063539736
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 580] Loss: 0.42865875419007404
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 680] Loss: 0.4286920783698666
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6133
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 780] Loss: 0.4286816741524897
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 880] Loss: 0.4287099058049571
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 980] Loss: 0.42874124644969
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 1080] Loss: 0.42868015260569453
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 1180] Loss: 0.4287427955759712
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6133000000000001
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 1280] Loss: 0.42881301456486737
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 1380] Loss: 0.42880322371857393
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 15, Batch 1480] Loss: 0.4288409955988109
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 55] Loss: 0.42881666697604565
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 155] Loss: 0.42878761846175567
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6134
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 255] Loss: 0.42868082599973
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 355] Loss: 0.4286186243744963
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 455] Loss: 0.42862931495658585
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 555] Loss: 0.42864281196628745
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 655] Loss: 0.42859016303381947
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6132
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 755] Loss: 0.42853453661862995
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 855] Loss: 0.4285035193648393
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 955] Loss: 0.4285374024435146
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 1055] Loss: 0.4285320221578206
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 1155] Loss: 0.42849551185831103
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 1255] Loss: 0.42847346140797077
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 1355] Loss: 0.42843265802588454
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 16, Batch 1455] Loss: 0.42845449102149186
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 30] Loss: 0.4283175891612816
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 130] Loss: 0.428190484995412
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.613
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 230] Loss: 0.4280953741826762
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 330] Loss: 0.42810689848132966
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 430] Loss: 0.42801881282351356
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 530] Loss: 0.4279939127628846
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 630] Loss: 0.4280243946809139
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 730] Loss: 0.42798370272419944
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 830] Loss: 0.4279478596938591
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 930] Loss: 0.4279863653514902
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 1030] Loss: 0.4280151506781224
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 1130] Loss: 0.42799411534090886
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 1230] Loss: 0.42790504007410013
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 1330] Loss: 0.4278234770613649
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 17, Batch 1430] Loss: 0.42773159726130305
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 5] Loss: 0.4277836927987382
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 105] Loss: 0.42787713274036754
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 205] Loss: 0.42777331703722243
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 305] Loss: 0.42777481259862826
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 405] Loss: 0.42769977788096797
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 505] Loss: 0.4276937055846763
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 605] Loss: 0.4277092023749985
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.613
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 705] Loss: 0.42762062878982654
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 805] Loss: 0.42763655278284035
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 905] Loss: 0.42759838057803023
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 1005] Loss: 0.4275984774142343
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 1105] Loss: 0.4275086694358868
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.613
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 1205] Loss: 0.42748683394468334
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 1305] Loss: 0.4274081263979197
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 1405] Loss: 0.4273498047854031
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 18, Batch 1505] Loss: 0.42739329652919084
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 80] Loss: 0.4273292819017044
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 180] Loss: 0.42730994381272863
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 280] Loss: 0.42730388078808873
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 380] Loss: 0.42736714697623857
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 480] Loss: 0.42728585268671254
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 580] Loss: 0.4273064782538867
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 680] Loss: 0.4272120957807967
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 780] Loss: 0.42715768943325927
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 880] Loss: 0.4271738604103103
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 980] Loss: 0.4271547339602096
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 1080] Loss: 0.4272349151009688
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 1180] Loss: 0.42724654933426776
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 1280] Loss: 0.4273087642534985
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 1380] Loss: 0.42723237023465443
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 19, Batch 1480] Loss: 0.4271463650278373
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 55] Loss: 0.42715577919423975
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 155] Loss: 0.42708825208925605
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 255] Loss: 0.4271014507474385
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 355] Loss: 0.42712159361613233
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 455] Loss: 0.4271499857817588
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 555] Loss: 0.4271523802323042
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 655] Loss: 0.4271708957116242
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 755] Loss: 0.4272048609947288
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 855] Loss: 0.42724861589302754
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 955] Loss: 0.42723143357617105
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 1055] Loss: 0.427247453910594
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 1155] Loss: 0.427244254176356
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 1255] Loss: 0.42727096270137593
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 1355] Loss: 0.4272118273452853
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 20, Batch 1455] Loss: 0.4272072045003942
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 30] Loss: 0.42712290410138276
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 130] Loss: 0.427143403152138
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 230] Loss: 0.4271008757554988
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 330] Loss: 0.42711956997264927
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 430] Loss: 0.42711846724298025
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 530] Loss: 0.4271150714693213
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 630] Loss: 0.4271035545765558
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 730] Loss: 0.4271106518952278
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 830] Loss: 0.42704259577839454
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 930] Loss: 0.42704028943175754
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 1030] Loss: 0.4269658943687191
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 1130] Loss: 0.4269464832928081
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 1230] Loss: 0.4269884686408495
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 1330] Loss: 0.4269284076642244
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 21, Batch 1430] Loss: 0.42688098974462946
+
+*********** Saving network weights and optimizer state *********** 
+
+
+CUDA Memory Allocated: 0
+[Epoch 22, Batch 5] Loss: 0.4268371886924417
+
+*********** Saving network weights and optimizer state *********** 
+
+
+******************************************************************
+*********************** Performance Update ***********************
+******************************************************************
+
+Area Under the ROC Curve: 0.6131
+
+******************************************************************
+****************** Performance Update Complete! ******************
+******************************************************************
+
+
+*********** Finished Training this Epoch in 16855.69809436798 seconds ***********
+Job 5738220 ended on:    n1816
+Job 5738220 ended on:    Fri Jan 13 05:58:23 PST 2023
+ 
