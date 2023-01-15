@@ -2,7 +2,7 @@ ResNet-50 Finetuning
 
 Using 5 Epochs, 3 linear (layers 300 neurons to 100 neurons to 1 neuron), 1D batch-normalization, dropout layers with p=0.3, and a 0.001 weight-decay (L2 regularization) ...
 
-- ROC AUC reached 0.885
+- ROC AUC reached 0.888
 - Downward trend still looks very apparent, more training could help
 
 
