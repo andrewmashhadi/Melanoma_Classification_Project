@@ -25,18 +25,22 @@ Current results: We stopped training after 10 epochs. However, the validation lo
 
 ### Residual Network 50
 
-This ResNet50 model is from the "Deep Residual Learning for Image Recognition" paper here: https://arxiv.org/pdf/1512.03385.pdf. Feature extraction was tested, and did not provide very strong results. Fine-tuning, however, using 3 additional linear layers (with batch-normalization and dropout) demonstrated great results. Given that the ResNet50 was trained with 224x224 resolution images, we center cropped and resized (interpolation from cv2.resize()) the original lesion images for training. This saved training time, and allowed for optimal results from the ResNet50 model.
+This ResNet50 model is from the "Deep Residual Learning for Image Recognition" paper here: https://arxiv.org/pdf/1512.03385.pdf. Feature extraction was tested, and did not provide very strong results. Fine-tuning, however, using 3 additional linear layers (with batch-normalization and dropout) demonstrated great results. Given that the ResNet50 was trained with 224x224 resolution images, we center cropped and resized (interpolation from cv2.resize()) the original lesion images for training. This saved training time, and allowed for optimal results from the ResNet50 model. Training and hyper-parameter tuning was done.
 
-Current results: After 5 epochs. However, the validation loss trend has not plateaued quite yet. Training and hyper-parameter tuning is ongoing, but the ROC AUC score is up to 0.89 already. See the associated Jupyter notebook for more results.
+Current results: After 15 epochs, the validation loss trend haf plateaued. The ROC AUC score is at 0.89. See the associated Jupyter notebook for more results.
 
 ### Residual Network 152
 
 Will use fixed hyper parameters and additional layers from the ResNet50 fine-tuning model to train a ResNet152 model (for fine-tuning and feature extraction). Unfortunately, the optimal input for this model is still 224x224, so we will again use the interpolated data.
 
+Current results: After 10 epochs, the validation loss trend had plateaued. The ROC AUC score remained at about 0.88. See the associated Jupyter notebook for more results.
+
 ### Efficient Network V2 (2022)
 
 Will *try* the Version 2 EfficientNet from https://arxiv.org/abs/2104.00298 for feature extraction and fine-tuning. We can use the V2Small model with 384x384 sized images and the V2Medium model with 480x480 sized images.
 
-### ResNest (2022)
+### ResNeSt (2022)
 
 Will try the ResNeSt-269 model from https://arxiv.org/abs/2004.08955 and https://pytorch.org/hub/pytorch_vision_resnest/ for feature extraction and fine-tuning. This would allow for a crop size of 416x416.
+
+Current results: After 1 epochs, the validation loss trend has not plateaued yet. Training and hyper-parameter tuning is ongoing. See the associated Jupyter notebook for more results.
