@@ -12,7 +12,7 @@ Melanoma is a deadly disease, but if caught early, most melanomas can be cured w
 
 Our model consists of a Two-Network Ensemble. The first network trains a convolutional neural network using only the image data, and the second network trains a single layer multi-layer perceptron (the number of layers and neurons for this MLP network was tuned). Then, the two networks are joined for one last layer before generating predictions (number of neurons also tuned). This general architecture has been used in the past. However, in this case, I have decided to use the all-new 2022 ResNeSt network for the CNN. Additionally, I trained a similar model with a basic CNN structure to compare the results to the ResNeSt results. 
 
-Therefore, our two models are:
+Therefore, the two CNN models trained were:
 
 ### Convolutional Neural Network with Image Augmentation, Batch Normalization, Adam Optimizer and L2 Regularization
 
@@ -26,7 +26,7 @@ I used the ResNeSt-269 model described here: https://arxiv.org/abs/2004.08955. M
 
 Current results: I used the validation set results to tune many hyper-parameters. From these results, I decided to fix the training to 12 epochs when training on the entire training set. I then trained our network on the entire training set and acheived a *0.93* AUC score on the test set. See the associated notebook for more details and results.
 
-## A Note About Our Computing and Data Storage
+## A Note About Computing and Data Storage
 
 Due to UCLA (and my) limited resources, I used a mixture of the UCLA's Hoffman2 Linux Cluster and Google Colab Pro+ to tune, train, and test the above networks with affordable GPUs and affordable storage. The resolution of the image data varied between 128x128 to 4000x6000, and there is about 33000 images. Ultimately, I found that the only way to train efficiently with suffcient batch-size (16+ images per batch) was to center cropped or resize (interpolation from cv2.resize()) the original lesion images to 512x512. This saved training time, and allowed for optimal results from my models. The GPU changed occasionally, but most of the time I used a single NVIDIA A100 GPU with about 40GB GPU RAM.
 
