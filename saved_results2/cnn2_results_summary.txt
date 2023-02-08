@@ -1,6 +1,0 @@
-CNN2
-
-Using 10 Epochs ...
-
-- ROC AUC reached 0.87
-- Downward trend still looks apparent, more training could help

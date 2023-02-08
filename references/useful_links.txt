@@ -1,0 +1,14 @@
+ResNeST References:
+
+- https://arxiv.org/pdf/2004.08955.pdf
+
+- https://pixta.vn/resnest-split-attention-a-future-backbone-for-computer-vision
+
+- https://pytorch.org/hub/pytorch_vision_resnest/
+
+
+Data References:
+
+- https://challenge2020.isic-archive.com/ 
+
+- https://arxiv.org/ftp/arxiv/papers/2008/2008.07360.pdf

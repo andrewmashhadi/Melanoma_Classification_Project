@@ -1,7 +1,3 @@
-additional/
-saved_weights/
-saved_weights2/
-saved_weights3/
-saved_weights3_tmp/
-saved_weights4/
+data/
+trained_weights/
 *.DS_Store
