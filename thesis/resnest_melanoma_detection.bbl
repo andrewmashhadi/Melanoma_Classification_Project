@@ -1,8 +1,7 @@
-\begin{thebibliography}{Knu86}
+\begin{thebibliography}{ISI20}
 
-\bibitem[Knu86]{texbook}
-Donald~E. Knuth.
-\newblock {\em The {\TeX} Book}.
-\newblock Addison-Wesley Professional, 1986.
+\bibitem[ISI20]{ISIC}
+``The ISIC 2020 Challenge Dataset.'', 2020.
+\newblock Last Accessed: 2023-02-13.
 
 \end{thebibliography}

@@ -37,31 +37,86 @@
 
 \makeintropages
 
-\chapter{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For text, introduction blah blah blah.
+\chapter{Introduction}
 
 \section{Background}
 
-For text, background blah blah blah.
+In the past decade, machine learning has exploded in popularity. Machine learning methods have demonstrated endless applciations to a variety of industries including but not limited to engineering, science, finance, medicine, and technology. A large branch of machine learning that has recently taken the world by storm is \textit{deep learning}. Deep learning is made up of \textit{artificial neural networks} (ANN) and is generally trained with a form of \textit{feature learning}. 
+
+Neural network architures have evolved and expanded since the original perceptron and ANN models. Through their applications in computer vision, natural language processing, and machine translation, variations in neural network architectures such as \textit{deep neural networks}, \textit{convolutional neural networks}, \textit{recurrent neural networks}, and more recently \textit{transformers}, have all been proposed and adopted. It is no secret that the transformer model has quickly become a front-runner for applications in computer vision due to its successes in natural language processing. However, deep convolutional neural networks are still state-of-the-art for tasks such as image classification, object detection, semantic segmentation, and instance segmentation
+
+Different learning methods have also been adopted. However, the type of learning method used generally depends on the model's particular objective. \textit{Supervised Learning} is one of the most common methods for classification or regression models. It is the process of using labeled datasets to train machine learning models to classify or predict outcomes appropriately. \textit{Unsupervised Learning} generally involves the analysis or clustering of unlabeled datsets. And \textit{Reinforcement Learning} is based on rewarding desired behaviors and/or punishing undesired ones.
+
+In this paper, 
+
 
 \section{Problem Statement}
 
-For text, problem statement blah blah blah.
+Write here.
 
-\chapter{Data Stuff}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For text, data blah blah blah.
+\chapter{Dataset}
 
-\section{Melanoma Blah}
+\section{ISIC 2020 Challenge Dataset}
 
-For text, melanoma blah blah blah.
+Write here about the dataset itself, storage, computing (on github), etc. \cite{ISIC}
 
-\section{Images, Meta Data, blah}
+\section{Exploratory Analysis}
 
-For text, data discussion blah blah blah. 
-\cite{texbook}
+Write about class imbalance (up sampling + bootstrapping in training), EDA results, and provide examples of benign vs malignant images.
 
+\section{Image Augmentations}
+
+Write about cropping augmentations to training data, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Modeling}
+
+\section{Multi-Network Ensemble Learning}
+
+Discuss the idea of using the two network ensemble. One MLP for meta data and the CNN for the image data. Disuss the use of the mentioned Image Augmentations and then discuss the idea of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers. Discuss the difference between starting the CNN weights at random values, vs starting the ResNeSt weights at the IMAGENET trained weights and finetuned for our set of data (effectively leveraging their training).
+
+\section{Network for Contextual Features}
+
+Give back-ground on Multi-Layer Perceptron for metadata.
+
+\section{Network for Lesion Images}
+
+\subsection{Convolutional Neural Network}
+
+Write here. Discuss final implementation of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers.
+
+\subsection{ResNeSt}
+
+Write about evolution from CNN to ResNet to ResNeSt. Also use the following description of ResNeSt somewher (from pytorch website):
+
+While image classification models have recently continued to advance, most downstream applications such as object detection and semantic segmentation still employ ResNet variants as the backbone network due to their simple and modular structure. We present a simple and modular Split-Attention block that enables attention across feature-map groups. By stacking these Split-Attention blocks ResNet-style, we obtain a new ResNet variant which we call ResNeSt. Our network preserves the overall ResNet structure to be used in downstream tasks straightforwardly without introducing additional computational costs. ResNeSt models outperform other networks with similar model complexities, and also help downstream tasks including object detection, instance segmentation and semantic segmentation.
+
+Discuss final implementation of Batch Normalization, Adam Optimizer (different rates), L2 Regularization, and Dropout layers.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Results}
+
+\section{CNN + MLP Ensemble Results}
+
+Write here. Give all plots from analysis notebook. Give table of statistics and confusion matrix.
+
+\section{ResNeSt + MLP Ensemble Results}
+
+Write here. Write here. Give all plots from analysis notebook. Give table of statistics and confusion matrix. Compare to regular CNN + MLP model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusion and Future Work}
+
+Write here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliography{bib/resnest_melanoma_detection.bib}    % bibliography references
 \bibliographystyle{uclathes}
