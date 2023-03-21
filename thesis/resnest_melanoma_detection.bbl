@@ -1,7 +1,17 @@
-\begin{thebibliography}{ISI20}
+\begin{thebibliography}{Soc23}
+
+\bibitem[Ins23]{SEER}
+National~Cancer Institute.
+\newblock ``Cancer Stat Facts: Melanoma of the Skin.'', 2023.
+\newblock Last Accessed: 2023-03-20.
 
 \bibitem[ISI20]{ISIC}
 ``The ISIC 2020 Challenge Dataset.'', 2020.
 \newblock Last Accessed: 2023-02-13.
+
+\bibitem[Soc23]{ACS}
+American~Cancer Society.
+\newblock ``Key Statistics for Melanoma Skin Cancer.'', 2023.
+\newblock Last Accessed: 2023-03-20.
 
 \end{thebibliography}

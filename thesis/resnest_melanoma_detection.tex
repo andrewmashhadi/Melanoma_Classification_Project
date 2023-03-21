@@ -45,28 +45,46 @@
 
 In the past decade, machine learning has exploded in popularity. Machine learning methods have demonstrated endless applciations to a variety of industries including but not limited to engineering, science, finance, medicine, and technology. A large branch of machine learning that has recently taken the world by storm is \textit{deep learning}. Deep learning is made up of \textit{artificial neural networks} (ANN) and is generally trained with a form of \textit{feature learning}. 
 
-Neural network architures have evolved and expanded since the original perceptron and ANN models. Through their applications in computer vision, natural language processing, and machine translation, variations in neural network architectures such as \textit{deep neural networks}, \textit{convolutional neural networks}, \textit{recurrent neural networks}, and more recently \textit{transformers}, have all been proposed and adopted. It is no secret that the transformer model has quickly become a front-runner for applications in computer vision due to its successes in natural language processing. However, deep convolutional neural networks are still state-of-the-art for tasks such as image classification, object detection, semantic segmentation, and instance segmentation
+Neural network architures have evolved and expanded since the original perceptron and ANN models. Through different areas of application, variations in neural network architecture such as \textit{deep neural networks}, \textit{convolutional neural networks}, \textit{recurrent neural networks}, and more recently \textit{transformers}, have all been proposed and adopted. It is no secret that the transformer model has quickly become a front-runner for applications in computer vision due to its successes in natural language processing. However, deep convolutional neural networks are still state-of-the-art for tasks such as image classification, object detection, semantic segmentation, and instance segmentation
 
 Different learning methods have also been adopted. However, the type of learning method used generally depends on the model's particular objective. \textit{Supervised Learning} is one of the most common methods for classification or regression models. It is the process of using labeled datasets to train machine learning models to classify or predict outcomes appropriately. \textit{Unsupervised Learning} generally involves the analysis or clustering of unlabeled datsets. And \textit{Reinforcement Learning} is based on rewarding desired behaviors and/or punishing undesired ones.
 
-In this paper, 
+More recently, the medical community has been opening it's doors to modern deep learning techniques. In particular, convolutional neural networks have often been used to develop more efficient, and accurate, diagnostic tools to analyze medical images. Due to the growth of effective image recognition models, collection of medical images for specific applciations in the healthcare community have been been growing. 
 
 
 \section{Problem Statement}
 
-Write here.
+Skin cancer is one of the most common types of cancer. Although melanoma only accounts for about 1\% of skin cancer, the death rate was still about 2.1 per 100,000 men and women per year based on 2016-2020 deaths \cite{SEER}. In 2023, the American Cancer Society estimates that bout 7,990 people are expected to die from a total of about 97,610 new melanoma cases in the United States alone \cite{ACS}. It is well known that early detection of melanoma will provide the best chance for successful treatment and greater chance of survival. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Image analysis tools that automate the diagnosis of melanoma will improve dermatologist's diagnostic accuracy, and better detection of melanoma has the opportunity to positively impact millions of people. Providing an accurate machine learning model to aid dermatologist's in their evaluations of patients moles may lead to an earlier diagnoses, and could therefore provide the best chance for appropriate intervention. The goal of this paper is to identify the presence of melanoma using images of skin lesions. In particular, we want to use a patients skin-lesion images along with any patient-level contextual information to determine which patients are likely to have melanoma skin cancer. 
 
 \chapter{Dataset}
 
 \section{ISIC 2020 Challenge Dataset}
 
-Write here about the dataset itself, storage, computing (on github), etc. \cite{ISIC}
+For this paper, we used the ``ISIC 2020 Challenge Dataset''. This was the official dataset of the SIIM-ISIC Melanoma Classification Challenge hosted as a Kaggle sponsored competition in the Summer of 2020. It contains over 30,000 dermoscopic images of distinct skin lesions from approximately 2,000 patients. Each image is labeled with an associated ``beniegn'' or ``malignant'' status, and the corresponding patient-level features: 
+
+\begin{itemize}
+    \item \textit{patient\_id}: unique patient idenitfier
+    \item \textit{sex}: sex of the patient 
+    \item \textit{age\_approx}: approximate age of the of the patient
+    \item \textit{anatom\_site\_general\_challenge}: the general location of imaged lesion
+    \item \textit{diagnosis}: additional details regarding the diagnosis
+\end{itemize}
+
+We should note that all associated malignant and benign diagnoses have been confimed using histopathology, expert agreement, or longitudinal follow-up \cite{ISIC}.
+
+The International Skin Imaging Collaboration (ISIC) was responsible for compiling the images from the Hospital Clínic de Barcelona, Medical University of Vienna, Memorial Sloan Kettering Cancer Center, Melanoma Institute Australia, University of Queensland, and the University of Athens Medical School to form this official dataset. The ISIC Archive contains the largest collection of quality-controlled dermoscopic images of skin lesions available to the public. 
+
+The resolution of each image varied drastically throughout the dataset, with some images reaching as high as 4000x6000 pixels. The set of images consisted of over 110GB, so we hosted the data on UCLA's Hoffman2 Linux Cluster. To support the size of each image and the large number of individual images within the dataset, we used computing resources from the Hoffman2 cluster and Google Colab to tune, train, and test our models with powerful \textit{Graphical Processing Units} (GPUs). Although the GPU would occasionally change, we mostly used a single NVIDIA A100 GPU with approximately 40GB VRAM to train our larger models.
 
 \section{Training, Validation, and Testing Sets}
 
 Write about class imbalance (up sampling + bootstrapping in training), and the train+val+test split made.
+
+The training/testing split was set to 80/20 percent. While validating, the validation set consisted of an additional split from the training set. Once hyper-parameters were tuned, the entire training set was used to train the networks and ultimately make predictions on the test set.
+
+Ultimately, I found that the only way to train efficiently with suffcient batch-size (16+ images per batch) was to center cropped or resize (using bilinear interpolation) the original lesion images to 512x512. This saved training time, and allowed for optimal results from my models. 
 
 \section{Exploratory Analysis}
 
