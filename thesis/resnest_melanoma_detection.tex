@@ -32,6 +32,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{subcaption} 
+\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin {document}
 
@@ -86,15 +90,134 @@ Throughout training, we found it to be difficult to train our models without bat
 The patient-level features within the metadata also required minor preprocessing. We created dummy variables with treatment coding (also known as \textit{one-hot encoding}) for the \textit{sex} and \textit{anatom\_site\_general\_challenge} features, while keeping \textit{age\_approx} as a continuous variable.
 
 
-\section{Exploratory Analysis}
+\section{Exploratory Data Analysis}
 
-Write about EDA results, and provide examples of benign vs malignant images.
+In this section, we provide an exploratory data analysis of both the images and the patient-level features within the metadata provided in our dataset.
 
-notes: 
+\subsection{Skin Lesion Images}
 
-- subsections are meta data and images
-- meta data includes one way and two way information / use boxplots and tables for two-way (see 412 eda)
-- images should include 3 images from malignant and 3 from benign note the difficulty in assessing with an untrained eye (use side by side seperate images technique seen in 412 paper)
+The images of skin lesions are the most important part of data for our model. They will be used to train the image classification network, so we decided to investigate the data a bit more, before beginning to model. First, we investigated the proportion of ``positives'' (malignant) and ``negative'' (beniegn) images within our dataset. Table 2.1 presents the balance of malignant and beniegn skin lesions within our dataset. As we can see from the table, there is significantly large class imbalance. Only about 1.8\% of the skin lesion image are classified as malignant. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| c | c | c |} 
+\hline
+& Beniegn ($-$) & Malignant ($+$) \\ 
+\hline
+\hline
+Count & 32542 & 584\\
+\hline
+Proportion & 0.9824 & 0.0176\\
+\hline  
+\end{tabular}
+\label{tab:propMel}
+\caption{Proportion of Beniegn \& Malignant Skin Lesions}
+\end{table}
+
+
+As mentioned above, we fixed the resolution of the images in our dataset to 512x512 pixels. We visually inspected the quality of several randomly selected skin lesions images after cropping and resizing to make sure that the \textit{object of interest} (the actually skin lesion itself) was still present and easily distinguishable. In Figures 2.1-2.2 , we present 6 images from our dataset. The top 3 skin lesions were randomly selected from the images flagged as malignant, while the bottom 3 skin lesisons were randomly selected from the images marked as beniegn. Although the relative and absolute size of the skin lesions differ, they are all clearly distinguishable in the images. 
+
+\begin{figure}[hbt!]
+\hspace*{\fill}
+\centering
+\subcaptionbox*{}{\includegraphics[height = 50mm, width=50mm]{imgs/mal_ex1.jpg}}\hspace{0.5em}
+\subcaptionbox*{}{\includegraphics[height = 50mm, width=50mm]{imgs/mal_ex2.jpg}}\hspace{0.5em}
+\subcaptionbox*{}{\includegraphics[height = 50mm, width=50mm]{imgs/mal_ex3.jpg}}
+\hspace*{\fill}
+\label{fig:mel_examples}
+\vspace{-1cm}
+\caption{Examples of Malignant Skin Lesions}
+\end{figure}
+
+\begin{figure}[hbt!]
+\hspace*{\fill}
+\centering
+\subcaptionbox*{}{\includegraphics[height = 50mm, width=50mm]{imgs/ben_ex1.jpg}}\hspace{0.5em}
+\subcaptionbox*{}{\includegraphics[height = 50mm, width=50mm]{imgs/ben_ex2.jpg}}\hspace{0.5em}
+\subcaptionbox*{}{\includegraphics[height = 50mm, width=50mm]{imgs/ben_ex3.jpg}}
+\hspace*{\fill}
+\label{fig:ben_examples}
+\vspace{-1cm}
+\caption{Examples of Beniegn Skin Lesions}
+\end{figure}
+
+
+We also visually compared a random collection of images flagged as malignant with another random collection of images flagged as benign. The objective here was to see if our ``untrained'' eye could easily classfiy the skin lessions as malignant or beniegn. We can see from Figures 2.1-2.2 that without proper training and eductaion, it is very difficult to determine whether or not a skin lesion is considered malignant. Even with the proper training, it can still be difficult to accurately determine if melanoma is present. According to the Skin Cancer Foundation, features such as assymmetry shapes, irregular borders, uneven distribution of color, and large relative size may indicate the presence of melanoma (or other skin cancers) \cite{SCF}. Ideally, our network will pick up on these characteristics while training.
+
+\subsection{Patient-Level Features}
+
+In this section we explore the one-way frequency tables for the approximate ages, patient sexes, and the locations of imaged lesions. Then we explored the two-way frequency tables for each of these variables with the response variable (malignant or beniegn).
+
+\subsubsection*{Patient Age}
+
+We can see from the histogram of approximate ages in Figure 2.3(a) that most of the patients in this data are in their 40's, 50's, and 60's. The box-plot in Figure 2.3(b) clearly indicates that older patients are generally associated with a larger number of malignant skin lesions.
+
+\begin{figure}[hbt!]
+\hspace*{\fill}
+\centering
+\subcaptionbox{}{\includegraphics[height = 60mm, width=80mm]{imgs/age.png}}\hspace{0.5em}
+\subcaptionbox{}{\includegraphics[height = 60mm, width=80mm]{imgs/age_2way.png}}
+\hspace*{\fill}
+\label{fig:age_eda}
+\vspace{0cm}
+\caption{Histogram and Box-Plot For Appoximate Age}
+\end{figure}
+
+\subsubsection*{Patient Sex}
+
+We can see from the frequencies shown in Figure 2.4(a) that there are a similar number of males and females in this dataset, with just one or two thousand more males. The two-way contingency table between the response variable and patient sex is also shown in Figure 2.4(b). We can see that the malignant cases have a significantly larger proportion of males than the beniegn cases do. In fact, the $\chi^2$-test of independence reported a p-value very close to 0. Therefore, we reject the hypothesis that patient sex and the presence of melanoma are independent, and conclude that there is a relationship between the two variables.
+
+\begin{figure}[h!tbp]
+    \hspace*{\fill}
+    \centering
+    \subcaptionbox{}{\includegraphics[height = 60mm, width=80mm]{imgs/sex.png}}\hspace{1em}
+    \subcaptionbox{}{\vspace{17mm} \footnotesize \begin{tabular}{| c || c | c |} 
+        \hline
+        & \textbf{Beniegn} & \textbf{Malignant} \\ 
+        \hline
+        \hline
+        \textbf{Female} & 15761 & 220\\
+        \hline
+        \textbf{Male} & 16716 & 364\\
+        \hline  
+        \end{tabular}}
+    \hspace*{\fill}
+    \label{fig:sex_eda}
+    \vspace{0cm}
+    \caption{Frequency Plot and Two-way Contingency Table for Patient Sex}
+    \end{figure}
+
+\subsubsection*{Skin-Lesion Location}
+
+There were 6 categories for the general skin-lesion location: oral/genital, palms/soles, head/neck, upper extremity, lower extremity, and torso. Figure 2.5(a) presents the associated frequencies within our dataset. None of the general locations have a similar number of counts, and almost half of the skin-lesions come from the torso region. We also present the two-way contingency table between the response variable and lesion location in Figure 2.5(b). While it is somewhat difficult to tell, the does appear to be some differences in the balance between beniegn and malignant cases when conditioned on the skin-lesion location. In this case, the $\chi^2$-test of independence also reported a p-value very close to 0, indicating that there is a relationship between the location of the skin-lesion and the presence of melanoma.
+
+\begin{figure}[h!tbp]
+    \hspace*{\fill}
+    \centering
+    \subcaptionbox{}{\includegraphics[height = 60mm, width=80mm]{imgs/site.png}}\hspace{1em}
+    \subcaptionbox{}{\vspace{5mm} \footnotesize \begin{tabular}{| c || c | c |} 
+        \hline
+        & \textbf{Beniegn} & \textbf{Malignant} \\ 
+        \hline
+        \hline
+        \textbf{Head/Neck} & 1781 & 74\\
+        \hline
+        \textbf{Lower Extremity} & 8293 & 124\\
+        \hline  
+        \textbf{Oral/Genital} & 120 & 4\\
+        \hline
+        \textbf{Palms/Soles} & 370 & 5\\
+        \hline  
+        \textbf{Torso} & 16588 & 257\\
+        \hline
+        \textbf{Upper Extremity} & 4872 & 111\\
+        \hline  
+        \end{tabular}}
+    \hspace*{\fill}
+    \label{fig:sex_eda}
+    \vspace{0cm}
+    \caption{Frequency Plot and Two-way Contingency Table for Lesion Location}
+    \end{figure}
 
 
 \chapter{Methodology}
