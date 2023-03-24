@@ -81,11 +81,11 @@ We should note that all associated malignant and benign diagnoses have been conf
 
 The International Skin Imaging Collaboration (ISIC) was responsible for compiling the images from the Hospital Clínic de Barcelona, Medical University of Vienna, Memorial Sloan Kettering Cancer Center, Melanoma Institute Australia, University of Queensland, and the University of Athens Medical School to form this official dataset. The ISIC Archive contains the largest collection of quality-controlled dermoscopic images of skin lesions available to the public. 
 
-The resolution of each image varied drastically throughout the dataset, with some images reaching as high as 4000x6000 pixels. The set of images consisted of over 110GB, so we hosted the data on UCLA's Hoffman2 Linux Cluster. To support the size of each image and the large number of individual images within the dataset, we used computing resources from the Hoffman2 cluster and Google Colab to tune, train, and test our models with powerful \textit{Graphical Processing Units} (GPUs). Although the GPU would occasionally change, we mostly used a single NVIDIA A100 GPU with approximately 40GB VRAM to train our larger models.
+The resolution of each image varied drastically throughout the dataset, with some images reaching as high as $4000 \times 6000$ pixels. The set of images consisted of over 110GB, so we hosted the data on UCLA's Hoffman2 Linux Cluster. To support the size of each image and the large number of individual images within the dataset, we used computing resources from the Hoffman2 cluster and Google Colab to tune, train, and test our models with powerful \textit{Graphical Processing Units} (GPUs). Although the GPU would occasionally change, we mostly used a single NVIDIA A100 GPU with approximately 40GB VRAM to train our larger models.
 
 \section{Data Preparation}
 
-Throughout training, we found it to be difficult to train our models without batch-sizes greater than or equal to 16 images. However, computational constraints limited our ability to utilize larger batch-sizes with such large lesion images. We ultimately found that the only way to train efficiently with suffcient batch-size ($B \geq 16$) was to center crop, or resize (using bilinear interpolation), each original lesion image to a fixed-sized 512x512 image. Further transformations and resizing are discussed in the methodology section.
+Throughout training, we found it to be difficult to train our models without batch-sizes greater than or equal to 16 images. However, computational constraints limited our ability to utilize larger batch-sizes with such large lesion images. We ultimately found that the only way to train efficiently with suffcient batch-size ($B \geq 16$) was to center crop, or resize (using bilinear interpolation), each original lesion image to a fixed-sized $512 \times 512$ image. Further transformations and resizing are discussed in the methodology section.
 
 The patient-level features within the metadata also required minor preprocessing. We created dummy variables with treatment coding (also known as \textit{one-hot encoding}) for the \textit{sex} and \textit{anatom\_site\_general\_challenge} features, while keeping \textit{age\_approx} as a continuous variable.
 
@@ -222,14 +222,18 @@ There were 6 categories for the general skin-lesion location: oral/genital, palm
 
 \chapter{Methodology}
 
-See the methodology intro in 412 paper.
+In this section, we describe the methods and models used to best predict the presence of melanoma. As mentioned above, we used deep convolutional neural networks to generate classifications. More specifically, the latest variant of the residual network, the \textit{ResNeSt}, was used to assess whether or not its channel-wise attention architecture would find further success in melanoma detection. Additionally, we trained a smaller, more traditional, convolutional neural network to compare the performance with the split-attention network. 
+
+To make use of the additional metadata features within our dataset, we simultaneously trained a standard \textit{multi-layer perceptron} (MLP) with inputs from our patient-level features. Therefore, the deep convolutional networks is used to effectively extract any contextualized features from the skin-lesion images and the multi-layer perceptron is used to extract any important patient-level information. The two networks are then connected with eachother before generating a final probability. Since the outputted probabilities are a result from two seperate networks communicating with eachother, this model may be described as a \textit{Multi-Network Ensemble}.
 
 \section{Training, Validation, and Testing Sets}
 
-We randomly split 80\% of the data into a training set and used the other random 20\% as the test set. The test set was
+Before discussing the actual models used, we breifly discuss the how the dataset was split and sampled for training, validating, and testing.
+
+We first randomly split 80\% of the data into a training set and used the other random 20\% as the test set. The test set was
 not used by any network during the training process. Additionally, we partitioned another 20\% of the training data into a validation set. Recall that our dataset is largely imbalanced. As shown in the Exploratory Data Analysis section, only about 2\% of the skin lesions in the dataset are flagged as malignant, while the remaining skin lesions are marked as benign. We ensured that each split of the data had a similar sample proportional of about 2\% malignant skin lesions.
 
-Since the response variable (malignant or beniegn) in the training data is heavily imbalanced, we used randomized oversampling of the malignant observations to combat any potential bias toward a ``beniegn'' classification. By oversampling, we hoped that the networks would better detect when skin lesions were truly malignant. 
+Since the response variable (malignant or beniegn) in the training data is heavily imbalanced, we used randomized oversampling of the malignant observations to combat any potential bias toward a ``beniegn'' classification. By oversampling, we hoped that the networks would better detect when skin lesions were truly malignant. It's important to note that since oversampling was used, we considered a single epoch as when the entire \textit{oversampled} dataset was passed forward and backward through the network exactly once. Therefore, a single epoch will contain multiple repeated malignant skin lesion images.
 
 Note that using standard $k$-fold cross validation would require a model to be trained $k$ times for each set of hyper-parameters. Given the size of our data and our models, the time it would take to perform this procedure was simply infeasible. Therefore, we used the independent validation set to tune each network's hyper-parameters effectively. This method minimized overall training time, and produced optimal hyper-parameters. Once the hyper-parameters were obtained, we retrained the model on a new oversampled dataset made up from combining the training and validation sets.
 
@@ -237,21 +241,24 @@ We tuned each model with the area under the \textit{Receiver Operating Character
 metric. The ROC-AUC was chosen over other metrics because it summarizes how well our network separates the two response
 classes over \textit{all} possible thresholds (as opposed to a single predetermined threshold). 
 
+\section{Image Augmentations}
 
+\textit{Image augmentations} were used as a preprocessing step for each image before training. Some image augmention methods are often used to alter the original images in the dataset to effectively create more ``unseen'' examples for the network to use while training. This technique artificially extends the dataset by randomly providing alerations to existing data. Given the limited number of malignant examples, this technique is very important to artificially extend our malignant skin-lesion training images. In our networks, we randomly employed the following image augmentations (in this order) on the images in our training data:
 
-\section{Multi-Network Ensemble Learning}
+\begin{enumerate}
+    \item \textbf{HueSaturationValue}: With probability $p=0.5$, we randomly changed the hue, saturation, and value of the input image. The shift in hue was between $(-5, 5)$, the shift in saturaion was between $(-10, 10)$, and the shift in value was between $(-5, 5)$.
+    \item \textbf{VerticalFlip}: With probability $p=0.5$, we veritially flipped the imput image. Note that vertically flipping the image should not change the true class of the skin lesion.
+    \item \textbf{HorizontalFlip}: With probability $p=0.5$, we veritially flipped the imput image. Note that vertically flipping the image should not change the true class of the skin lesion.
+    \item \textbf{GaussNoise}: we applied gaussian noise to the input image. We did not want to corrupt the image too much and to ooften, so we used a mean of $0$ and a variance between $(10, 50)$ with a low probability $p=0.2$.
+    \item \textbf{ShiftScaleRotate}: With probability $p=0.5$, we randomly applied the three affine transforms: translate, scale and rotate the input. The shift factor range for both height and width was set to $(-0.25, 0.25)$, the scaling factor range was set to $(-0.25, 0.25)$, and the rotation range was set from $-30$ degrees to $30$ degrees. 
+    \item \textbf{RandomBrightnessContrast}: With probability $p=0.5$, we randomly modified the brightness and contrast of the input image. Since many of the images were already very dark, the factor range for changing brightness was set to $(0.9, 1.1)$. The factor range for changing contrast was also set to $(0.9, 1.1)$.
+\end{enumerate}
 
-Discuss the idea of using the two network ensemble. One MLP for meta data and the CNN for the image data. Disuss the use of the mentioned Image Augmentations and then discuss the idea of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers. Discuss the difference between starting the CNN weights at random values, vs starting the ResNeSt weights at the IMAGENET trained weights and finetuned for our set of data (effectively leveraging their training).
+Some image augmentations techniques are also used to make sure the images in the dataset work with our models, and may promote faster convergence. For instance, in addition to the above augmentations, we also randomly cropped each $512 \times 512$ image to a 416x416 image and normalized the pixel values to have a similar distribution. Although the randomness of the cropping does somewhat ``artificially'' extend our training set, the main point of cropping the images to $416 \times 416$ is because the ResNeSt network we used requires an input size of $416 \times 416$ pixels. The normalization of the pixel values will reduce the risk of exploding gradients, which has been shown to increase training time and generally slows down convergence. We normalized each channel using the associated sample means and sample standard deviations calculcated from the \textit{ImageNet} database. The ImageNet database consists of millions of images and was designed for use in visual object recognition software research. Although we could have used the sample means and sample standard deviations from our own dataset, using the sample statistics from the ImageNet database is common practice and was recommended by the authors of the \textit{ResNeSt} network.
 
-\section{Network for Contextual Features}
+We should note that most of the above image augmentations were only used on the training set. The validation and testing sets only center cropped the images to $416 \times 416$ and normalized the pixels to work with the trained network.
 
-Give back-ground on Multi-Layer Perceptron for metadata.
-
-\section{Network for Lesion Images}
-
-\subsection{Image Augmentations}
-
-Write about cropping augmentations to training data, etc.
+\section{Network for Skin-Lesion Images}
 
 \subsection{Convolutional Neural Network}
 
@@ -266,6 +273,12 @@ While image classification models have recently continued to advance, most downs
 Discuss final implementation of Batch Normalization, Adam Optimizer (different rates), L2 Regularization, and Dropout layers.
 
 A New ResNet Variant, is modularized architecture is designed to apply the channel-wise attention on different network branchesresidual-network variant known as \textit{ResNeSt}.
+
+Disuss the use of the mentioned Image Augmentations and then discuss the idea of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers. Discuss the difference between starting the CNN weights at random values, vs starting the ResNeSt weights at the IMAGENET trained weights and finetuned for our set of data (effectively leveraging their training).
+
+\section{Network for Patient-Level Metadata}
+
+Give back-ground on Multi-Layer Perceptron for metadata.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
