@@ -34,6 +34,8 @@
 
 \usepackage{subcaption} 
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -243,10 +245,11 @@ classes over \textit{all} possible thresholds (as opposed to a single predetermi
 
 \section{Image Augmentations}
 
-\textit{Image augmentations} were used as a preprocessing step for each image before training. Some image augmention methods are often used to alter the original images in the dataset to effectively create more ``unseen'' examples for the network to use while training. This technique artificially extends the dataset by randomly providing alerations to existing data. Given the limited number of malignant examples, this technique is very important to artificially extend our malignant skin-lesion training images. In our networks, we randomly employed the following image augmentations (in this order) on the images in our training data:
+\textit{Image augmentations} were used as a preprocessing step for each image before training. Some image augmention methods are often used to alter the original images in the dataset to effectively create more ``unseen'' examples for the network to use while training. These techniques artificially extends the dataset by randomly providing alerations to existing data, and consequently reduces the chance of overfitting. Given the limited number of malignant examples, this technique is very important to artificially extend our malignant skin-lesion training images. In our networks, we randomly employed the following image augmentations (in this order) on our training data \cite{AUG}:
 
 \begin{enumerate}
     \item \textbf{HueSaturationValue}: With probability $p=0.5$, we randomly changed the hue, saturation, and value of the input image. The shift in hue was between $(-5, 5)$, the shift in saturaion was between $(-10, 10)$, and the shift in value was between $(-5, 5)$.
+    \item \textbf{FancyPCA}: With probability $p=0.2$, perform \textit{principal component analysis} on the set of RGB pixel values throughout the imput image, then add multiples of the found principal components, with magnitudes proportional to the corresponding eigenvalues times a random variable drawn from $\alpha_1, \alpha_2, \alpha_3 \stackrel{i.i.d}{\sim} \mathcal{N}(0, 0.1)$.
     \item \textbf{VerticalFlip}: With probability $p=0.5$, we veritially flipped the imput image. Note that vertically flipping the image should not change the true class of the skin lesion.
     \item \textbf{HorizontalFlip}: With probability $p=0.5$, we veritially flipped the imput image. Note that vertically flipping the image should not change the true class of the skin lesion.
     \item \textbf{GaussNoise}: we applied gaussian noise to the input image. We did not want to corrupt the image too much and to ooften, so we used a mean of $0$ and a variance between $(10, 50)$ with a low probability $p=0.2$.
@@ -258,27 +261,70 @@ Some image augmentations techniques are also used to make sure the images in the
 
 We should note that most of the above image augmentations were only used on the training set. The validation and testing sets only center cropped the images to $416 \times 416$ and normalized the pixels to work with the trained network.
 
-\section{Network for Skin-Lesion Images}
+\section{Network Architectures \& Training}
 
-\subsection{Convolutional Neural Network}
+In the section, we provide an overview of the foundational neural network architectures and we breifly discuss how our networks were trained. We also introduce a few of the techniques we employed to combat overfittins.
 
-Write here. Discuss final implementation of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers.
+\subsection{Multi-Layer Perceptrons}
 
-\subsection{ResNeSt}
+As illustrated in Figure 3.1, a standard multi-layer perceptron (MLP) model consists of an input layer and an output layer, with at least one hidden layer in between. 
 
-Write about evolution from CNN to ResNet to ResNeSt. Also use the following description of ResNeSt somewher (from pytorch website):
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 80mm, width=130mm]{imgs/ffn.png}
+\caption{A Standard Feed-Forward Network}
+\label{fig:ffn}
+\end{figure}
+
+The $l$th layer within the network may be represented by a vector, $\mathbf{h}^{(l)}$, which is obtained by applying a Sigmoid or ReLU transform to the product of the $(l-1)$th layer and a weight matrix, $\mathbf{W}^{(l)}$, plus a bias vector, $\mathbf{b}^{(l)}$. That is, the general MLP has the following recursive structure, $$\mathbf{h}^{(l)} = f_l(\mathbf{s}^{(l)})$$
+$$\mathbf{s}^{(l)} = \mathbf{W}^{(l)}\mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}$$ for $l=1, 2, ..., L$. Here, $L$ is the number of layers in the network, $\mathbf{h}^{(0)}$ represents our input features $\mathbf{X}$, $\mathbf{h}^{(K)}$ represents the outputted probabilites used to make the final calssification for our response, $\mathbf{Y}$, and $f_l$ is an element-wise transformation. Following industry standards, our networks used the ReLU activation function for all hidden layers such that $f_l(s^{(l)}_j) = \text{ReLU}(s^{(l)}_j) = \max(0, s^{(l)}_j)$ for $l=1, 2, ..., L-1$ and the softmax function (or sigmoid function if $s^{(K)} \in \mathbb{R}$) for the output layer transformation such that the $j$th outputted probability is:
+
+$$\hat{p}(\mathbf{X})_j = f_K(\mathbf{s}^{(L)})_j = \frac{e^{s^{(L)}_j}}{\sum_i e^{s^{(L)}_i}} \in (0, 1)$$
+
+\subsection{Learning}
+
+In general, neural networks are trained by minimizing a chosen loss function $L$, with some form of gradient descent. The gradients for each layer's weights $\mathbf{W}_l$ and bias $\mathbf{b}_l$ are calculated using \textit{back-propogation}. Back-propogation is essentially the process of applying chain rule as many times as necessary to obtain the gradient for a specified weight or bias. Given the network structure described above, the following relationships between gradients can be easily shown with chain rule:
+$$\frac{\partial L}{\partial \mathbf{h}^{(l-1) \text{ }T}} = \frac{\partial L}{\partial \mathbf{h}^{(l) \text{ }T}} f'_{l} \mathbf{W}^{(l)} \text{,\quad \quad} \frac{\partial L}{\partial \mathbf{W}^{(l)}} = f'_{l} \frac{\partial L}{\partial \mathbf{h}^{(l)}}\mathbf{h}^{(l-1) \text{ }T} \text{,\quad \quad} \frac{\partial L}{\partial \mathbf{b}^{(l)}} = f'_{l} \frac{\partial L}{\partial \mathbf{h}^{(l)}}$$ where $f'_{l} = \text{diag}(f'(s^{(l)}_{j})  \text{; for } j = 1, 2, ... d)$.
+
+
+For notational convenience, we can represent our training data as $(\mathbf{x}_i, y_i)$ for $i = 1, 2, ..., N$ and our network parameters as $\theta = (\mathbf{W}_l, \mathbf{b}_l  \text{; for } l = 1, 2, ... d)$. Since we have a binary response variable (the skin lesion is either malignant or beniegn), we trained our networks using the \textit{Binary Cross-Entropy} loss function defined as: 
+
+$$L(y_i, \mathbf{x}_i; \theta) = - \left[ y_i\log(\hat{p}(\mathbf{x}_i)) + (1 - y_i)\log(1 - \hat{p}(\mathbf{x}_i)) \right]$$ 
+
+As mentioned above, this loss function is used to train the network's parameters with a form of gradient descent. With $\mathcal{L}(\theta_t) = \frac{1}{N} \sum_{i=1}^{N} L(y_i, \mathbf{x}_i; \theta_t)$ as the averaged loss over the entire training set, the standard gradient descent algorithm has the following form: $$\theta_{t} = \theta_{t-1} - \eta_t \mathcal{L}'(\theta_t)$$ where $\mathcal{L}'(\theta_t)$ is the gradient and $\eta_t$ is the learning rate ($\eta_t \propto \frac{1}{t}$). The general idea of this algorithm is to pass the training data through the network (known as the \textit{forward pass}), use these predictions with the loss function to calculate the resulting gradients (known as the \textit{back-propagation pass}), then use these gradients to update the parameterss as shown above. Ideally, we find this algorithm finds the weights and biases $\theta$ that minimizes the binary cross-entropy loss function. 
+
+Practically speaking, computing $\mathcal{L}'(\theta_t) = \frac{1}{N} \sum_{i=1}^{N} L'(y_i, \mathbf{x}_i; \theta_t)$ would be far too time consuming with massive traning set and large number of parameters. Instead, we use a randomly selected mini-batch of size $m$ to replace $\mathcal{L}(\theta_t)$ with its estimate: $$\hat{L}(\theta_t) = \frac{1}{m} \sum_{j=1}^{m} L(y_j, \mathbf{x}_j; \theta_t)$$ when updating the parameters. This replacement is known as \textit{Stochastic-Gradient Descent}. This reduces the computation cost at each iteration, and will ideally lead to similar results (assuming a true randomly sampled batch and a large enough $m$). One \textit{Epoch} occurs after the entire training set has been passed though the network exactly once. Therefore, with stochastic gradient descent, a single epoch occurs after about $t=\frac{N}{m}$ updates to the network paramters.
+
+At each iteration, the stochastic gradient descent algorithm described above will always update the parameters in the direction of the steepest darnward direction. This direction may not always be the ideal choice. Depending on the level of noise and the loss function itself, it may be valuable to consider characteristics such as the momentum of the movement and the unevenness of the individual parameter components. The \textit{Adam} optimizer modifies the stochastic gradient descent algoithm by considering the direction of the momentum and includes an adaptive mechanism to reduce the effects of extremely uneven gradient components. At the $t$th iteration, momentum is characterized by: $$\nu_t = \frac{1}{(1-\gamma)} \left[ \gamma \nu_{t-1} + (1-\gamma)\hat{L}(\theta_t) \right]$$ and the mechanism for adjusting the uneven components is: $$G_t = \frac{1}{(1-\beta)} \left[ \beta G_{t-1} + (1-\beta)\hat{L}(\theta_t) \odot \hat{L}(\theta_t)\right]$$ where $\gamma, \beta \in \mathbb{R}$ are tunable hyperparameters. However, they are usually set between $\gamma, \beta \in (0.9, 1)$. 
+
+Consequently, the network parameters are now updated such that: $$\theta_{t} = \theta_{t-1} - \eta_t \frac{\nu_t}{\sqrt{G_t + \varepsilon}}$$ Here $\varepsilon>0$ is a very small constant to avoid division by 0. Note that the generall structure of the parameter update still remains similar to stochasic gradient descent, however, each update also considers the momentum from the previous updates and the variation in the gradient components.
+
+Our melanoma detection networks were trained using this Adam optimizer with $\gamma$ and $\beta$ fixed at $0.9$ and $0.999$, respectively. Throughout training, the initial learning rate $\eta_t$ was tuned using our validation set, however, we customized our networks to tune different learning rates for different branches of our network. That is, the weights and biases from the convolutional network in our ensemble had a \textit{seperately tuned} learning rate from the rest of our ensemble network. This is discussed in more detail in section X.X.X. Additionally, all learning rates were scheduled to decay by a multiplicative factor of $0.1$ after each epoch.
+
+\subsection{Preventing Overfitting}
+
+mentioned eariler: image augmentation. tried L2 Regularization but ultimately found that no Regularization is better for our parameters (tuned), and Dropout layers background.
+
+\subsection{Batch Normalization}
+
+\subsection{Convolutional Neural Networks}
+
+Write here. Discuss final implementation of Batch Normalization
+
+\section{ResNeSt}
+
+Write about evolution from CNN to ResNet to ResNeSt. Also use the following description of ResNeSt somewhere (from pytorch website):
 
 While image classification models have recently continued to advance, most downstream applications such as object detection and semantic segmentation still employ ResNet variants as the backbone network due to their simple and modular structure. We present a simple and modular Split-Attention block that enables attention across feature-map groups. By stacking these Split-Attention blocks ResNet-style, we obtain a new ResNet variant which we call ResNeSt. Our network preserves the overall ResNet structure to be used in downstream tasks straightforwardly without introducing additional computational costs. ResNeSt models outperform other networks with similar model complexities, and also help downstream tasks including object detection, instance segmentation and semantic segmentation.
 
-Discuss final implementation of Batch Normalization, Adam Optimizer (different rates), L2 Regularization, and Dropout layers.
+Discuss final implementation of Batch Normalization, 
 
 A New ResNet Variant, is modularized architecture is designed to apply the channel-wise attention on different network branchesresidual-network variant known as \textit{ResNeSt}.
 
 Disuss the use of the mentioned Image Augmentations and then discuss the idea of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers. Discuss the difference between starting the CNN weights at random values, vs starting the ResNeSt weights at the IMAGENET trained weights and finetuned for our set of data (effectively leveraging their training).
 
-\section{Network for Patient-Level Metadata}
 
-Give back-ground on Multi-Layer Perceptron for metadata.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
