@@ -1,4 +1,4 @@
-\begin{thebibliography}{Fou23}
+\begin{thebibliography}{HTF01}
 
 \bibitem[AI23]{AUG}
 Albumentations AI.
@@ -9,6 +9,12 @@ Albumentations AI.
 Skin~Cancer Foundation.
 \newblock ``Melanoma Warning Signs.'', 2023.
 \newblock Last Accessed: 2023-03-20.
+
+\bibitem[HTF01]{ESL}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock {\em The Elements of Statistical Learning}.
+\newblock Springer Series in Statistics. Springer New York Inc., New York, NY,
+  USA, 2001.
 
 \bibitem[Ins23]{SEER}
 National~Cancer Institute.
