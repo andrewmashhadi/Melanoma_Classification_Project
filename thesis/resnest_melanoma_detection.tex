@@ -326,7 +326,12 @@ Dropout regularization was frequently used throughout our network ensemble with 
 
 \subsection{Batch Normalization}
 
-Discuss background implementation of Batch Normalization
+When training the neural network with back-propagation, the distribution of each layer's inputs, $\mathbf{h}^{(l)}$ for $l=1, 2, ..., L$, may often change because the parameters of previous layers ($< l$) are also changing with every mini-batch update. This phenomenon is known as \textit{internal covariate shift}, and it has been shown to drastically slow training time down \cite{BatchNorm}. In our networks, we stabilize the distributions of each layer's inputs, $\mathbf{h}^{(l)}$ for $l=1, 2, ..., L$, using \textit{batch normalization} \cite{BatchNorm}. Therefore, between $\mathbf h^{(l)}$ and $\mathbf h^{(l+1)}$, we added a batch normalization layer that transformed $\mathbf{h}^{(l)}$ to $\tilde{\mathbf{h}}^{(l)}$ to help stabilize its distribution and reduce the internal covariate shift. Then $\tilde{\mathbf{h}}^{(l)}$ is fed into the next layer for the computation of $\mathbf{h}^{(l+1)}$. 
+
+More formally, consider a mini-batch size of $m$, and a layer input $\mathbf{h}^{(l)} = (h^{(l)}_1, ..., h^{(l)}_d) \in \mathbb{R}^d$. Batch-normalization is applied to each element of $\mathbf{h}^{(l)}$ independently, so for each $k \in \{1, 2, ..., d \}$, we have exactly $m$ values of this activation from the mini-batch. For simplicity, we denote the $i$th value from the $k$th activation by $x_{i,k}$ for $i \in \{1, 2, ..., m \}$ and $k \in \{1, 2, ..., d \}$. The batch normalization layer computes $$\mu_k = \sum_{i=1}^{m} x_{i, k} \text{, \quad} \sigma_k = \frac{1}{m} \sum_{i=1}^{m} (x_{i, k} - \mu_k)^2 \text{, \quad} \hat{x}_{i,k} = \frac{x_{i,k} - \mu_k}{\sigma_k} \text{, \quad} y_{i, k} = \beta + \gamma \hat{x}_{i,k}$$ where $\beta$ and $\gamma$ are learned while training. Here, $y_{i, k}$ represents the $i$th value (from the mini-batch) for the $k$th activation of the batch-normalized, layer inputs $\tilde{\mathbf{h}}^{(l)}$, where $i \in \{1, 2, ..., m \}$ and $k \in \{1, 2, ..., d \}$.
+
+These batch-normalization transformations were used after most of the convolutional and linear layers within our ensemble of networks. Although no tuning was necessary for this technique, we found that the inclusion of batch-normalization layers significantly sped up training time.
+
 
 \subsection{Convolutional Neural Networks}
 

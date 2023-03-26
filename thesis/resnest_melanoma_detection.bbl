@@ -21,6 +21,12 @@ National~Cancer Institute.
 \newblock ``Cancer Stat Facts: Melanoma of the Skin.'', 2023.
 \newblock Last Accessed: 2023-03-20.
 
+\bibitem[IS15]{BatchNorm}
+Sergey Ioffe and Christian Szegedy.
+\newblock ``Batch Normalization: Accelerating Deep Network Training by Reducing
+  Internal Covariate Shift.''
+\newblock {\em CoRR}, {\bfseries abs/1502.03167}, 2015.
+
 \bibitem[ISI20]{ISIC}
 ``The ISIC 2020 Challenge Dataset.'', 2020.
 \newblock Last Accessed: 2023-02-13.
