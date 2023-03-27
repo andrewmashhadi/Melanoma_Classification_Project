@@ -335,7 +335,7 @@ These batch-normalization transformations were used after most of the convolutio
 
 \subsection{Convolutional Neural Networks}
 
-The convolutional neural network (CNN) structure is often used for computer vision objectives. In general, a CNN is made up by a series of convolutional layers that filter down the training images to a ``thought'' vector. This ``thought'' vector is a larger linear layer with many nodes/elements that represents the extracted features from the images. The final ``thought'' vector is then followed by a series of fully-connected linear layers as if it were a standard multi-layer perceptron. Figure 3.3 illustrates the general idea. Through a variety of transformations and subsampling (or pooling) techniques, the original image is filtered down into a longer, linear, layer that is ultimately used as input for another feed-forward network.
+The convolutional neural network (CNN) structure is often used for computer vision objectives. In general, a CNN is made up by a series of convolutional layers that filter down the training images to a single ``thought'' vector. This ``thought'' vector is a larger linear layer with many nodes/elements that represents extracted features from the images. The final ``thought'' vector is then followed by a series of fully-connected linear layers as if it were a standard multi-layer perceptron. We can think of the ``thought'' vector as a characterization of its associated image. Figure 3.3 illustrates the general idea. Through a variety of transformations and subsampling (or pooling) techniques, the original image is filtered down into a longer, linear, layer that is ultimately used as input for another feed-forward network.
 
 \begin{figure}[h]
 \centering
@@ -348,10 +348,22 @@ Each convolutional layer $\mathbf{h}^{(l)}$ is organized as a series of channels
 
 We may also present the operations of a convolutional layer more formally. Let $\mathbf{x}_{i j} \in \mathbb{R}^{C_{l-1}}$ represent the vector of values at the $(i, j)$th coordinate for each of the $C_{l-1}$ channels in the $(l-1)$th layer, and let $\mathbf{y}_{i j} \in \mathbb{R}^{C_{l}}$ represent the vector of values at the $(i, j)$th coordinate for each of the $C_{l}$ channels in the $l$th layer. The kernel operation is equivalent to the following linear transformation: $$\tilde{\mathbf{x}}_{i j} = \sum_{\Delta i = -k_1}^{k_1} \sum_{\Delta j = -k_2}^{k_2} \mathbf{W}_{\Delta i \text{ } \Delta j} \text{ } \mathbf{x}_{i+\Delta i \text{ } j+\Delta j}$$ where $\mathbf{W}_{\Delta i \Delta j} \in \mathbb{R}^{C^{l} \times C^{l-1}}$ is learned and the kernel dimensions are fixed at $2k_1$ by $2k_2$. As mentioned above, the bias term, $\mathbf{b}_{l}$, is added and the ReLU transformation is applied such that: $$\mathbf{y}_{i j} = \text{ReLU}(\tilde{\mathbf{x}}_{i j} + \mathbf{b}_{l})$$ where $\mathbf{b}_{l}$ is learned and the ReLU transformation is applied element-wise.
 
-discuss Max-pool /subsample techniques
+For each convolutional layer, a method of \textit{pooling} or \textit{sub-sampling} is generally done after the above transformations are performed. Pooling and sub-sampling methods are performed to effectively downsample the output of the convolutional layer along its spatial dimensions. That is, the size of each channel is reduced. While the convolutional layer of $h^{(l-1)}$ is generally meant to increase the number of channels, the pooling or sub-sampling method is applied to decrease the height and width of each channel. The primary goal of pooling and sub-sampling is to reduce the total number of parameters within the network. Consequently, this reduces the chance of overfitting our training data and significantly increases training time.
 
-discuss what we used in the convolutional baseline model and the resnest model.
+As mentioned previously, we trained a total of two multi-network ensembles. The first ensemble includes a standard CNN for the image data and a multi-layer perceptron for the patient-level metadata, while the second ensemble includes a ResNeSt network for the image data and a similar multi-layer perceptron for the patient-level metadata. The first ensemble was used as a model to compare the ResNeSt model with. It can be thought of as a baseline model to assess the improvements provided by the split-attention networks within the second ensemble. 
 
+The CNN within the first ensemble contained a total of 6 convolutional layers. Each convolutional layer was immediately followed by batch-normalization and downsampling. The convolutional layer within this ensembles exclusively applied \textit{max-pooling} as its downsampling method. For each channel, max-pooling simply replaces the value of each pixel by the maximum of a fixed-size patch surrounding the pixel. In this case, we decided to use max-pooling with a kernel size of $2 \times 2$ and a stride of 2 (NOTE: MAY WANT TO PROVIDE FIGURE OR IMAGE OF HOW THIS WORKS). Therefore, after all 6 convolutional, normalization, and downsampling operations are applied, the original 3-channel image is filtered to a linear layer with exactly 900 nodes. (NOTE: MAY WANT TO PROVIDE DIAGRAM HERE LIKE THE RESNET PAPER DOES).
+
+
+As described above, the output from the convolutional layers respresents the high-level features within the images. We include two more fully-connected layers, each with 512 nodes, in another attempt to learn any remaining non-linear combinations of these features. Note that all convolutional and linear layers associated with this network used the ReLU activation function.
+
+In parallel, the multi-layer perceptron takes the 7 patient-level features (after one-hot encoding) and connects it to a linear layer with 256 nodes. A batch-normalization layer is also included, and dropout regularization with $p=0.2$ is used to prevent overfitting. Again, we note that the ReLU activation function was used for this multi-layer perceptron. 
+
+Figure X.X illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant.
+
+(NOTE: PROVIDE ILLUSTRATION).
+
+The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next section, we first discuss the ResNeSt network itself, and how it can be used to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within our second multi-network ensemble.
 
 \subsection{ResNeSt}
 
@@ -362,6 +374,8 @@ While image classification models have recently continued to advance, most downs
 A New ResNet Variant, is modularized architecture is designed to apply the channel-wise attention on different network branchesresidual-network variant known as \textit{ResNeSt}.
 
 Disuss the use of the mentioned Image Augmentations and then discuss the idea of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers. Discuss the difference between starting the CNN weights at random values, vs starting the ResNeSt weights at the IMAGENET trained weights and finetuned for our set of data (effectively leveraging their training).
+
+However, with average-pooling, the value of each pixel, for each channel, is replaced with the average of the patch surrounding the pixel. The convolutional layers within our ensemble that uses the ResNeSt network exclusively uses average-pooling with a kernel size of $3 \times 3$ or $2 \times 2$ depending on the location of the layer within the network. However, 
 
 \subsection{Network for Patient-Level Features}
 
