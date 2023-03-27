@@ -335,7 +335,23 @@ These batch-normalization transformations were used after most of the convolutio
 
 \subsection{Convolutional Neural Networks}
 
-Write here. 
+The convolutional neural network (CNN) structure is often used for computer vision objectives. In general, a CNN is made up by a series of convolutional layers that filter down the training images to a ``thought'' vector. This ``thought'' vector is a larger linear layer with many nodes/elements that represents the extracted features from the images. The final ``thought'' vector is then followed by a series of fully-connected linear layers as if it were a standard multi-layer perceptron. Figure 3.3 illustrates the general idea. Through a variety of transformations and subsampling (or pooling) techniques, the original image is filtered down into a longer, linear, layer that is ultimately used as input for another feed-forward network.
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 60mm, width=160mm]{imgs/cnn_s1.png}
+\caption{Convolution Neural Network Basic Structure}
+\label{fig:cnn1}
+\end{figure}
+
+Each convolutional layer $\mathbf{h}^{(l)}$ is organized as a series of channels, where each channel is obtained by a kernel, $\mathbf{W}_{i, j}$ operating on the previous layer's $\mathbf{h}^{(l-1)}$ which was also organized as a series of channels.  Each kernel operation is a local weighted sum of the values within each channel. That is, when there are multiple channels, this weighted sum is over the multiple channels. Once the weighted summations have been performed, a bias term is generally added, and a non-linear transformation, such as the ReLU activation function, is applied to the result. For example, consider Figure 3.3. The first layer, $\mathbf{h}^{(0)}$ is the input image with 3 channels (which coresspond to Red, Green, and Blue), and after applying the kernel operations with the bias and ReLU transformation, the subsequent layer, $\mathbf{h}^{(1)}$, increases to 14 channels. 
+
+We may also present the operations of a convolutional layer more formally. Let $\mathbf{x}_{i j} \in \mathbb{R}^{C_{l-1}}$ represent the vector of values at the $(i, j)$th coordinate for each of the $C_{l-1}$ channels in the $(l-1)$th layer, and let $\mathbf{y}_{i j} \in \mathbb{R}^{C_{l}}$ represent the vector of values at the $(i, j)$th coordinate for each of the $C_{l}$ channels in the $l$th layer. The kernel operation is equivalent to the following linear transformation: $$\tilde{\mathbf{x}}_{i j} = \sum_{\Delta i = -k_1}^{k_1} \sum_{\Delta j = -k_2}^{k_2} \mathbf{W}_{\Delta i \text{ } \Delta j} \text{ } \mathbf{x}_{i+\Delta i \text{ } j+\Delta j}$$ where $\mathbf{W}_{\Delta i \Delta j} \in \mathbb{R}^{C^{l} \times C^{l-1}}$ is learned and the kernel dimensions are fixed at $2k_1$ by $2k_2$. As mentioned above, the bias term, $\mathbf{b}_{l}$, is added and the ReLU transformation is applied such that: $$\mathbf{y}_{i j} = \text{ReLU}(\tilde{\mathbf{x}}_{i j} + \mathbf{b}_{l})$$ where $\mathbf{b}_{l}$ is learned and the ReLU transformation is applied element-wise.
+
+discuss Max-pool /subsample techniques
+
+discuss what we used in the convolutional baseline model and the resnest model.
+
 
 \subsection{ResNeSt}
 
