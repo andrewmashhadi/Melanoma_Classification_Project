@@ -359,7 +359,7 @@ The CNN within the first ensemble contained a total of 6 convolutional layers. E
 
 \begin{figure}[h]
 \centering
-\includegraphics[height = 30mm, width= 80mm]{imgs/maxpool.png}
+\includegraphics[height = 40mm, width= 100mm]{imgs/maxpool.png}
 \caption{Max-Pooling Example with Filter-Size $2 \times 2$ and Stride 2}
 \label{fig:maxpool}
 \end{figure}
@@ -400,16 +400,30 @@ In parallel to this convolutional network, the multi-layer perceptron takes the 
 
 \begin{figure}[h]
 \centering
-\includegraphics[height = 100mm, width= 120mm]{imgs/ens1_arch.png}
+\includegraphics[height = 120mm, width= 140mm]{imgs/ens1_arch.png}
 \caption{Multi-Network Ensemble \#1}
 \label{fig:ens1_arch}
 \end{figure}
 
 Figure 3.5 illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant.
 
-The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next section, we first discuss the ResNeSt network itself, and how it can be used to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within our second multi-network ensemble.
+The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next section, we begin with an introduction to the ResNeSt network architecture and how it may be leveraged to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within the second multi-network ensemble.
 
 \subsection{ResNeSt}
+
+In 2015, the residual neural network, or \textit{ResNet}, revolutioned the world of convolutional neural networks. The ResNet model was designed by Kaiming He, and introduced in the paper: \textit{Deep Residual Learning for Image Recognition}. Prior to the residual network, deep neural networks faced the ``vanishing gradient'' difficultly while training. The ``vanishing gradient'' occurs when the gradients get very close to 0. In general, as the number of layers within a network increases, the gradients approach 0. Motivated by Taylor expansion, Kaiming introduced the technique known as a ``identity skip connection''. An identity skip connection reduces the effect of gradient vanishing regardless of the number of layers within the network, allowing for deeper networks to be built without negatively impacting training. 
+
+In general, a residual network uses blocks of convolutional layers, in combination with an identity skip connection (more formally known as \textit{identity mapping}). Each block of convolutional layers is referred to as a \textit{residual block}. Suppose $\mathbf{h}^{(l)}$ is the input to a residual block and $\mathbf{s}^{(l+1)}$ is the output of the residual block. If we denote the series of applied convolutional layers (weighted sums), batch normalizations, and ReLU activations by $\mathcal{F}$, then $\mathbf{s}^{(l+1)} = \mathbf{h}^{(l)} + \mathcal{F}(\mathbf{h}^{(l)})$. Figure 3.6 illustrates this idea of a residual block with an identity skip connection. Note that the final ReLU activation is not applied until after the addition of the residual block transformations and the identity connection such that $h^{(l+1)}$ can be found by applying the ReLU activation to $s^{(l+1)}$. 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 120mm, width= 80mm]{imgs/resblock.png}
+\caption{Residual Block Example}
+\label{fig:res_block}
+\end{figure}
+
+
 
 Write about evolution from CNN to ResNet to ResNeSt. Also use the following description of ResNeSt somewhere (from pytorch website):
 
