@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: resnest_melanoma_detection.aux
+The style file: uclathes.bst
+Database file #1: bib/resnest_melanoma_detection.bib
+Warning--entry type for "ISIC" isn't style-file defined
+--line 49 of file bib/resnest_melanoma_detection.bib
+Warning--entry type for "SEER" isn't style-file defined
+--line 56 of file bib/resnest_melanoma_detection.bib
+Warning--entry type for "ACS" isn't style-file defined
+--line 64 of file bib/resnest_melanoma_detection.bib
+Warning--entry type for "SCF" isn't style-file defined
+--line 72 of file bib/resnest_melanoma_detection.bib
+Warning--entry type for "AUG" isn't style-file defined
+--line 80 of file bib/resnest_melanoma_detection.bib
+Warning--to sort, need author or key in ISIC
+UCLA thesis.bst Version 0.92 BETA (3/28/91).
+Bugs to wales@CS.UCLA.EDU
+You've used 12 entries,
+            2546 wiz_defined-function locations,
+            627 strings with 6191 characters,
+and the built_in function-call counts, 4836 in all, are:
+= -- 451
+> -- 268
+< -- 2
++ -- 102
+- -- 80
+* -- 335
+:= -- 742
+add.period$ -- 41
+call.type$ -- 12
+change.case$ -- 76
+chr.to.int$ -- 12
+cite$ -- 14
+duplicate$ -- 183
+empty$ -- 351
+format.name$ -- 115
+if$ -- 994
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 17
+newline$ -- 59
+num.names$ -- 33
+pop$ -- 122
+preamble$ -- 1
+purify$ -- 112
+quote$ -- 0
+skip$ -- 196
+stack$ -- 0
+substring$ -- 171
+swap$ -- 35
+text.length$ -- 2
+text.prefix$ -- 24
+top$ -- 2
+type$ -- 92
+warning$ -- 1
+while$ -- 33
+width$ -- 14
+write$ -- 143
+(There were 6 warnings)

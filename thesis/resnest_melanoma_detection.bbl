@@ -1,4 +1,4 @@
-\begin{thebibliography}{ZWZ20}
+\begin{thebibliography}{LQW21}
 
 \bibitem[AI23]{AUG}
 Albumentations AI.
@@ -35,10 +35,23 @@ Sergey Ioffe and Christian Szegedy.
 ``The ISIC 2020 Challenge Dataset.'', 2020.
 \newblock Last Accessed: 2023-02-13.
 
+\bibitem[LQW21]{EffNet_MelDet}
+Chaoyi Li, Zihan Qiao, Kehan Wang, and Jiang Hongxing.
+\newblock ``Improved EfficientNet-B4 for Melanoma Detection.''
+\newblock In {\em 2021 IEEE 2nd International Conference on Big Data,
+  Artificial Intelligence and Internet of Things Engineering (ICBAIE)}, pp.
+  127--130, 2021.
+
 \bibitem[Soc23]{ACS}
 American~Cancer Society.
 \newblock ``Key Statistics for Melanoma Skin Cancer.'', 2023.
 \newblock Last Accessed: 2023-03-20.
+
+\bibitem[VPZ19]{VariousMethods}
+Eugenio Vocaturo, Diego Perna, and Ester Zumpano.
+\newblock ``Machine Learning Techniques for Automated Melanoma Detection.''
+\newblock In {\em 2019 IEEE International Conference on Bioinformatics and
+  Biomedicine (BIBM)}, pp. 2310--2317, 2019.
 
 \bibitem[VSP17]{attention}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
