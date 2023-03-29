@@ -353,6 +353,8 @@ We may also present the operations of a convolutional layer more formally. Let $
 
 For each convolutional layer, a method of \textit{pooling} or \textit{sub-sampling} is generally done after the above transformations are performed. Pooling and sub-sampling methods are performed to effectively downsample the output of the convolutional layer along its spatial dimensions. That is, the size of each channel is reduced. While the convolutional layer of $h^{(l-1)}$ is generally meant to increase the number of channels, the pooling or sub-sampling method is applied to decrease the height and width of each channel. The primary goal of pooling and sub-sampling is to reduce the total number of parameters within the network. Consequently, this reduces the chance of overfitting our training data and significantly increases training time.
 
+\subsection{Ensemble \#1}
+
 As mentioned previously, we trained a total of two multi-network ensembles. The first ensemble includes a standard CNN for the image data and a multi-layer perceptron for the patient-level metadata, while the second ensemble includes a ResNeSt network for the image data and a similar multi-layer perceptron for the patient-level metadata. The first ensemble was used as a model to compare the ResNeSt model with. It can be thought of as a baseline model to assess the improvements provided by the split-attention networks within the second ensemble. 
 
 The CNN within the first ensemble contained a total of 6 convolutional layers. Each convolutional layer was immediately followed by batch-normalization and downsampling. The convolutional layer within this ensembles exclusively applied \textit{max-pooling} as its downsampling method. For each channel, max-pooling simply replaces the value of each pixel by the maximum of a fixed-size patch surrounding the pixel. In this case, we decided to use max-pooling with a kernel size of $2 \times 2$ and a stride of 2. Figure 3.4 demonstrates a simple example of how max-pooling is applied to the spatial data within each channel. 
@@ -373,21 +375,21 @@ The CNN within the first ensemble contained a total of 6 convolutional layers. E
 \makecell{\textbf{Layer} \\ \textbf{Name}} & \makecell{\textbf{Output} \\ \textbf{Size}} & \textbf{Operation} & \makecell{\textbf{Output} \\ \textbf{Channel} \\ \textbf{Number}} & \textbf{Normalization} & \textbf{Activation} & \textbf{Pooling}\\ 
 \hline
 \hline
-Conv1 & 253x253 & $7 \times 7$ & 6 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
+Conv1 & $253 \times 253$ & $7 \times 7$ & 6 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
 \hline
-Conv2 & 124x124 & $7 \times 7$ & 15 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
+Conv2 & $124 \times 124$ & $7 \times 7$ & 15 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
 \hline
-Conv3 & 59x59 & $7 \times 7$ & 30 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
+Conv3 & $59 \times 59$ & $7 \times 7$ & 30 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
 \hline
-Conv4 & 26x26 & $5 \times 5$ & 60 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
+Conv4 & $26 \times 26$ & $5 \times 5$ & 60 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
 \hline
-Conv5 & 11x11 & $5 \times 5$ & 80 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
+Conv5 & $11 \times 11$ & $5 \times 5$ & 80 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
 \hline
-Conv6 & 3x3 & $3 \times 3$ & 100 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
+Conv6 & $3 \times 3$ & $3 \times 3$ & 100 & \makecell{Batch-Norm \\ (2D)} & ReLU & \makecell{Max-Pool \\ (2x2, stride=2)}\\
 \hline
-Linear1 & 1x1 & Fully Connected & 512 & \makecell{Batch-Norm \\ (1D)} & ReLU & N/A\\
+Linear1 & $1 \times 1$ & Fully Connected & 512 & \makecell{Batch-Norm \\ (1D)} & ReLU & N/A\\
 \hline
-Linear2 & 1x1 & Fully Connected & 512 & \makecell{Batch-Norm \\ (1D)} & ReLU & N/A\\
+Linear2 & $1 \times 1$ & Fully Connected & 512 & \makecell{Batch-Norm \\ (1D)} & ReLU & N/A\\
 \hline  
 \end{tabular}
 \label{tab:CNN_arch}
@@ -407,38 +409,115 @@ In parallel to this convolutional network, the multi-layer perceptron takes the 
 
 Figure 3.5 illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant.
 
-The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next section, we begin with an introduction to the ResNeSt network architecture and how it may be leveraged to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within the second multi-network ensemble.
+The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next two sections, we introduce the ResNeSt network architecture and how it may be leveraged to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within the second multi-network ensemble.
 
 \subsection{ResNeSt}
 
-In 2015, the residual neural network, or \textit{ResNet}, revolutioned the world of convolutional neural networks. The ResNet model was designed by Kaiming He, and introduced in the paper: \textit{Deep Residual Learning for Image Recognition}. Prior to the residual network, deep neural networks faced the ``vanishing gradient'' difficultly while training. The ``vanishing gradient'' occurs when the gradients get very close to 0. In general, as the number of layers within a network increases, the gradients approach 0. Motivated by Taylor expansion, Kaiming introduced the technique known as a ``identity skip connection''. An identity skip connection reduces the effect of gradient vanishing regardless of the number of layers within the network, allowing for deeper networks to be built without negatively impacting training. 
+In 2015, the residual neural network, or \textit{ResNet}, revolutioned the world of convolutional neural networks \cite{resnet}. The ResNet model was designed by Kaiming He, and introduced in the paper: \textit{Deep Residual Learning for Image Recognition}. Prior to the residual network, deep neural networks faced the ``vanishing gradient'' difficultly while training. The ``vanishing gradient'' occurs when the gradients get very close to 0. In general, as the number of layers within a network increases, the gradients approach 0. Motivated by Taylor expansion, Kaiming introduced the technique known as a ``identity skip connection''. An identity skip connection reduces the effect of gradient vanishing regardless of the number of layers within the network, allowing for deeper networks to be built without negatively impacting training. 
 
-In general, a residual network uses blocks of convolutional layers, in combination with an identity skip connection (more formally known as \textit{identity mapping}). Each block of convolutional layers is referred to as a \textit{residual block}. Suppose $\mathbf{h}^{(l)}$ is the input to a residual block and $\mathbf{s}^{(l+1)}$ is the output of the residual block. If we denote the series of applied convolutional layers (weighted sums), batch normalizations, and ReLU activations by $\mathcal{F}$, then $\mathbf{s}^{(l+1)} = \mathbf{h}^{(l)} + \mathcal{F}(\mathbf{h}^{(l)})$. Figure 3.6 illustrates this idea of a residual block with an identity skip connection. Note that the final ReLU activation is not applied until after the addition of the residual block transformations and the identity connection such that $h^{(l+1)}$ can be found by applying the ReLU activation to $s^{(l+1)}$. 
+In general, a residual network uses blocks of convolutional layers, in combination with an identity skip connection (more formally known as \textit{identity mapping}). Each block of convolutional layers is referred to as a \textit{residual block}. Suppose $\mathbf{h}^{(l)}$ is the input to a residual block and $\mathbf{s}^{(l+1)}$ is the output of the residual block. If we denote the series of applied convolutional layers (weighted sums), batch normalizations, and ReLU activations by $\mathcal{F}$, then $\mathbf{s}^{(l+1)} = \mathbf{h}^{(l)} + \mathcal{F}(\mathbf{h}^{(l)})$. Figure 3.6 illustrates this idea of a residual block with an identity skip connection. Note that the final ReLU activation is not applied until after the addition of the residual block transformations and the identity connection such that $\mathbf{h}^{(l+1)}$ can be found by applying the ReLU activation to $\mathbf{s}^{(l+1)}$. Additionally, if the dimensions of $\mathbf{h}^{(l)}$ and $\mathcal{F}(\mathbf{h}^{(l)})$ are not the same, a linear projection is used by the shortcut connections to match the dimensions.
 
 
 \begin{figure}[h]
 \centering
-\includegraphics[height = 120mm, width= 80mm]{imgs/resblock.png}
+\includegraphics[height = 100mm, width= 60mm]{imgs/resblock.png}
 \caption{Residual Block Example}
 \label{fig:res_block}
 \end{figure}
 
+Many variants of the ResNet have emerged since its initial release in 2015. In 2020, Amazon introduced the \textit{ResNeSt} model in the paper, \textit{ResNeSt: Split-Attention Networks}. This model was built upon the ResNet meta-architecture, and many ResNeSt models contain the same number of layers as the original ResNet models. However, the network structure was also scaled up to provide even deeper versions, with significantly larger input crop-sizes. For instance, the ResNeSt-269 model has an input crop-size of $416 \times 416$ and has a total of 269 layers. This was particularly attractive for our application to melanoma detection since many of the original images were very large, and we wanted to limit further cropping to minimize further information loss within our training images.
+
+The ResNeSt adopted both the block-style architecture and the identity-skip, or \textit{shortcut}, connection from the ResNet model. As before, this mitigated potential vanishing gradient issues. Table 3.2 shows the basic structures of the ResNet-101 and the ResNeSt-101 networks. Since it is not shown in the table, we should note that a $2 \times 2$ average-pooling layer (stride of 2) is also applied to the identity connections in the ResNeSt's transitioning blocks. Average-pooling works very similar to max-pooling in that it simply replaces the value of each pixel by the average of the fixed-size patch surrounding the pixel, instead of the maximum. 
+
+\
+
+\begin{table}[h!]
+\centering
+\footnotesize 
+\renewcommand{\arraystretch}{0.7}
+\begin{tabular}{ c | c | c | c } 
+\hline
+\makecell{\textbf{Layer} \\ \textbf{Name}} & \makecell{\textbf{Output} \\ \textbf{Size}} & \textbf{ResNet101} & \textbf{ResNeSt101}\\ 
+\hline
+\hline
+Conv1\_x & $112 \times 112$ & $7 \times 7$, 64, stride 2 & [$3\times 3$], 64, stride 2\\
+\hline
+ &  & \multicolumn{2}{c}{$3 \times 3$ max pool, stride 2}\\
+\hline
+&  & & \\
+Conv2\_x & $56 \times 56$ & $\begin{bmatrix} 1 \times 1, 64  \\ 3 \times 3, 64 \\ 1 \times 1, 256 \end{bmatrix} \times 3$ & [\texttt{ResNeSt Block}, 256] $\times 3$\\
+&  & & \\
+\hline
+&  & & \\
+Conv3\_x & $28 \times 28$ & $\begin{bmatrix} 1 \times 1, 128  \\ 3 \times 3, 128 \\ 1 \times 1, 512 \end{bmatrix} \times 4$ & [\texttt{ResNeSt Block}, 512] $\times 3$\\
+&  & & \\
+\hline
+&  & & \\
+Conv4\_x & $14 \times 14$ & $\begin{bmatrix} 1 \times 1, 256  \\ 3 \times 3, 256 \\ 1 \times 1, 1024 \end{bmatrix} \times 23$ & [\texttt{ResNeSt Block}, 1024] $\times 3$\\
+&  & & \\
+\hline
+&  & & \\
+Conv5\_x & $7 \times 7$ & $\begin{bmatrix} 1 \times 1, 512  \\ 3 \times 3, 512 \\ 1 \times 1, 2048 \end{bmatrix} \times 3$ & [\texttt{ResNeSt Block}, 2048] $\times 3$\\
+&  & & \\
+\hline
+Linear & $1 \times 1$ & \multicolumn{2}{c}{$3 \times 3$ average pool, 1000 (fully connected)}\\
+\hline  
+\end{tabular}
+\label{tab:resnet_resnest_archs}
+\caption{ResNet-101 and ResNeSt-101 Architecture}
+\end{table}
 
 
-Write about evolution from CNN to ResNet to ResNeSt. Also use the following description of ResNeSt somewhere (from pytorch website):
+Clearly, the major difference between the ResNet and ResNeSt models lies within the design of the computational blocks. While the ResNet block contains a few convolutional layers, batch-normalizations, and ReLU activations, the ResNeSt block is much more involved. Each ResNeSt block has \textit{Split-Attention} sub-blocks that enable channel-wise attention across different subsets of channels. 
 
-While image classification models have recently continued to advance, most downstream applications such as object detection and semantic segmentation still employ ResNet variants as the backbone network due to their simple and modular structure. We present a simple and modular Split-Attention block that enables attention across feature-map groups. By stacking these Split-Attention blocks ResNet-style, we obtain a new ResNet variant which we call ResNeSt. Our network preserves the overall ResNet structure to be used in downstream tasks straightforwardly without introducing additional computational costs. ResNeSt models outperform other networks with similar model complexities, and also help downstream tasks including object detection, instance segmentation and semantic segmentation.
+We now describe the basic design the ResNeSt blocks, as described in the paper, \textit{ResNeSt: Split-Attention Networks} \cite{resnest}. Suppose the incoming input to a given block has shape $(H, W, C)$ where $H$ and $W$ are the spatial dimensions and $C$ is the number of the channels. At the beginning of each ResNeSt block, the $C$ channels are divided into $K$ groups. Here, $K$ is a tunable hyperparameter referred to as the cardinality, and each group is known as a cadinal group. Figure 3.7 illustrates this split to cardinal groups.
 
-A New ResNet Variant, is modularized architecture is designed to apply the channel-wise attention on different network branchesresidual-network variant known as \textit{ResNeSt}.
+\begin{figure}[h]
+\centering
+\includegraphics[height = 100mm, width= 130mm]{imgs/resnest_block.png}
+\caption{ResNeSt Block}
+\label{fig:resnest_block}
+\end{figure}
 
-Disuss the use of the mentioned Image Augmentations and then discuss the idea of Batch Normalization, Adam Optimizer, L2 Regularization, and Dropout layers. Discuss the difference between starting the CNN weights at random values, vs starting the ResNeSt weights at the IMAGENET trained weights and finetuned for our set of data (effectively leveraging their training).
+As expected, the block has the shortcut connection on the right-hand side and creates $K$ cardinal groups from the $C$ input channels. With each caridnal group, the set of $C/K$ channels is further split into $R$ groups. Therefore, the total number of feature groups is $G = KR$. Two convolutional layers ($1 \times 1$, $3 \times 3$) are then applied to each of the $R$ groups within a a caridnal group in parallel. The $R$ outputs within each cardinal group are then used together as input for the \textit{Split-Attention} block as shown in Figure 3.8.
 
-However, with average-pooling, the value of each pixel, for each channel, is replaced with the average of the patch surrounding the pixel. The convolutional layers within our ensemble that uses the ResNeSt network exclusively uses average-pooling with a kernel size of $3 \times 3$ or $2 \times 2$ depending on the location of the layer within the network. However, 
+\begin{figure}[h]
+\centering
+\includegraphics[height = 70mm, width= 60mm]{imgs/split_att.png}
+\caption{Split-Attention Block}
+\label{fig:split_att_block}
+\end{figure}
 
-\subsection{Network for Patient-Level Features}
+
+Let $U_i$ represent the output from the convolutional layers for the $i$th feature group, where $i \in \{1, 2, ..., G \}$. Using its $R$ outputs, the split-attention block first calculates the combined representation for the $k$th cardinal group: $$\hat{U}^k = \sum_{j = R(k-1)}^{Rk} U_j$$ where $\hat{U}^k \in \mathbb{R}^{H \times W \times C/K}$ and $k \in \{1, 2, ..., K\}$. This is step is indicated by fusing together of the $R$ inputs at the very top of the Figure 3.8. Furthermore, each cardinal groups's associated channel-wise statistics are then gathered using the global average pooling across the spatial dimensions and represented by the $s^k \in \mathbb{R}^{C/K}$. The $c$th component of the global pooling vector is calculated as follows: $$s_{c}^{k} = \frac{1}{H \times W} \sum_{i = 1}^{H} \sum_{j = 1}^{W} \hat{U}_{c}^{k}(i, j)$$ The global pooling vector is indicated by the ``Global Pooling'' step in Figure 3.8. 
+
+As illustrated, the gobal pooling vector is ultimately used to compute the weighted fusion of the $k$th cardinal group 
+representation, $V^k \in \mathbb{R}^{H \times W \times C/K}$. $V^k$ is computed from channel-wise soft attention such that each channel is a weighted sum over the corresponding $R$ splits. Formally, the $c$th channel is calculated as $$V_{c}^{k} = \sum_{i = 1}^{R} a_{i}^{k}(c) U_{R(k-1) + i}$$ where $a_{i}^{k}(c)$ represents the soft assignment weight such that: \[  a_{i}^{k}(c)= \begin{cases} \frac{exp(\mathcal{G}_{i}^c(s^k))}{\sum_{j=1}^{R} exp(\mathcal{G}_{j}^c(s^k))}, & \text{if } R > 1\\ \frac{1}{1 + exp(-\mathcal{G}_{i}^c(s^k))}, & \text{if} R = 1 \end{cases} \] Here, $\mathcal{G}_{i}^{c}$ denotes a mapping from the global context respresentation, $s_k$, to an associated weight for the $i$ feature group and $c$th channel. 
+
+Lastly, the cardinal group representations $V^k$ for $k=1, 2, ..., K$ are concatenated along their channel dimensions and a $1 \times 1$ convolutional layer is applied upon return to the ResNeSt block (this is generally performed to restore dimension if reduced at the beginning of the block \cite{resnet}). As illustrated in Figure 3.7, the shortcut connection $X$ is then added to the concatenated output from the Split-Attention blocks $V$. The sum, $V+X$, serves as the final output of the ResNeSt block.
+
+We should note that the techniques employed within split-attention block appear to draw heavily on the muliple-head attention and self-attention mechanisms from the 2017 paper, \textit{Attention Is All You Need} \cite{attention}. Although the transformer model is very different, many of the foundational ideas seem to overlap.
+
+\subsection{Ensemble \#2}
+
+The ResNeSt model was shown to perform better than the EfficientNet in the accuracy and latency trade-off for image classification problems. The ResNeSt model has also demonstrated excellent transfer learning results on a variety of well-known public benchmarks. We now discuss how we leveraged this high performing network to pick up on the most important features within our skin-lesion images.
+
+As mentioned in the previous section, our second ensemble uses the ResNeSt network to extract the principal features from our image data and uses a standard multi-layer perceptron to find patterns within the patient-level metadata. 
+ 
+%%%%%%
+The CNN within the first ensemble contained a total of 6 convolutional layers. Each convolutional layer was immediately followed by batch-normalization and downsampling. The convolutional layer within this ensembles exclusively applied \textit{max-pooling} as its downsampling method. For each channel, max-pooling simply replaces the value of each pixel by the maximum of a fixed-size patch surrounding the pixel. In this case, we decided to use max-pooling with a kernel size of $2 \times 2$ and a stride of 2. Figure 3.4 demonstrates a simple example of how max-pooling is applied to the spatial data within each channel. 
+
+After all 6 convolutional, normalization, and downsampling operations are applied, the original 3-channel image is filtered to a linear layer with exactly 900 nodes. As described above, this output should respresent the high-level features within the images. We include two additional fully-connected layers, each with 512 nodes, in another attempt to learn any remaining non-linear combinations of these features. Note that all convolutional and linear layers associated with this network used the ReLU activation function. Table 3.1 includes the details regarding the specific architecture used for the CNN within our first ensemble.
+
+In parallel to this convolutional network, the multi-layer perceptron takes the 7 patient-level features (after one-hot encoding) and connects it to a linear layer with 256 nodes. A batch-normalization layer is also included, and dropout regularization with $p=0.2$ is used to prevent overfitting. Again, we note that the ReLU activation function was used for this multi-layer perceptron. 
+
+% INSERT FIGURE OF ENSEMBLE
+
+Figure 3.5 illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant.
+
+The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next section, we begin with an introduction to the ResNeSt network architecture and how it may be leveraged to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within the second multi-network ensemble.
 
 
-One dropout layer was included in the final fully-connected layer of our convolution network and another dropout layer was included in the multi-layer perceptron for the 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
