@@ -525,13 +525,12 @@ In our case, we initiallized our ResNeSt-269 model with the pre-trained paramete
 
 \subsection{Evaluation Methods}
 
-% import as much as possible from the 412 paper!
+To examine and compare predictive performance of each ensemble, we used our (completely unseen) test data. For each model, we generated predicted probabilities for the test set to obtain visuals such as ROC Curves, accuracy plots, sensitivity plots, specificity plots, and false positive plots. In addition to the visuals, we also computed quantitative measures such as the area under the ROC curves, confusion matrices, and a variety of other performance metrics. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Although visuals and metrics such as the ROC curve and ROC-AUC consider \textit{all} thresholds, most of the other measures mentioned above require a specified probability threshold to generate class predictions. Given that our ensembles attempt to predict the presence of melanoma, the most aggressive form of skin cancer, we aimed to identify a threshold that prioritizes true-positives while not overly accepting too many false-positives. Accepting too many false-positives would reduce the trust in our model's final predictions. In addition, we prefered to optimize our threshold in a way that does not unfairly suffer from the large class imbalance in our data. Therefore, we used the geometric mean of the \textit{Sensitivity} (or true-positive rate, $\frac{TP}{TP+FN}$) and the \textit{Specificity} (or true-negative rate, $\frac{TN}{TN+FP}$), $$G_{mean}(t) = \sqrt{\text{Sensitivity} \cdot \text{Specificity}} = \sqrt{\frac{TP \cdot TN }{(TP + FN)(TN + FP)}}$$ to determine an optimal threshold for each model. That is, for each model, we found the threshold $t^* \in (0, 1)$ that maximizes the geometric mean, $G_{mean}(t)$. Note that only the training and validation sets were used to find $t^*$ so that we can retain a completely unseen testing set when evaluating and comparing model performances. 
+
 
 \chapter{Results}
-
-% if time, use import tikzplotlib
 
 \section{CNN + MLP Ensemble Results}
 
