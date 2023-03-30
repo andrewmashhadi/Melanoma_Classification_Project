@@ -303,7 +303,7 @@ At each iteration, the stochastic gradient descent algorithm described above wil
 
 Consequently, the network parameters are now updated such that: $$\theta_{t+1} = \theta_{t} - \eta_t \frac{\nu_t}{\sqrt{G_t + \varepsilon}}$$ Here $\varepsilon>0$ is a very small constant to avoid division by 0. Note that the generall structure of the parameter update still remains similar to stochasic gradient descent, however, each update also considers the momentum from the previous updates and the variation in the gradient components.
 
-Our melanoma detection networks were trained using this Adam optimizer with $\gamma$ and $\beta$ fixed at $0.9$ and $0.999$, respectively. Throughout training, the initial learning rate $\eta_t$ was tuned using our validation set, however, we customized our networks to tune different learning rates for different branches of our network. That is, the weights and biases from the convolutional network in our ensemble had a \textit{seperately tuned} learning rate from the rest of our ensemble network. This is discussed in more detail in section X.X.X. Additionally, all learning rates were scheduled to decay by a multiplicative factor of $0.1$ after each epoch.
+Our melanoma detection networks were trained using this Adam optimizer with $\gamma$ and $\beta$ fixed at $0.9$ and $0.999$, respectively. Throughout training, the initial learning rate $\eta_t$ was tuned using our validation set, however, we customized our networks to tune different learning rates for different branches of our network. That is, the weights and biases from the convolutional network in our ensemble had a \textit{seperately tuned} learning rate from the rest of our ensemble network. This is discussed in more detail in Section 3.3.8. Additionally, all learning rates were scheduled to decay by a multiplicative factor of $0.1$ after each epoch.
 
 \subsection{Preventing Overfitting}
 
@@ -407,7 +407,7 @@ In parallel to this convolutional network, the multi-layer perceptron takes the 
 \label{fig:ens1_arch}
 \end{figure}
 
-Figure 3.5 illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant.
+Figure 3.5 illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant. Throughout training, we searched through a variety of potential learning rates between $\eta \in (10^{-3}, 10^{-1})$ to find the optimal initial learning rate, $\hat{\eta}$.
 
 The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next two sections, we introduce the ResNeSt network architecture and how it may be leveraged to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within the second multi-network ensemble.
 
@@ -449,11 +449,11 @@ Conv2\_x & $56 \times 56$ & $\begin{bmatrix} 1 \times 1, 64  \\ 3 \times 3, 64 \
 &  & & \\
 \hline
 &  & & \\
-Conv3\_x & $28 \times 28$ & $\begin{bmatrix} 1 \times 1, 128  \\ 3 \times 3, 128 \\ 1 \times 1, 512 \end{bmatrix} \times 4$ & [\texttt{ResNeSt Block}, 512] $\times 3$\\
+Conv3\_x & $28 \times 28$ & $\begin{bmatrix} 1 \times 1, 128  \\ 3 \times 3, 128 \\ 1 \times 1, 512 \end{bmatrix} \times 4$ & [\texttt{ResNeSt Block}, 512] $\times 4$\\
 &  & & \\
 \hline
 &  & & \\
-Conv4\_x & $14 \times 14$ & $\begin{bmatrix} 1 \times 1, 256  \\ 3 \times 3, 256 \\ 1 \times 1, 1024 \end{bmatrix} \times 23$ & [\texttt{ResNeSt Block}, 1024] $\times 3$\\
+Conv4\_x & $14 \times 14$ & $\begin{bmatrix} 1 \times 1, 256  \\ 3 \times 3, 256 \\ 1 \times 1, 1024 \end{bmatrix} \times 23$ & [\texttt{ResNeSt Block}, 1024] $\times 23$\\
 &  & & \\
 \hline
 &  & & \\
@@ -500,22 +500,28 @@ We should note that the techniques employed within split-attention block appear 
 
 \subsection{Ensemble \#2}
 
-The ResNeSt model was shown to perform better than the EfficientNet in the accuracy and latency trade-off for image classification problems. The ResNeSt model has also demonstrated excellent transfer learning results on a variety of well-known public benchmarks. We now discuss how we leveraged this high performing network to pick up on the most important features within our skin-lesion images.
+The ResNeSt model was shown to perform better than the EfficientNet in the accuracy and latency trade-off for image classification problems. Additionally, the ResNeSt model has demonstrated excellent transfer learning results on a variety of well-known public benchmarks. We now discuss the steps taken to leveraged this high performing network to pick up on the most important features within our skin-lesion images.
 
-As mentioned in the previous section, our second ensemble uses the ResNeSt network to extract the principal features from our image data and uses a standard multi-layer perceptron to find patterns within the patient-level metadata. 
- 
-%%%%%%
-The CNN within the first ensemble contained a total of 6 convolutional layers. Each convolutional layer was immediately followed by batch-normalization and downsampling. The convolutional layer within this ensembles exclusively applied \textit{max-pooling} as its downsampling method. For each channel, max-pooling simply replaces the value of each pixel by the maximum of a fixed-size patch surrounding the pixel. In this case, we decided to use max-pooling with a kernel size of $2 \times 2$ and a stride of 2. Figure 3.4 demonstrates a simple example of how max-pooling is applied to the spatial data within each channel. 
+As mentioned in the previous section, our second ensemble uses the ResNeSt network to extract the principal features from our image data and uses a standard multi-layer perceptron to find patterns within the patient-level metadata. We used the deepest avaiable network, the \textit{ResNeSt-269}, which uses an input crop-size of $416 \times 416$ and has a total of 269 layers. This input size is significantly larger than the maximum crop-size for widely used networks such as those from the ResNet or Inception-Net families. We used this larger network to limit any further cropping of our skin lesion images. Since many of the images were originally very large, further cropping may lead to unnecessary information loss. In addition, a deeper networks generally have a stronger ability to learn features at multiple levels of abstraction which may lead to better a generalization. As described above, the ResNeSt-269 model stacks several computational blocks containing split-attention operations and shortcut connections, with a variety of intermediate pooling (max/average) operations throughout the network. Note that batch-normalization was also applied after each block.
 
-After all 6 convolutional, normalization, and downsampling operations are applied, the original 3-channel image is filtered to a linear layer with exactly 900 nodes. As described above, this output should respresent the high-level features within the images. We include two additional fully-connected layers, each with 512 nodes, in another attempt to learn any remaining non-linear combinations of these features. Note that all convolutional and linear layers associated with this network used the ReLU activation function. Table 3.1 includes the details regarding the specific architecture used for the CNN within our first ensemble.
+After feeding our 3-channel skin-lesion image through the ReSneSt-269 model, we obtain a linear layer with 1000 nodes as output. This output represents the extracted features found from the image. Ideally, the channel-wise attention mechanisms were successful in capturing the cross-feature interactions that may have not been found from the standard convolutional network within the first ensemble. Since the ResNeSt-269 already contains a deep set of layers, we chose to not connect any additional linear layers to the 1000-node output.
 
-In parallel to this convolutional network, the multi-layer perceptron takes the 7 patient-level features (after one-hot encoding) and connects it to a linear layer with 256 nodes. A batch-normalization layer is also included, and dropout regularization with $p=0.2$ is used to prevent overfitting. Again, we note that the ReLU activation function was used for this multi-layer perceptron. 
+As in Ensemble \#1,  a multi-layer perceptron was also built and trained in parellel to the ResNeSt-269 model. This network also uses the 7 patient-level features as input, then sequentially applies a 256-node linear layer with batch-normalization, dropout regularization (with $p=0.2$), and ReLU activation.
 
-% INSERT FIGURE OF ENSEMBLE
 
-Figure 3.5 illustrates how these two seperate networks are effectively fused together for our first ensemble. The 512 node output corresponding to the image-data CNN is concatenated with the 256 node output corresponding to the patient-level metadata. This concatenated layer is then fed into the output layer, with a single node. Lastly, we applied the sigmoid function to the score of the output node in order to estimate the probability that the associated skin-lesion is malignant.
+\begin{figure}[h]
+\centering
+\includegraphics[height = 120mm, width= 140mm]{imgs/ens2_arch.png}
+\caption{Multi-Network Ensemble \#2}
+\label{fig:ens2_arch}
+\end{figure}
 
-The framework of this first multi-network ensemble is very similar to the framework used in the second ensemble. In the next section, we begin with an introduction to the ResNeSt network architecture and how it may be leveraged to better extract the high-level features within the skin-lesion images. Then, we provide the details regarding how it was used within the second multi-network ensemble.
+Figure 3.9 illustrates how the ResNeSt-269 output was fused together with the multi-layer perceptron output. The concatenated output effectively served as a $1000+256 = 1256$ node linear layer. This layer was then connected to a single output node. In order to estimate the probability that the skin-lesion is maligant, we applied the sigmoid function to the output node's final score.
+
+One of the drawbacks of using such a deep network is that it requires substantial computing resources to train the large number of network parameters. However, we may be able to leverage pre-trained models that were trained using computing resources that are much more powerful than what is available to us. We can use the weights from a network that has \textit{already been trained} for a large-scale, generic, image classification task. This process is known as \textit{transfer learning}. The idea is that if a network has been trained on a large enough, and general enough, dataset, we may take advantage of the learned weights by initializing our network with these pre-trained weights instead of starting from scratch with randomly initiallized weights. 
+
+In our case, we initiallized our ResNeSt-269 model with the pre-trained parameters from the ImageNet dataset. Throughout training, we \textit{fine-tuned} these parameters to our skin-lesion images by updating the parameters with a very small learning rate throughout training. To prevent extremely large modifications of the pretrained weights within our ResNeSt network, we usually began training with very small learning rates when tuning the learning rate hyperparameter. For the ResNeSt portion of the second ensemble, we tried a variety of learning rates between $\eta_{ResNeSt} \in (10^{-6}, 10^{-5})$ in search for an optimal inditial learning rate. However, since the multi-layer perceptron and final connections to the single-node output layer were randomly initiallized, we searched for an optimal learning rate within $\eta_{MLP + Final} \in (10^{-4}, 10^{-2})$, as we did in the first ensemble. 
+
 
 \subsection{Evaluation Methods}
 
