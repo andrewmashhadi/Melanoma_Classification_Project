@@ -303,7 +303,7 @@ At each iteration, the stochastic gradient descent algorithm described above wil
 
 Consequently, the network parameters are now updated such that: $$\theta_{t+1} = \theta_{t} - \eta_t \frac{\nu_t}{\sqrt{G_t + \varepsilon}}$$ Here $\varepsilon>0$ is a very small constant to avoid division by 0. Note that the generall structure of the parameter update still remains similar to stochasic gradient descent, however, each update also considers the momentum from the previous updates and the variation in the gradient components.
 
-Our melanoma detection networks were trained using this Adam optimizer with $\gamma$ and $\beta$ fixed at $0.9$ and $0.999$, respectively. Throughout training, the initial learning rate $\eta_t$ was tuned using our validation set, however, we customized our networks to tune different learning rates for different branches of our network. That is, the weights and biases from the convolutional network in our ensemble had a \textit{seperately tuned} learning rate from the rest of our ensemble network. This is discussed in more detail in Section 3.3.8. Additionally, all learning rates were scheduled to decay by a multiplicative factor of $0.1$ after each epoch.
+Our melanoma detection networks were trained using this Adam optimizer with $\gamma$ and $\beta$ fixed at $0.9$ and $0.999$, respectively. Throughout training, the initial learning rate $\eta_t$ was tuned using our validation set, however, we customized our networks to tune different learning rates for different branches of our network. That is, the weights and biases from the convolutional network in our ensemble had a \textit{seperately tuned} learning rate from the rest of our ensemble network. This is discussed in more detail in Section 3.3.8. Additionally, all learning rates were scheduled to decay by a multiplicative factor of $\gamma_{LR}$ after each epoch.
 
 \subsection{Preventing Overfitting}
 
@@ -525,26 +525,83 @@ In our case, we initiallized our ResNeSt-269 model with the pre-trained paramete
 
 \subsection{Evaluation Methods}
 
-To examine and compare predictive performance of each ensemble, we used our (completely unseen) test data. For each model, we generated predicted probabilities for the test set to obtain visuals such as ROC Curves, accuracy plots, sensitivity plots, specificity plots, and false positive plots. In addition to the visuals, we also computed quantitative measures such as the area under the ROC curves, confusion matrices, and a variety of other performance metrics. 
+To examine and compare predictive performance of each ensemble, we used our (completely unseen) test data. For each model, we generated predicted probabilities for the test set to obtain visuals such as ROC Curves, accuracy plots, sensitivity plots, specificity plots, and false-positive plots. In addition to the visuals, we also computed quantitative measures such as the area under the ROC curves, confusion matrices, and a variety of other performance metrics. 
 
-Although visuals and metrics such as the ROC curve and ROC-AUC consider \textit{all} thresholds, most of the other measures mentioned above require a specified probability threshold to generate class predictions. Given that our ensembles attempt to predict the presence of melanoma, the most aggressive form of skin cancer, we aimed to identify a threshold that prioritizes true-positives while not overly accepting too many false-positives. Accepting too many false-positives would reduce the trust in our model's final predictions. In addition, we prefered to optimize our threshold in a way that does not unfairly suffer from the large class imbalance in our data. Therefore, we used the geometric mean of the \textit{Sensitivity} (or true-positive rate, $\frac{TP}{TP+FN}$) and the \textit{Specificity} (or true-negative rate, $\frac{TN}{TN+FP}$), $$G_{mean}(t) = \sqrt{\text{Sensitivity} \cdot \text{Specificity}} = \sqrt{\frac{TP \cdot TN }{(TP + FN)(TN + FP)}}$$ to determine an optimal threshold for each model. That is, for each model, we found the threshold $t^* \in (0, 1)$ that maximizes the geometric mean, $G_{mean}(t)$. Note that only the training and validation sets were used to find $t^*$ so that we can retain a completely unseen testing set when evaluating and comparing model performances. 
+Although visuals and metrics such as the ROC curve and ROC-AUC consider \textit{all} thresholds, most of the other measures mentioned above require a specified probability threshold to generate class predictions. Given that our ensembles attempt to predict the presence of melanoma, the most aggressive form of skin cancer, we aimed to identify a threshold that prioritizes true-positives while not overly accepting too many false-positives. Accepting too many false-positives would reduce the trust in our model's final predictions. In addition, we prefered to optimize our threshold in a way that does not unfairly suffer from the large class imbalance in our data. Therefore, we used the geometric mean of the \textit{Sensitivity} (or true-positive rate, $\frac{TP}{TP+FN}$) and the \textit{Specificity} (or true-negative rate, $\frac{TN}{TN+FP}$), $$G_{mean}(t) = \sqrt{\text{Sensitivity} \cdot \text{Specificity}} = \sqrt{\frac{TP \cdot TN }{(TP + FN)(TN + FP)}}$$ to determine an optimal threshold for each model. That is, for each model, we found the threshold $t^* \in (0, 1)$ that maximizes the geometric mean, $G_{mean}(t)$. Note that only the training and validation sets were used to find $t^*$ so that we can retain a completely unseen testing set when evaluating and comparing model performances.
 
+Recall that the primary metrics of interest are true-positive rate and true-negative rate as they are not influenced by the large class imbalance within our test data. As an example, consider a measure such as accuracy. Assessing performance with accuracy would not be appropriate in our case because a model that always classifies a skin-lesion as beniegn would achieve $>98$\% accuracy on our test set. Obviously, this model would be useless, and the measurement would decieving. Therefore, using our confusion matrices, we compute and output the corresponing sensitivities, specificities, balanced-accuracies, and F2-scores. Balanced-accuracy simply represents the average of the true-positive and true-negative rates, while the F2-score corresponds to the weighted harmonic mean of the precision ($\frac{TP}{TP + FP}$) and sensitivity such that: $$F2_{score} = \frac{5 \cdot \text{Precision} \cdot \text{Sensitivity}}{4 \cdot \text{Precision} +\text{Sensitivity}}$$ The F2-score represents a single measure of both precision and recall in one metric, with slightly more weight on sensitivity than on precision.
 
 \chapter{Results}
 
-\section{CNN + MLP Ensemble Results}
+\section{Tuning Ensemble \#1}
 
-Write here. Give all plots from analysis notebook. Give table of statistics and confusion matrix.
+As we described in Section 3.3.6, ensemble \#1 uses a standard CNN to process the skin-lesion images and a multi-layer perceptron to process the associated patient-level data. Throughout training, we tuned a variety hyperparameters such as the L2-regularization hyperparameter, $\lambda$, the initial learning-rate $\eta_{t}$ with its multiplicative factor $\gamma_{LR}$ used to decay the learning rate after each epoch, and the total number of training epochs, $M$.
 
-\section{ResNeSt + MLP Ensemble Results}
+We performed a grid-search to find the optimal set of hyperparameters. That is, we trained the ensemble with a distinct set of hyperparameters $S^{(k)} = \{\lambda^{(k)}, \eta_{t}^{(k)}, \gamma_{LR}^{(k)}, M^{(k)}\}$ and obtained the ROC-AUC score on the validation data. We trained and validated our ensemble with a total of 10 unique sets of hyparmeters, $S^{(k)}$ for $k=1, 2, ..., 10$, and took the set corresponding to the maximum ROC-AUC, $S^{(\hat k)}$ as the optimal set of parameters. Given our limited computing resources, this repeated process of training and validating was very time consuming. In fact, the process took more than a week to complete (with occasional periods of inactivity). The optimal set of hyperparameters $S^{(\hat k)}$ contained:
 
-Write here. Write here. Give all plots from analysis notebook. Give table of statistics and confusion matrix. Compare to regular CNN + MLP model.
+\begin{itemize}
+    \item L2-regularization hyperparameter of $\hat \lambda = 0.01$
+    \item Initial learning-rate $\hat \eta_{t} = 0.01$
+    \item Multiplicative Decay Factor $\hat \gamma_{LR} = 0.5$ ($\eta_{t}$ is cut in half after each epoch)
+    \item Number of Epochs $\hat M=10$
+\end{itemize}
+
+
+\section{Tuning Ensemble \#2}
+
+As we described in Section 3.3.8, ensemble \#2 uses a ResNeSt-269 network to process the skin-lesion images and a multi-layer perceptron to process the associated patient-level data. We tuned a set of hyperparameters similar to Ensemble \#1. However, as mentioned in the previous chapter, we tuned the learning rate associated with the ResNeSt network $\eta_{ResNeSt}$ seperately from the learning rate associated with the rest of the ensemble, $\eta_{MLP + Final}$, because the weight's in the ResNeSt network are pre-trained and we would only like to fine-tune them for our application in melanoma detection.
+
+Again, we performed a grid-search to find the optimal set of hyperparameters $S^{(\hat k)} = \{\hat \lambda, \hat \eta_{ResNeSt}, \hat \eta_{MLP + Final}, \hat \gamma_{LR}, M^{(k)}\}$ using the ROC-AUC scores on the validation data. We trained and validated this ensemble with a total of 15 unique sets of hyparmeters, $S^{(k)} = \{\lambda^{(k)}, \eta_{ResNeSt}^{(k)}, \eta_{MLP+Final}^{(k)}, \gamma_{LR}^{(k)}, M^{(k)}\}$ for $k=1, 2, ..., 15$. Since the ResNeSt-269 model contains over 100 million parameters alone, the training the ensemble required even more time than the first ensemble. In total, the entire process of training required about 2 weeks, incluing occasional periods of inactivity.
+
+\begin{itemize}
+    \item L2-regularization hyperparameter of $\hat \lambda = 0.01$ (no L2-regularization applied)
+    \item Initial learning-rate for ResNeSt-269 parameters $\hat \eta_{ResNeSt-269} = 3 \times 10^{-5}$
+    \item Initial learning-rate for all other parameters $\hat \eta_{MLP+Final} = 1 \times 10^{-3}$
+    \item Multiplicative Decay Factor $\hat \gamma_{LR} = 0.1$
+    \item Number of Epochs $\hat M=10$
+\end{itemize}
+
+
+\section{Evaluation and Comparison}
+
+In this final results section, we use the dedicated test data to assess and compare the overall predictive performance of each
+multi-network ensemble. We started by examining the metrics of interest, true-positive rate and true-negative rate, computed at all possible thresholds. Figure 4.1 displays the specificity and specificity scores across the range of thresholds, $t \in (0, 1)$.
+
+\begin{figure}[hbt!]
+\hspace*{\fill}
+\centering
+\subcaptionbox{}{\includegraphics[height = 70mm, width=80mm]{imgs/results_sens.png}}\hspace{0em}
+\subcaptionbox{}{\includegraphics[height = 70mm, width=80mm]{imgs/results_spec.png}}
+\hspace*{\fill}
+\label{fig:sens_spec}
+\vspace{0cm}
+\caption{True-Positive Rates and True-Negative Rates for Ensembles \#1 \& \#2}
+\end{figure}
+
+
+As mentioned in the Section 3.3.9, since our ensembles are ultimately predicting the presence of a life-threatening condition, a false-negative is far more dangerous than a false-positive. Ideally, we would like our ensembles to have the greatest possible true-positive rate without compromising the overall ``trust'' in its classifications. That is, our goal was to maximize the sensitivity without dropping the specificity too much. Figure 4.1(a) and Figure 4.1(b) indicate that there may exist a range of thresholds for each model ...
+
+As we mentioned in previous sections, since our model is attempting to predict the presence of a life-threatening condition,
+a false-negative is far more dangerous than a false-positive. Ideally, we wanted the model to have the greatest true-positive
+rate possible without compromising the overall “trust” in its classifications. That is, our goal was to maximize the sensitivity
+without dropping the specificity too much. The plots above indicate that there exists a range of thresholds between 0.4 to
+0.6 that could accomplish this goal. Notice that since the curves for the XGBoost model are much steeper than the curves
+for the logistic regression models, this optimal range of thresholds may be a bit smaller for the XGBoost model than it is for
+the three logistic regression models.
+
+% use stats 412 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Conclusion and Future Work}
 
+Start with idea of retraining on the entire training + Validation sets.
+
 Write here. Maybe discuss the work that has been done in the past \cite{VariousMethods}, and maybe point out the efficient net results from here \cite{EffNet_MelDet} (note that others have been able to leverage efficient net model to get even better results, but our ROC-AUC is comparable amongst the best available options)
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
