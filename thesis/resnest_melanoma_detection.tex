@@ -37,6 +37,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{array, makecell}
+\usepackage{multirow}
 \renewcommand\cellset{\renewcommand\arraystretch{0.8}%
 \setlength\extrarowheight{0pt}}
 
@@ -579,17 +580,105 @@ multi-network ensemble. We started by examining the metrics of interest, true-po
 \end{figure}
 
 
-As mentioned in the Section 3.3.9, since our ensembles are ultimately predicting the presence of a life-threatening condition, a false-negative is far more dangerous than a false-positive. Ideally, we would like our ensembles to have the greatest possible true-positive rate without compromising the overall ``trust'' in its classifications. That is, our goal was to maximize the sensitivity without dropping the specificity too much. Figure 4.1(a) and Figure 4.1(b) indicate that there may exist a range of thresholds for each model ...
+As mentioned in the Section 3.3.9, since our ensembles are ultimately predicting the presence of a life-threatening condition, a false-negative is far more dangerous than a false-positive. Ideally, we want our ensembles to have the greatest possible true-positive rate without compromising the overall ``trust'' in its classifications. That is, our goal was to maximize the sensitivity without dropping the specificity too much. Figure 4.1 indicates that there may exist a distinct range of thresholds for each model that could accomplish this goal. From Figure 4.1(a) and Figure 4.1(b) we can see that the optimal threshold lies within $t \in (0.45, 0.75)$ for Ensemble \#1 since their appears to be the best balance of sensitivity and specificity in this range. Notice that for Ensemble \#2, Figure 4.1(a) indicates a sharp and sudden drop in sensitivity within the range of smaller thresholds. However, Figure 4.1(b) shows an equally sharp and sudden \textit{increase} in specificity within the same range of smaller thresholds. Therefore, we can see that the optimal threshold lies within $t \in (0, 0.05)$ for Ensemble \#2.
 
-As we mentioned in previous sections, since our model is attempting to predict the presence of a life-threatening condition,
-a false-negative is far more dangerous than a false-positive. Ideally, we wanted the model to have the greatest true-positive
-rate possible without compromising the overall “trust” in its classifications. That is, our goal was to maximize the sensitivity
-without dropping the specificity too much. The plots above indicate that there exists a range of thresholds between 0.4 to
-0.6 that could accomplish this goal. Notice that since the curves for the XGBoost model are much steeper than the curves
-for the logistic regression models, this optimal range of thresholds may be a bit smaller for the XGBoost model than it is for
-the three logistic regression models.
+The geometric mean of the sensitivity and the specificity was then used to find the optimal threshold, $t^*$, for each model. For both models, we evaluated the $G_{mean}(t)$ at a variety of different thresholds between $t \in (0, 1)$, and stored the threshold that maximized the $G_{mean}(t)$. Using the optimal thresholds for each model, we created the following performance metrics and confusion matrices from our test set.
 
-% use stats 412 
+\
+
+\begin{table}[h!]
+\centering
+\footnotesize 
+\begin{tabular}{| c | c | c | c | c | c | c |} 
+\hline
+\textbf{Model} & $\mathbf{t^*}$ & $\mathbf{G_{mean}}$ & \textbf{Sensitivity} & \textbf{Specificity} & \makecell{\textbf{Balanced} \\ \textbf{Accuracy}} & $\mathbf{F2_{Score}}$ \\ 
+\hline
+\hline
+\makecell{Ensemble \#1 \\ (with Conv. Net)} & 0.580 & 0.781 & 0.798 & 0.765 & 0.782 & 0.105\\
+\hline
+\makecell{Ensemble \#2 \\ (with ResNeSt-269)} & 0.003 & 0.853 & 0.895 & 0.813 & 0.853 & 0.287\\
+\hline  
+\end{tabular}
+\label{tab:mods_metrics}
+\caption{Performance Metrics Using the $G_{mean}(t)$ Maximizer, $t^*$}
+\end{table}
+
+\begin{table}[hbt!]
+\footnotesize 
+\hspace{-1em}
+\begin{subtable}{.5\linewidth}\centering
+{\begin{tabular}{cc|c|c|c|}
+&\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
+&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{Beniegn}}
+&\multicolumn{1}{c}{\textbf{Malignant}}
+&\multicolumn{1}{c}{\textbf{Total}}\\
+\cline{3-5}
+\multicolumn{1}{c}{\multirow{3}{*}{\rotatebox{90}{\textbf{Actual}}}}
+&\textbf{Beniegn} &4981 & 1531 &  6512\\
+\cline{3-5}
+&\textbf{Malignant} &23 & 91 & 114\\
+\cline{3-5}
+&\textbf{Total} &5004 & 1622 &\\
+\cline{3-5}
+\end{tabular}}
+\caption{Ensemble \#1 (w/ Conv. Net)}
+\end{subtable}\hspace{1em}
+\begin{subtable}{.5\linewidth}\centering
+{\begin{tabular}{cc|c|c|c|}
+&\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
+&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{Beniegn}}
+&\multicolumn{1}{c}{\textbf{Malignant}}
+&\multicolumn{1}{c}{\textbf{Total}}\\
+\cline{3-5}
+\multicolumn{1}{c}{\multirow{3}{*}{\rotatebox{90}{\textbf{Actual}}}}
+&\textbf{Beniegn} & 5293 &  1219 &  6512\\
+\cline{3-5}
+&\textbf{Malignant} & 12 & 102 & 114\\
+\cline{3-5}
+&\textbf{Total} &5305 & 1321 &\\
+\cline{3-5}
+\end{tabular}}
+\caption{Ensemble \#2 (w/ ResNeSt-269)}
+\end{subtable}
+\label{tab:conf_mats}
+\caption{Confusion Matrices For Both Multi-Network Ensembles}
+\end{table}
+    
+From the performance metrics and confusion matrices, we can see that both model's demonstrate an excellent classification performance. However, the improvement from the ResNeSt-269 in Ensemble \#2 is very apparent. Using the deep split-attention network to process the skin-lesion images rather than a generic convolutional neural network has shown to drastically improve every metric listed in Table 4.1. Most notably, we can see that the balanced accuracy increases by over 7\% when using Ensemble \#2! This indicates that the Ensemble \#2 model was able to successfully leverage ResNeSt-269 to extract the most important features from the skin-leasion images. Table 4.1 tells us that the balanced accuracy increases 
+
+For a more general assessment and comparison across all possible thresholds, we also used the testing data to compute the ROC curves for each model (shown below) and their associated ROC-AUCs.
+
+\begin{figure}[hbt!]
+\hspace*{\fill}
+\footnotesize 
+\centering
+\vspace{0cm}
+\subcaptionbox{}{\vspace{0.8cm}\begin{tabular}{| c | c |} 
+\hline
+& \\
+\textbf{Model} & \textbf{ROC-AUC} \\ 
+& \\
+\hline
+& \\
+\makecell{Ensemble \#1 \\ (w/ Conv. Net)} & 0.852\\
+& \\
+\hline
+& \\
+\makecell{Ensemble \#2 \\ (with ResNeSt-269)} & 0.929\\
+& \\
+\hline
+\end{tabular}}\hspace{1em}
+\subcaptionbox{}{\includegraphics[height = 90mm, width=100mm]{imgs/results_roc.png}}
+\hspace*{\fill}
+\label{fig:roc}
+\caption{ROC-AUC and ROC Curves for Ensemble's \#1 \& \#2}
+\end{figure}
+
+%%%% update me 
+Although it is difficult to compare the models visually from this plot, it's clear from both the plot and the associated table of ROC-AUC scores that all four models demonstrated great predictive performance across the entire range of thresholds. They each exhibit an ability to successfully classify whether or not the patients have a 10-year risk of heart disease, and they appear to produce predictive results far better than a model that purely guesses (which is displayed by the black dotted line).
+
+The associated ROC-AUCs from the table above also tell us that the logistic regression model using only feature selection distinguishes patients with and without a 10-year risk of heart disease the best across the whole range of thresholds. The logistic regression model using PCA for dimension reduction has a very close ROC-AUC score to the model using feature selection, and the difference in performance is so small that it may simply be a product of random variation when we initially split the test data. Interestingly, we can see that out of all the models, the XGBoost model seems to have had the worst testing performance across the entire range of thresholds.
+%%%% 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -598,10 +687,6 @@ the three logistic regression models.
 Start with idea of retraining on the entire training + Validation sets.
 
 Write here. Maybe discuss the work that has been done in the past \cite{VariousMethods}, and maybe point out the efficient net results from here \cite{EffNet_MelDet} (note that others have been able to leverage efficient net model to get even better results, but our ROC-AUC is comparable amongst the best available options)
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
