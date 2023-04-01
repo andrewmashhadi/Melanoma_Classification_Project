@@ -14,7 +14,7 @@
 %                                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title          {An Application of Split Attention Networks:\\
+\title          {An Application of Split-Attention Networks:\\
                 Melanoma Detection}
 \author         {Andrew Mashhadi}
 \department     {Statistics}
@@ -562,6 +562,8 @@ Again, we performed a grid-search to find the optimal set of hyperparameters $S^
     \item Number of Epochs $\hat M=10$
 \end{itemize}
 
+The optimal hyperparameters listed for Ensemble \#1 and Ensemble \#2 were ultimately used to re-train the models with the combined training and validation data prior to obtaining any test results.
+
 
 \section{Evaluation and Comparison}
 
@@ -644,7 +646,7 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 \caption{Confusion Matrices For Both Multi-Network Ensembles}
 \end{table}
     
-From the performance metrics and confusion matrices, we can see that both model's demonstrate an excellent classification performance. However, the improvement from the ResNeSt-269 in Ensemble \#2 is very apparent. Using the deep split-attention network to process the skin-lesion images rather than a generic convolutional neural network has shown to drastically improve every metric listed in Table 4.1. Most notably, we can see that the balanced accuracy increases by over 7\% when using Ensemble \#2! This indicates that the Ensemble \#2 model was able to successfully leverage ResNeSt-269 architecture to extract the most important features from the skin-leasion images. Table 4.1 tells us that the balanced accuracy increases 
+From the performance metrics and confusion matrices, we can see that both model's demonstrate an excellent classification performance. However, the improvement from the ResNeSt-269 in Ensemble \#2 is very apparent. Using the deep split-attention network to process the skin-lesion images rather than a generic convolutional neural network has shown to drastically improve every metric listed in Table 4.1. Most notably, we can see that the balanced accuracy increases by over 7\% when using Ensemble \#2! This indicates that the Ensemble \#2 model was able to successfully leverage ResNeSt-269 architecture to extract the most important features from the skin-leasion images. Table 4.1 tells us that the balanced accuracy increases. 
 
 For a more general assessment and comparison across all possible thresholds, we also used the testing data to compute the ROC curves for each model (shown below) and their associated ROC-AUCs.
 
@@ -679,12 +681,24 @@ Although it is difficult to compare the models visually from Figure 4.2(b), it's
 
 The associated ROC-AUCs from Figure 4.2(a) above also tell us that the ensemble using the ResNeSt-269 network to extract features from the skin-lesion images was able to detect the presence of melanoma better than the ensemble using the generic CNN, across the whole raneg of thresholds. That is, at each threshold $t \in (0, 1)$, the aggregate score of sensitivity and specificity was the same or better for Ensemble \#2 than it was for Ensemble \#1. Using the split-attention network increased the total area under the ROC curve by over 9\%. This provides further evidence suggesting that the second ensemble model was able to successfully leverage the channel-wise attention design within the ResNeSt network to extract the most important features and most relevant cross-feature interactions from the skin-leasion images. Table 4.1 tells us that the balanced accuracy increases 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Conclusion and Future Work}
 
-Start with idea of retraining on the entire training + Validation sets.
+We began this paper with a breif introduction to the ISIC 2020 dataset. We then performed a thorough exploratory data analysis for both skin-lesion images and the patient-level metadata. The design and implementation of the two multi-network ensembles used to detect the presence of melanoma were then discuss in detail. Ensemble \#1 used a generic convolutional neural network for the skin-lesion images and a multi-layer perceptron model for the patient-level metadata. However, Ensemble \#2 used the split-attention network architecture from the 269-layer ResNeSt model to extract the most important features from the image data, and also used the multi-layer perceptron model for the metadata. PyTorch was used for the implementation of each model.
+
+The test results demonstrated powerful predictive performance from both model's. In fact, both ensembles achieved an outstanding ROC-AUC score over 0.85 and a balanced accuracy over 75\% (using the optimal threshold, $t^*$). However, the test results also indicated an improvement in predictive power of Ensemble \#2 when compared to Ensemble \#1. The ResNeSt's architecture was shown to significantly increase the sensitivity, specificity, and the area under the ROC curve. Therefore, Ensemble \#2 was able to successfully leverage the channel-wise attention from the ResNeSt blocks, as well as the deep design of the ResNeSt-269 network itself, to extract the most important features and the most relevant cross-feature interactions from the skin-lesion images. The evidence suggests that these extracted features were highly significant for predicting the presence of melanoma.
+
+In conclusion, using the split-attention network within our multi-network ensemble model has demonstrated excellent predictive performance in detecting melanoma. The classfication ability is comparable to many of the most powerful models used in melanoma detection today \cite{EffNet_MelDet}. 
+
+Future work could involve alternative models or pre-processing techniques for the patient-level metadata. For instance, some form of feature selection with a tree-based model for the metadata may lead to a better performance from our ensemble. Additionally, future work could also directly compare the performances between other commonly used pretrained models, such as the \textit{EfficientNet}, for the image data. Using the same training, validation, and testing split would ensure a fair comparison between the the models.
+
+% add in section 2.1
+In the past few years, a variety of machine learning approaches for melanoma detection have been proposed \cite{VariousMethods}. More recently, Efficient Networks have been thought to acheive the strongest predictive performance. In the paper, \textit{Improved EfficientNet-B4 for Melanoma Detection}, the authors demonstrated significant pEfficientNet-B4 \cite{EffNet_MelDet} However, our
+
+
+n this paper, we refer to the various machine learning approaches that have been proposed and that provide inspiration for the implementation of effective frameworks.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Write here. Maybe discuss the work that has been done in the past \cite{VariousMethods}, and maybe point out the efficient net results from here \cite{EffNet_MelDet} (note that others have been able to leverage efficient net model to get even better results, but our ROC-AUC is comparable amongst the best available options)
 
