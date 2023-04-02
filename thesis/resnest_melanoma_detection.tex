@@ -66,8 +66,11 @@ More recently, the medical community has been opening it's doors to modern deep 
 
 Skin cancer is one of the most common types of cancer. Although melanoma only accounts for about 1\% of skin cancer, the death rate was still about 2.1 per 100,000 men and women per year based on 2016-2020 deaths \cite{SEER}. In 2023, the American Cancer Society estimates that bout 7,990 people are expected to die from a total of about 97,610 new melanoma cases in the United States alone \cite{ACS}. It is well known that early detection of melanoma will provide the best chance for successful treatment and greater chance of survival. 
 
-Image analysis tools that automate the diagnosis of melanoma will improve dermatologist's diagnostic accuracy, and better detection of melanoma has the opportunity to positively impact millions of people. Providing an accurate machine learning model to aid dermatologist's in their evaluations of patients moles may lead to an earlier diagnoses, and could therefore provide the best chance for appropriate intervention. We want to use a new deep convolutional-neural-network architecture that uses patients skin-lesion images along with any other patient-level contextual information to determine which patients are likely to have melanoma skin cancer. In particular, the goal of this paper is to identify the presence of melanoma from images of skin lesions using the novel \textit{ResNeSt} architecture that was designed to apply channel-wise attention on different network branches.
+Image analysis tools that automate the diagnosis of melanoma will improve dermatologist's diagnostic accuracy, and better detection of melanoma has the opportunity to positively impact millions of people. Providing an accurate machine learning model to aid dermatologist's in their evaluations of patients moles may lead to an earlier diagnoses, and could therefore provide the best chance for appropriate intervention. We want to use a modern convolutional neural network architecture that uses patients skin-lesion images along with any other patient-level contextual information to determine which patients are likely to have melanoma skin cancer.
 
+Over the past few years, a variety of machine learning approaches for melanoma detection have been proposed \cite{VariousMethods}. More recently, deep convolutional networks such as the \textit{EfficientNet} have been shown to be highly effective in detecting melanoma \cite{EffNet_MelDet}. However, the goal of this paper is to identify the presence of melanoma from images of skin lesions using the novel \textit{ResNeSt} architecture, and to investigate any associated improvements in predictive power.
+
+From the paper \textit{ResNeSt: Split-Attention Networks}, ResNeSt was introduced as one of the latest \textit{residual-network} variants. It has maintained the same block-style meta architecture as the original \textit{ResNet} to scale up to various sizes of networks, but it leverages a split-attention architecture that is designed to apply channel-wise attention on different branches. A comprehensive description of the ResNeSt architectureWe is provided in Section 3.3.
 
 \chapter{Dataset}
 
@@ -690,19 +693,6 @@ The test results demonstrated powerful predictive performance from both model's.
 In conclusion, using the split-attention network within our multi-network ensemble model has demonstrated excellent predictive performance in detecting melanoma. The classfication ability is comparable to many of the most powerful models used in melanoma detection today \cite{EffNet_MelDet}. 
 
 Future work could involve alternative models or pre-processing techniques for the patient-level metadata. For instance, some form of feature selection with a tree-based model for the metadata may lead to a better performance from our ensemble. Additionally, future work could also directly compare the performances between other commonly used pretrained models, such as the \textit{EfficientNet}, for the image data. Using the same training, validation, and testing split would ensure a fair comparison between the the models.
-
-% add in section 2.1
-In the past few years, a variety of machine learning approaches for melanoma detection have been proposed \cite{VariousMethods}. More recently, Efficient Networks have been thought to acheive the strongest predictive performance. In the paper, \textit{Improved EfficientNet-B4 for Melanoma Detection}, the authors demonstrated significant pEfficientNet-B4 \cite{EffNet_MelDet} However, our
-
-
-n this paper, we refer to the various machine learning approaches that have been proposed and that provide inspiration for the implementation of effective frameworks.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Write here. Maybe discuss the work that has been done in the past \cite{VariousMethods}, and maybe point out the efficient net results from here \cite{EffNet_MelDet} (note that others have been able to leverage efficient net model to get even better results, but our ROC-AUC is comparable amongst the best available options)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliography{bib/resnest_melanoma_detection.bib}    % bibliography references
 \bibliographystyle{uclathes}
