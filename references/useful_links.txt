@@ -6,9 +6,18 @@ ResNeST References:
 
 - https://pytorch.org/hub/pytorch_vision_resnest/
 
+- https://medium.com/@silkworm/dresnest-a-replacement-for-resnet-in-computer-vision-72e61d8d876a
+
 
 Data References:
 
 - https://challenge2020.isic-archive.com/ 
 
 - https://arxiv.org/ftp/arxiv/papers/2008/2008.07360.pdf
+
+
+Diagram References:
+
+- http://alexlenail.me/NN-SVG/LeNet.html
+
+- https://app.diagrams.net/?src=about
