@@ -53,65 +53,63 @@
 
 \section{Background}
 
-In the past decade, machine learning has exploded in popularity. Machine learning methods have demonstrated endless applciations to a variety of industries including but not limited to engineering, science, finance, medicine, and technology. A large branch of machine learning that has recently taken the world by storm is \textit{deep learning}. Deep learning is made up of \textit{artificial neural networks} (ANN) and is generally trained with a form of \textit{feature learning}. 
+In the past decade, machine learning has exploded in popularity. Machine learning methods have demonstrated endless applciations to a variety of industries including, but not limited to, engineering, science, finance, medicine, and technology. A large branch of machine learning that has recently taken the world by storm is \textit{deep learning}. Deep learning is made up of \textit{artificial neural networks} (ANN) and is generally trained with a form of \textit{feature learning}. 
 
-Neural network architures have evolved and expanded since the original perceptron and ANN models. Through different areas of application, variations in neural network architecture such as \textit{deep neural networks}, \textit{convolutional neural networks}, \textit{recurrent neural networks}, and more recently \textit{transformers}, have all been proposed and adopted. It is no secret that the transformer model has quickly become a front-runner for applications in computer vision due to its successes in natural language processing. However, deep convolutional neural networks are still state-of-the-art for tasks such as image classification, object detection, semantic segmentation, and instance segmentation
+Neural network architures have evolved and expanded since the original perceptron and ANN models. Through different areas of application, variations in neural network architecture such as \textit{deep neural networks}, \textit{convolutional neural networks}, \textit{recurrent neural networks}, and, more recently, \textit{transformers}, have all been proposed and adopted. It is no secret that the transformer model has quickly become a front-runner for applications in computer vision due to its successes in natural language processing. However, deep convolutional neural networks are still state-of-the-art for tasks such as image classification, object detection, semantic segmentation, and instance segmentation
 
-Different learning methods have also been adopted. However, the type of learning method used generally depends on the model's particular objective. \textit{Supervised Learning} is one of the most common methods for classification or regression models. It is the process of using labeled datasets to train machine learning models to classify or predict outcomes appropriately. \textit{Unsupervised Learning} generally involves the analysis or clustering of unlabeled datsets. And \textit{Reinforcement Learning} is based on rewarding desired behaviors and/or punishing undesired ones.
+Various learning methods have also been adopted over the years. However, the type of learning method used generally depends on the model's particular objective. \textit{Supervised Learning} is one of the most common methods for classification or regression models. It is the process of using labeled datasets to train machine learning models to classify or predict outcomes appropriately. \textit{Unsupervised Learning} generally involves the analysis or clustering of unlabeled datasets and \textit{Reinforcement Learning} is based on rewarding desired behaviors and/or punishing undesired ones.
 
-More recently, the medical community has been opening it's doors to modern deep learning techniques. In particular, convolutional neural networks (CNNs) have often been used to develop more efficient, and accurate, diagnostic tools to analyze medical images. Due to the growth of effective image recognition models, collection of medical images for specific applciations in the healthcare community have been been growing. 
+The medical community has recently been opening it's doors to modern deep learning techniques as well. For example, convolutional neural networks (CNNs) have often been used to develop more efficient, and accurate, diagnostic tools to analyze medical images. Due to the growth of effective image recognition models such as the CNN, the collection of medical images for specific applications in the healthcare community has also been growing. 
 
 
 \section{Problem Statement}
 
-Skin cancer is one of the most common types of cancer. Although melanoma only accounts for about 1\% of skin cancer, the death rate was still about 2.1 per 100,000 men and women per year based on 2016-2020 deaths \cite{SEER}. In 2023, the American Cancer Society estimates that bout 7,990 people are expected to die from a total of about 97,610 new melanoma cases in the United States alone \cite{ACS}. It is well known that early detection of melanoma will provide the best chance for successful treatment and greater chance of survival. 
+Skin cancer is one of the most common types of cancer. Although melanoma only accounts for about 1\% of skin cancer, the death rate was still about 2.1 per 100,000 men and women per year, based on the deaths from 2016 to 2020 \cite{SEER}. For 2023, the American Cancer Society estimates that about 7,990 people are expected to die from a total of about 97,610 new melanoma cases in the United States alone \cite{ACS}. It is well known that early detection of melanoma will provide the best chance of successful treatment and greater chance of survival. 
 
-Image analysis tools that automate the diagnosis of melanoma will improve dermatologist's diagnostic accuracy, and better detection of melanoma has the opportunity to positively impact millions of people. Providing an accurate machine learning model to aid dermatologist's in their evaluations of patients moles may lead to an earlier diagnoses, and could therefore provide the best chance for appropriate intervention. We want to use a modern convolutional neural network architecture that uses patients skin-lesion images along with any other patient-level contextual information to determine which patients are likely to have melanoma skin cancer.
+Image analysis tools that automate the diagnosis of melanoma will improve dermatologist's diagnostic accuracy and should provide a significantly better detection of melanoma. Therefore, such image analysis tools have the ability to positively impact millions of people around the world. Providing an accurate machine learning model to aid dermatologist's in their evaluations of patients moles may lead to an earlier diagnoses, and could therefore provide the best chance for appropriate intervention. We want to apply a modern convolutional neural network that uses images of skin-lesions, along with any other patient-level contextual information, to determine whether or not a patient is likely to have melanoma skin cancer.
 
-Over the past few years, a variety of machine learning approaches for melanoma detection have been proposed \cite{VariousMethods}. More recently, deep convolutional networks such as the \textit{EfficientNet} have been shown to be highly effective in detecting melanoma \cite{EffNet_MelDet}. However, the goal of this paper is to identify the presence of melanoma from images of skin lesions using the novel \textit{ResNeSt} architecture, and to investigate any associated improvements in predictive power.
-
-From the paper \textit{ResNeSt: Split-Attention Networks}, ResNeSt was introduced as one of the latest \textit{residual-network} variants. It has maintained the same block-style meta architecture as the original \textit{ResNet} to scale up to various sizes of networks, but it leverages a split-attention architecture that is designed to apply channel-wise attention on different branches. A comprehensive description of the ResNeSt architectureWe is provided in Section 3.3.
+Over the past few years, a variety of machine learning approaches for melanoma detection have been proposed \cite{VariousMethods}. More recently, deep convolutional networks such as the \textit{EfficientNet} have been shown to be highly effective in detecting melanoma \cite{EffNet_MelDet}. In 2020, Hang Zhang introduced the \textit{ResNeSt} as one of the latest \textit{ResNet} variants. In order to scale up to various sizes, the network retained the same block-style meta architecture as the original residual network. However, it also leveraged a new split-attention architecture that was designed to apply channel-wise attention on different branches of the network \cite{resnest}. The goal of this paper is to identify the presence of melanoma from images of skin-lesions using this novel ResNeSt architecture, and to investigate any associated improvements in its predictive power. 
 
 \chapter{Dataset}
 
 \section{ISIC 2020 Challenge Dataset}
 
-For this paper, we used the ``ISIC 2020 Challenge Dataset''. This was the official dataset of the SIIM-ISIC Melanoma Classification Challenge hosted as a Kaggle sponsored competition in the Summer of 2020. It contains over 30,000 dermoscopic images of distinct skin lesions from approximately 2,000 patients. Each image has an associated record of metadata. The metadata includes the corresponding ``beniegn'' or ``malignant'' status, as well as the following patient-level features: 
+For this paper, we used the ``ISIC 2020 Challenge Dataset''. This was the official dataset of the SIIM-ISIC Melanoma Classification Challenge hosted as a Kaggle sponsored competition in the Summer of 2020. It contains over 30,000 dermoscopic images of distinct skin-lesions from approximately 2,000 patients. Each image has an associated record of metadata. The metadata includes the corresponding ``benign'' or ``malignant'' status, as well as the following patient-level features: 
 
 \begin{itemize}
     \item \textit{patient\_id}: unique patient idenitfier
     \item \textit{sex}: sex of the patient 
     \item \textit{age\_approx}: approximate age of the of the patient
-    \item \textit{anatom\_site\_general\_challenge}: the general location of imaged lesion
+    \item \textit{anatom\_site\_general\_challenge}: the general location of the imaged lesion
     \item \textit{diagnosis}: additional details regarding the diagnosis
 \end{itemize}
 
 We should note that all associated malignant and benign diagnoses have been confimed using histopathology, expert agreement, or longitudinal follow-up \cite{ISIC}.
 
-The International Skin Imaging Collaboration (ISIC) was responsible for compiling the images from the Hospital Clínic de Barcelona, Medical University of Vienna, Memorial Sloan Kettering Cancer Center, Melanoma Institute Australia, University of Queensland, and the University of Athens Medical School to form this official dataset. The ISIC Archive contains the largest collection of quality-controlled dermoscopic images of skin lesions available to the public. 
+The International Skin Imaging Collaboration (ISIC) was responsible for compiling the images from the Hospital Clínic de Barcelona, Medical University of Vienna, Memorial Sloan Kettering Cancer Center, Melanoma Institute Australia, University of Queensland, and the University of Athens Medical School to form this official dataset. It's important to note that the ISIC Archive contains the largest collection of quality-controlled dermoscopic images of skin-lesions available to the public. 
 
-The resolution of each image varied drastically throughout the dataset, with some images reaching as high as $4000 \times 6000$ pixels. The set of images consisted of over 110GB, so we hosted the data on UCLA's Hoffman2 Linux Cluster. To support the size of each image and the large number of individual images within the dataset, we used computing resources from the Hoffman2 cluster and Google Colab to tune, train, and test our models with powerful \textit{Graphical Processing Units} (GPUs). Although the GPU would occasionally change, we mostly used a single NVIDIA A100 GPU with approximately 40GB VRAM to train our larger models.
+The resolution of each image varied drastically throughout the dataset, with some images reaching as high as $4000 \times 6000$ pixels. The set of images consisted of over 110GB, so we hosted the data on UCLA's Hoffman2 Linux Cluster. To support the size of each image and the large number of individual images within the dataset, we used computing resources from the Hoffman2 cluster and Google Colab to tune, train, and test our models with powerful \textit{Graphical Processing Units} (GPUs). Although the type of GPU would occasionally change, we mostly used a single NVIDIA A100 with approximately 40GB VRAM for training and validation.
 
 \section{Data Preparation}
 
-Throughout training, we found it to be difficult to train our models without batch-sizes greater than or equal to 16 images. However, computational constraints limited our ability to utilize larger batch-sizes with such large lesion images. We ultimately found that the only way to train efficiently with suffcient batch-size ($m \geq 16$) was to center crop, or resize (using bilinear interpolation), each original lesion image to a fixed-sized $512 \times 512$ image. Further transformations and resizing are discussed in the methodology section.
+We found it difficult to train our models with batch-sizes smaller than 16 images. However, computational constraints limited our ability to utilize larger batch-sizes with such high-resolution skin-lesion images. We ultimately found that the only way to train with suffcient batch-size ($m \geq 16$) was to center crop, or resize (using bilinear interpolation), each original lesion image to a fixed-sized $512 \times 512$ image. Further transformations and resizing are discussed in the methodology section.
 
 The patient-level features within the metadata also required minor preprocessing. We created dummy variables with treatment coding (also known as \textit{one-hot encoding}) for the \textit{sex} and \textit{anatom\_site\_general\_challenge} features, while keeping \textit{age\_approx} as a continuous variable.
 
 
 \section{Exploratory Data Analysis}
 
-In this section, we provide an exploratory data analysis of both the images and the patient-level features within the metadata provided in our dataset.
+In this section, we provide an exploratory data analysis of both the images and the patient-level features provided in our dataset.
 
-\subsection{Skin Lesion Images}
+\subsection{Skin-Lesion Images}
 
-The images of skin lesions are the most important part of data for our model. They will be used to train the image classification network, so we decided to investigate the data a bit more, before beginning to model. First, we investigated the proportion of ``positives'' (malignant) and ``negative'' (beniegn) images within our dataset. Table 2.1 presents the balance of malignant and beniegn skin lesions within our dataset. As we can see from the table, there is significantly large class imbalance. Only about 1.8\% of the skin lesion image are classified as malignant. 
+The images of skin-lesions contain the most important information for our models. They will be used to train our image-classification networks, so we decided to investigate the data a bit more. First, we investigated the proportion of ``positive'' (malignant) and ``negative'' (benign) images within our dataset. Table 2.1 presents the balance of malignant and benign skin-lesions within our dataset. As we can see from the table, there is significantly large class imbalance. Only about 1.8\% of the skin-lesions are classified as malignant. 
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{| c | c | c |} 
 \hline
-& Beniegn ($-$) & Malignant ($+$) \\ 
+& Benign ($-$) & Malignant ($+$) \\ 
 \hline
 \hline
 Count & 32542 & 584\\
@@ -120,11 +118,11 @@ Proportion & 0.9824 & 0.0176\\
 \hline  
 \end{tabular}
 \label{tab:propMel}
-\caption{Proportion of Beniegn \& Malignant Skin Lesions}
+\caption{Proportion of Benign \& Malignant Skin-lesions}
 \end{table}
 
 
-As mentioned above, we fixed the resolution of the images in our dataset to 512x512 pixels. We visually inspected the quality of several randomly selected skin lesions images after cropping and resizing to make sure that the \textit{object of interest} (the actually skin lesion itself) was still present and easily distinguishable. In Figures 2.1-2.2 , we present 6 images from our dataset. The top 3 skin lesions were randomly selected from the images flagged as malignant, while the bottom 3 skin lesisons were randomly selected from the images marked as beniegn. Although the relative and absolute size of the skin lesions differ, they are all clearly distinguishable in the images. 
+As mentioned above, we fixed the resolution of the images in our dataset to 512x512 pixels. We visually inspected the quality of several randomly selected skin-lesion images after cropping and resizing to make sure that the \textit{object of interest} (the actually skin-lesion itself) was still present and easily distinguishable. In Figures 2.1-2.2 , we present 6 images from our dataset. The top row of skin-lesions were randomly selected from the images flagged as malignant, while the bottom row of skin-lesions were randomly selected from the images marked as benign. Although the relative and absolute size of the skin-lesions differ, they are all clearly distinguishable in the images. 
 
 \begin{figure}[hbt!]
 \hspace*{\fill}
@@ -135,7 +133,7 @@ As mentioned above, we fixed the resolution of the images in our dataset to 512x
 \hspace*{\fill}
 \label{fig:mel_examples}
 \vspace{-1cm}
-\caption{Examples of Malignant Skin Lesions}
+\caption{Examples of Malignant skin-lesions}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -147,19 +145,19 @@ As mentioned above, we fixed the resolution of the images in our dataset to 512x
 \hspace*{\fill}
 \label{fig:ben_examples}
 \vspace{-1cm}
-\caption{Examples of Beniegn Skin Lesions}
+\caption{Examples of Benign skin-lesions}
 \end{figure}
 
 
-We also visually compared a random collection of images flagged as malignant with another random collection of images flagged as benign. The objective here was to see if our ``untrained'' eye could easily classfiy the skin lessions as malignant or beniegn. We can see from Figures 2.1-2.2 that without proper training and eductaion, it is very difficult to determine whether or not a skin lesion is considered malignant. Even with the proper training, it can still be difficult to accurately determine if melanoma is present. According to the Skin Cancer Foundation, features such as assymmetry shapes, irregular borders, uneven distribution of color, and large relative size may indicate the presence of melanoma (or other skin cancers) \cite{SCF}. Ideally, our network will pick up on these characteristics while training.
+We also visually compared a random collection of images flagged as malignant with another random collection of images flagged as benign. The objective here was to see if our ``untrained'' eyes could easily classfiy the skin-lesions as malignant or benign. We can see from Figures 2.1-2.2 that without proper training and eductaion, it is very difficult to determine whether or not a skin-lesion is actually malignant. Even with the proper training, it can still be difficult to accurately determine if melanoma is present. According to the Skin Cancer Foundation, features such as assymmetrical shapes, irregular borders, uneven distribution of color, and large relative size may indicate the presence of melanoma (or other skin cancers) \cite{SCF}. Ideally, our convolutional neural networks will pick up on these characteristics while training.
 
 \subsection{Patient-Level Features}
 
-In this section we explore the one-way frequency tables for the approximate ages, patient sexes, and the locations of imaged lesions. Then we explored the two-way frequency tables for each of these variables with the response variable (malignant or beniegn).
+In this section we explore the one-way frequency tables for the approximate ages, patient sex, and the locations of the imaged lesions. Then we explore the two-way frequency tables for each of these variables with the response variable (malignant or benign).
 
 \subsubsection*{Patient Age}
 
-We can see from the histogram of approximate ages in Figure 2.3(a) that most of the patients in this data are in their 40's, 50's, and 60's. The box-plot in Figure 2.3(b) clearly indicates that older patients are generally associated with a larger number of malignant skin lesions.
+We can see from the histogram of approximate ages in Figure 2.3(a) that most of the patients in this data are in their 40's, 50's, and 60's. The box-plot in Figure 2.3(b) indicates that older patients are generally associated with a larger number of malignant skin-lesions.
 
 \begin{figure}[hbt!]
 \hspace*{\fill}
@@ -174,7 +172,7 @@ We can see from the histogram of approximate ages in Figure 2.3(a) that most of 
 
 \subsubsection*{Patient Sex}
 
-We can see from the frequencies shown in Figure 2.4(a) that there are a similar number of males and females in this dataset, with just one or two thousand more males. The two-way contingency table between the response variable and patient sex is also shown in Figure 2.4(b). We can see that the malignant cases have a significantly larger proportion of males than the beniegn cases do. In fact, the $\chi^2$-test of independence reported a p-value very close to 0. Therefore, we reject the hypothesis that patient sex and the presence of melanoma are independent, and conclude that there is a relationship between the two variables.
+We can see from the frequencies shown in Figure 2.4(a) that there are a similar number of males and females in this dataset, with just one or two thousand more males. The two-way contingency table between the response variable and patient sex is also shown in Figure 2.4(b). We can see that the malignant cases have a significantly larger proportion of males than the benign cases do. In fact, the $\chi^2$-test of independence reported a p-value very close to 0. Therefore, we reject the hypothesis that patient sex and the presence of melanoma are independent, and conclude that there is a relationship between the two variables.
 
 \begin{figure}[h!tbp]
     \hspace*{\fill}
@@ -182,7 +180,7 @@ We can see from the frequencies shown in Figure 2.4(a) that there are a similar 
     \subcaptionbox{}{\includegraphics[height = 60mm, width=80mm]{imgs/sex.png}}\hspace{1em}
     \subcaptionbox{}{\vspace{17mm} \footnotesize \begin{tabular}{| c || c | c |} 
         \hline
-        & \textbf{Beniegn} & \textbf{Malignant} \\ 
+        & \textbf{Benign} & \textbf{Malignant} \\ 
         \hline
         \hline
         \textbf{Female} & 15761 & 220\\
@@ -193,12 +191,12 @@ We can see from the frequencies shown in Figure 2.4(a) that there are a similar 
     \hspace*{\fill}
     \label{fig:sex_eda_tab}
     \vspace{0cm}
-    \caption{Frequency Plot and Two-way Contingency Table for Patient Sex}
+    \caption{Freq. Plot and Two-way Cont. Table for Patient Sex}
     \end{figure}
 
 \subsubsection*{Skin-Lesion Location}
 
-There were 6 categories for the general skin-lesion location: oral/genital, palms/soles, head/neck, upper extremity, lower extremity, and torso. Figure 2.5(a) presents the associated frequencies within our dataset. None of the general locations have a similar number of counts, and almost half of the skin-lesions come from the torso region. We also present the two-way contingency table between the response variable and lesion location in Figure 2.5(b). While it is somewhat difficult to tell, the does appear to be some differences in the balance between beniegn and malignant cases when conditioned on the skin-lesion location. In this case, the $\chi^2$-test of independence also reported a p-value very close to 0, indicating that there is a relationship between the location of the skin-lesion and the presence of melanoma.
+There were 6 categories for the general skin-lesion location: oral/genital, palms/soles, head/neck, upper extremity, lower extremity, and torso. Figure 2.5(a) presents the associated frequencies within our dataset. None of the general locations have a similar number of counts, and almost half of the skin-lesions come from the torso region. We also present the two-way contingency table between the response variable and lesion location in Figure 2.5(b). While it is somewhat difficult to tell, there does appear to be some differences in the balance between benign and malignant cases when conditioned on the skin-lesion location. In this case, the $\chi^2$-test of independence also reported a p-value very close to 0, indicating that there is a relationship between the location of the skin-lesion and the presence of melanoma.
 
 \begin{figure}[h!tbp]
     \hspace*{\fill}
@@ -206,7 +204,7 @@ There were 6 categories for the general skin-lesion location: oral/genital, palm
     \subcaptionbox{}{\includegraphics[height = 60mm, width=80mm]{imgs/site.png}}\hspace{1em}
     \subcaptionbox{}{\vspace{5mm} \footnotesize \begin{tabular}{| c || c | c |} 
         \hline
-        & \textbf{Beniegn} & \textbf{Malignant} \\ 
+        & \textbf{Benign} & \textbf{Malignant} \\ 
         \hline
         \hline
         \textbf{Head/Neck} & 1781 & 74\\
@@ -225,52 +223,52 @@ There were 6 categories for the general skin-lesion location: oral/genital, palm
     \hspace*{\fill}
     \label{fig:loc_eda_tab}
     \vspace{0cm}
-    \caption{Frequency Plot and Two-way Contingency Table for Lesion Location}
+    \caption{Freq. Plot and Two-way Cont. Table for Skin-Lesion Location}
     \end{figure}
 
 
 \chapter{Methodology}
 
-In this section, we describe the methods and models used to best predict the presence of melanoma. As mentioned above, we used deep convolutional neural networks to generate classifications. More specifically, the latest variant of the residual network, the \textit{ResNeSt}, was used to assess whether or not its channel-wise attention architecture would find further success in melanoma detection. Additionally, we trained a smaller, more traditional, convolutional neural network to compare the performance with the split-attention network. 
+In this section, we describe the methods and models used to best predict the presence of melanoma. As mentioned above, we used deep convolutional neural networks to generate classifications. More specifically, the latest variant of the residual network, the \textit{ResNeSt}, was used to assess whether or not its channel-wise attention architecture would find further success in melanoma detection. Additionally, we trained a smaller, more generic, convolutional neural network to compare the performance with the split-attention network. 
 
-To make use of the additional metadata features within our dataset, we simultaneously trained a standard \textit{multi-layer perceptron} (MLP) with inputs from our patient-level features. Therefore, the deep convolutional networks is used to effectively extract any contextualized features from the skin-lesion images and the multi-layer perceptron is used to extract any important patient-level information. The two networks are then connected with eachother before generating a final probability. Since the outputted probabilities are a result from two seperate networks communicating with eachother, this model may be described as a \textit{Multi-Network Ensemble}.
+To make use of the additional metadata features within our dataset, we simultaneously trained a standard \textit{multi-layer perceptron} (MLP) with inputs from our patient-level features. Therefore, the deep convolutional networks were used to effectively extract the contextualized features from the skin-lesion images while the multi-layer perceptron was used to extract any important patient-level information. The two networks were fused to eachother prior to generating a final probability. Since the predicted probabilities are a result from two seperate networks communicating with eachother, this model may be described as a \textit{Multi-Network Ensemble}. For convenience, the baseline model using the generic convolutional neural network and the multi-layer perceptron was named ``Ensemble \#1'', while the model using the ResNeSt architecture and the multi-layer perceptron was named ``Ensemble \#2''.
 
 \section{Training, Validation, and Testing Sets}
 
-Before discussing the actual models used, we breifly discuss the how the dataset was split and sampled for training, validating, and testing.
+Before discussing the actual models used, we breifly discuss how the dataset was split and sampled for training, validating, and testing.
 
 We first randomly split 80\% of the data into a training set and used the other random 20\% as the test set. The test set was
-not used by any network during the training process. Additionally, we partitioned another 20\% of the training data into a validation set. Recall that our dataset is largely imbalanced. As shown in the Exploratory Data Analysis section, only about 2\% of the skin lesions in the dataset are flagged as malignant, while the remaining skin lesions are marked as benign. We ensured that each split of the data had a similar sample proportional of about 2\% malignant skin lesions.
+not used by any model during the training process. Additionally, we partitioned another 20\% of the training data into a validation set. Recall that our dataset is largely imbalanced. As shown in the Exploratory Data Analysis section, only about 2\% of the skin-lesions from the dataset are flagged as malignant, while the remaining skin-lesions are marked as benign. We ensured that each split of the data had a similar sample proportional of about 2\% malignant skin-lesions.
 
-Since the response variable (malignant or beniegn) in the training data is heavily imbalanced, we used randomized oversampling of the malignant observations to combat any potential bias toward a ``beniegn'' classification. By oversampling, we hoped that the networks would better detect when skin lesions were truly malignant. It's important to note that since oversampling was used, we considered a single epoch as when the entire \textit{oversampled} dataset was passed forward and backward through the network exactly once. Therefore, a single epoch will contain multiple repeated malignant skin lesion images.
+Since the response variable (malignant or benign) in the training data is heavily imbalanced, we used randomized oversampling of the malignant observations to combat any potential bias toward a ``benign'' classification. By oversampling, we hoped that the models would better detect when skin-lesions were truly malignant. It's important to note that since oversampling was used, we considered a single epoch as when the entire \textit{oversampled} dataset was passed forward and backward through the network exactly once. Therefore, a single epoch will contain multiple repeated malignant skin-lesion images.
 
-Note that using standard $k$-fold cross validation would require a model to be trained $k$ times for each set of hyper-parameters. Given the size of our data and our models, the time it would take to perform this procedure was simply infeasible. Therefore, we used the independent validation set to tune each network's hyper-parameters effectively. This method minimized overall training time, and produced optimal hyper-parameters. Once the hyper-parameters were obtained, we retrained the model on a new oversampled dataset made up from combining the training and validation sets.
+Note that using standard $k$-fold cross validation would require a model to be trained $k$ times for each set of hyperparameters. Given the size of our data and our models, the time it would have taken to perform this procedure would have been impractical. Therefore, we used the independent validation set to tune each network's hyperparameters effectively. This method minimized overall training time, and produced optimal hyperparameters. Once the hyperparameters were obtained, we retrained the model on a new oversampled dataset made up from combining the training and validation sets.
 
 We tuned each model with the area under the \textit{Receiver Operating Characteristic} (ROC-AUC) as our performance
-metric. The ROC-AUC was chosen over other metrics because it summarizes how well our network separates the two response
+metric. The ROC-AUC was chosen over other metrics because it summarizes how well our model separates the two response
 classes over \textit{all} possible thresholds (as opposed to a single predetermined threshold). 
 
 \section{Image Augmentations}
 
-\textit{Image augmentations} were used as a preprocessing step for each image before training. Some image augmention methods are often used to alter the original images in the dataset to effectively create more ``unseen'' examples for the network to use while training. These techniques artificially extends the dataset by randomly providing alerations to existing data, and consequently reduces the chance of overfitting. Given the limited number of malignant examples, this technique is very important to artificially extend our malignant skin-lesion training images. In our networks, we randomly employed the following image augmentations (in this order) on our training data \cite{AUG}:
+\textit{Image augmentations} were used as a preprocessing step for each image before training. Some image augmention methods are often used to alter the original images in the dataset to effectively create more ``unseen'' examples for the network to use while training. These techniques artificially extend the dataset by randomly providing alterations to existing data, and consequently reduces the chance of overfitting. Given the limited number of malignant examples in our data, this technique was very important to artificially extend our malignant skin-lesion training images. In our networks, we randomly employed the following image augmentations (in this order) on our training data \cite{AUG}:
 
 \begin{enumerate}
     \item \textbf{HueSaturationValue}: With probability $p=0.5$, we randomly changed the hue, saturation, and value of the input image. The shift in hue was between $(-5, 5)$, the shift in saturaion was between $(-10, 10)$, and the shift in value was between $(-5, 5)$.
-    \item \textbf{FancyPCA}: With probability $p=0.2$, perform \textit{principal component analysis} on the set of RGB pixel values throughout the imput image, then add multiples of the found principal components, with magnitudes proportional to the corresponding eigenvalues times a random variable drawn from $\alpha_1, \alpha_2, \alpha_3 \stackrel{i.i.d}{\sim} \mathcal{N}(0, 0.1)$.
-    \item \textbf{VerticalFlip}: With probability $p=0.5$, we veritially flipped the imput image. Note that vertically flipping the image should not change the true class of the skin lesion.
-    \item \textbf{HorizontalFlip}: With probability $p=0.5$, we veritially flipped the imput image. Note that vertically flipping the image should not change the true class of the skin lesion.
-    \item \textbf{GaussNoise}: we applied gaussian noise to the input image. We did not want to corrupt the image too much and to ooften, so we used a mean of $0$ and a variance between $(10, 50)$ with a low probability $p=0.2$.
-    \item \textbf{ShiftScaleRotate}: With probability $p=0.5$, we randomly applied the three affine transforms: translate, scale and rotate the input. The shift factor range for both height and width was set to $(-0.25, 0.25)$, the scaling factor range was set to $(-0.25, 0.25)$, and the rotation range was set from $-30$ degrees to $30$ degrees. 
+    \item \textbf{FancyPCA}: With probability $p=0.2$, we performed \textit{principal component analysis} on the set of RGB pixel values throughout the imput image, then added multiples of the found principal components, with magnitudes proportional to the corresponding eigenvalues times a random variable drawn from $\alpha_1, \alpha_2, \alpha_3 \stackrel{i.i.d}{\sim} \mathcal{N}(0, 0.1)$.
+    \item \textbf{VerticalFlip}: With probability $p=0.5$, we vertically flipped the input image. Note that vertically flipping the image should not change the true class of the skin-lesion.
+    \item \textbf{HorizontalFlip}: With probability $p=0.5$, we horizontally flipped the input image. Note that horizontally flipping the image should not change the true class of the skin-lesion.
+    \item \textbf{GaussNoise}: We applied gaussian noise to the input image. We did not want to corrupt the image too much and/or too often, so we used a mean of $0$ and a variance between $(10, 50)$ with a low probability $p=0.2$.
+    \item \textbf{ShiftScaleRotate}: With probability $p=0.5$, we randomly applied the following three affine transforms: translation, scaling, and rotation of the input image. The shift factor range for both height and width was set to $(-0.25, 0.25)$, the scaling factor range was set to $(-0.25, 0.25)$, and the rotation range was set from $-30$ degrees to $30$ degrees. 
     \item \textbf{RandomBrightnessContrast}: With probability $p=0.5$, we randomly modified the brightness and contrast of the input image. Since many of the images were already very dark, the factor range for changing brightness was set to $(0.9, 1.1)$. The factor range for changing contrast was also set to $(0.9, 1.1)$.
 \end{enumerate}
 
-Some image augmentations techniques are also used to make sure the images in the dataset work with our models, and may promote faster convergence. For instance, in addition to the above augmentations, we also randomly cropped each $512 \times 512$ image to a 416x416 image and normalized the pixel values to have a similar distribution. Although the randomness of the cropping does somewhat ``artificially'' extend our training set, the main point of cropping the images to $416 \times 416$ is because the ResNeSt network we used requires an input size of $416 \times 416$ pixels. The normalization of the pixel values will reduce the risk of exploding gradients, which has been shown to increase training time and generally slows down convergence. We normalized each channel using the associated sample means and sample standard deviations calculcated from the \textit{ImageNet} database. The ImageNet database consists of millions of images and was designed for use in visual object recognition software research. Although we could have used the sample means and sample standard deviations from our own dataset, using the sample statistics from the ImageNet database is common practice and was recommended by the authors of the \textit{ResNeSt} network.
+Some image augmentation techniques are also used to make sure the images in the dataset work with our models, and may promote faster convergence. For instance, in addition to the above augmentations, we also randomly cropped each $512 \times 512$ image to a 416x416 image and normalized the pixel values to have a similar distribution. Although the randomness of the cropping does somewhat ``artificially'' extend our training set, the main point of cropping the images to $416 \times 416$ is because the ResNeSt network we used requires an input size of $416 \times 416$ pixels. The normalization of the pixel values will reduce the risk of exploding gradients, which has been shown to increase training time and generally slows down convergence. We normalized each channel using the associated sample means and sample standard deviations calculcated from the \textit{ImageNet} database. The ImageNet database consists of millions of images and was designed for use in visual object recognition software research. Although we could have used the sample means and sample standard deviations from our own dataset, using the sample statistics from the ImageNet database is common practice and was recommended by the authors of the \textit{ResNeSt} network.
 
-We should note that most of the above image augmentations were only used on the training set. The validation and testing sets only center cropped the images to $416 \times 416$ and normalized the pixels to work with the trained network.
+We should note that most of the above image augmentations were only used on the training set. The validation and testing sets only center cropped the images to $416 \times 416$ and normalized the pixels to work with the trained networks.
 
 \section{Network Architectures \& Training}
 
-In the section, we provide an overview of the foundational neural network architectures and we breifly discuss how our networks were trained. We also introduce a few of the techniques we employed to combat overfittins.
+In this section, we provide an overview of the foundational neural network architectures and we breifly discuss how our networks were trained. We also introduce a few of the techniques we employed to combat overfitting.
 
 \subsection{Multi-Layer Perceptrons}
 
@@ -295,7 +293,7 @@ In general, neural networks are trained by minimizing a chosen loss function $L$
 $$\frac{\partial L}{\partial \mathbf{h}^{(l-1) \text{ }T}} = \frac{\partial L}{\partial \mathbf{h}^{(l) \text{ }T}} f'_{l} \mathbf{W}^{(l)} \text{,\quad \quad} \frac{\partial L}{\partial \mathbf{W}^{(l)}} = f'_{l} \frac{\partial L}{\partial \mathbf{h}^{(l)}}\mathbf{h}^{(l-1) \text{ }T} \text{,\quad \quad} \frac{\partial L}{\partial \mathbf{b}^{(l)}} = f'_{l} \frac{\partial L}{\partial \mathbf{h}^{(l)}}$$ where $f'_{l} = \text{diag}(f'(s^{(l)}_{j})  \text{; for } j = 1, 2, ... d)$.
 
 
-For notational convenience, we can represent our training data as $(\mathbf{x}_i, y_i)$ for $i = 1, 2, ..., N$ and our network parameters as $\theta = (\mathbf{W}_l, \mathbf{b}_l  \text{; for } l = 1, 2, ... d)$. Since we have a binary response variable (the skin lesion is either malignant or beniegn), we trained our networks using the \textit{Binary Cross-Entropy} loss function defined as: 
+For notational convenience, we can represent our training data as $(\mathbf{x}_i, y_i)$ for $i = 1, 2, ..., N$ and our network parameters as $\theta = (\mathbf{W}_l, \mathbf{b}_l  \text{; for } l = 1, 2, ... d)$. Since we have a binary response variable (the skin-lesion is either malignant or benign), we trained our networks using the \textit{Binary Cross-Entropy} loss function defined as: 
 
 $$L(y_i, \mathbf{x}_i; \theta) = - \left[ y_i\log(\hat{p}(\mathbf{x}_i)) + (1 - y_i)\log(1 - \hat{p}(\mathbf{x}_i)) \right]$$ 
 
@@ -506,7 +504,7 @@ We should note that the techniques employed within split-attention block appear 
 
 The ResNeSt model was shown to perform better than the EfficientNet in the accuracy and latency trade-off for image classification problems. Additionally, the ResNeSt model has demonstrated excellent transfer learning results on a variety of well-known public benchmarks. We now discuss the steps taken to leveraged this high performing network to pick up on the most important features within our skin-lesion images.
 
-As mentioned in the previous section, our second ensemble uses the ResNeSt network to extract the principal features from our image data and uses a standard multi-layer perceptron to find patterns within the patient-level metadata. We used the deepest avaiable network, the \textit{ResNeSt-269}, which uses an input crop-size of $416 \times 416$ and has a total of 269 layers. This input size is significantly larger than the maximum crop-size for widely used networks such as those from the ResNet or Inception-Net families. We used this larger network to limit any further cropping of our skin lesion images. Since many of the images were originally very large, further cropping may lead to unnecessary information loss. In addition, a deeper networks generally have a stronger ability to learn features at multiple levels of abstraction which may lead to better a generalization. As described above, the ResNeSt-269 model stacks several computational blocks containing split-attention operations and shortcut connections, with a variety of intermediate pooling (max/average) operations throughout the network. Note that batch-normalization was also applied after each block.
+As mentioned in the previous section, our second ensemble uses the ResNeSt network to extract the principal features from our image data and uses a standard multi-layer perceptron to find patterns within the patient-level metadata. We used the deepest avaiable network, the \textit{ResNeSt-269}, which uses an input crop-size of $416 \times 416$ and has a total of 269 layers. This input size is significantly larger than the maximum crop-size for widely used networks such as those from the ResNet or Inception-Net families. We used this larger network to limit any further cropping of our skin-lesion images. Since many of the images were originally very large, further cropping may lead to unnecessary information loss. In addition, a deeper networks generally have a stronger ability to learn features at multiple levels of abstraction which may lead to better a generalization. As described above, the ResNeSt-269 model stacks several computational blocks containing split-attention operations and shortcut connections, with a variety of intermediate pooling (max/average) operations throughout the network. Note that batch-normalization was also applied after each block.
 
 After feeding our 3-channel skin-lesion image through the ReSneSt-269 model, we obtain a linear layer with 1000 nodes as output. This output represents the extracted features found from the image. Ideally, the channel-wise attention mechanisms were successful in capturing the cross-feature interactions that may have not been found from the standard convolutional network within the first ensemble. Since the ResNeSt-269 already contains a deep set of layers, we chose to not connect any additional linear layers to the 1000-node output.
 
@@ -533,7 +531,7 @@ To examine and compare predictive performance of each ensemble, we used our (com
 
 Although visuals and metrics such as the ROC curve and ROC-AUC consider \textit{all} thresholds, most of the other measures mentioned above require a specified probability threshold to generate class predictions. Given that our ensembles attempt to predict the presence of melanoma, the most aggressive form of skin cancer, we aimed to identify a threshold that prioritizes true-positives while not overly accepting too many false-positives. Accepting too many false-positives would reduce the trust in our model's final predictions. In addition, we prefered to optimize our threshold in a way that does not unfairly suffer from the large class imbalance in our data. Therefore, we used the geometric mean of the \textit{Sensitivity} (or true-positive rate, $\frac{TP}{TP+FN}$) and the \textit{Specificity} (or true-negative rate, $\frac{TN}{TN+FP}$), $$G_{mean}(t) = \sqrt{\text{Sensitivity} \cdot \text{Specificity}} = \sqrt{\frac{TP \cdot TN }{(TP + FN)(TN + FP)}}$$ to determine an optimal threshold for each model. That is, for each model, we found the threshold $t^* \in (0, 1)$ that maximizes the geometric mean, $G_{mean}(t)$. Note that only the training and validation sets were used to find $t^*$ so that we can retain a completely unseen testing set when evaluating and comparing model performances.
 
-Recall that the primary metrics of interest are true-positive rate and true-negative rate as they are not influenced by the large class imbalance within our test data. As an example, consider a measure such as accuracy. Assessing performance with accuracy would not be appropriate in our case because a model that always classifies a skin-lesion as beniegn would achieve $>98$\% accuracy on our test set. Obviously, this model would be useless, and the measurement would decieving. Therefore, using our confusion matrices, we compute and output the corresponing sensitivities, specificities, balanced-accuracies, and F2-scores. Balanced-accuracy simply represents the average of the true-positive and true-negative rates, while the F2-score corresponds to the weighted harmonic mean of the precision ($\frac{TP}{TP + FP}$) and sensitivity such that: $$F2_{score} = \frac{5 \cdot \text{Precision} \cdot \text{Sensitivity}}{4 \cdot \text{Precision} +\text{Sensitivity}}$$ The F2-score represents a single measure of both precision and recall in one metric, with slightly more weight on sensitivity than on precision.
+Recall that the primary metrics of interest are true-positive rate and true-negative rate as they are not influenced by the large class imbalance within our test data. As an example, consider a measure such as accuracy. Assessing performance with accuracy would not be appropriate in our case because a model that always classifies a skin-lesion as benign would achieve $>98$\% accuracy on our test set. Obviously, this model would be useless, and the measurement would decieving. Therefore, using our confusion matrices, we compute and output the corresponing sensitivities, specificities, balanced-accuracies, and F2-scores. Balanced-accuracy simply represents the average of the true-positive and true-negative rates, while the F2-score corresponds to the weighted harmonic mean of the precision ($\frac{TP}{TP + FP}$) and sensitivity such that: $$F2_{score} = \frac{5 \cdot \text{Precision} \cdot \text{Sensitivity}}{4 \cdot \text{Precision} +\text{Sensitivity}}$$ The F2-score represents a single measure of both precision and recall in one metric, with slightly more weight on sensitivity than on precision.
 
 \chapter{Results}
 
@@ -614,12 +612,12 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 \begin{subtable}{.5\linewidth}\centering
 {\begin{tabular}{cc|c|c|c|}
 &\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
-&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{Beniegn}}
+&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{benign}}
 &\multicolumn{1}{c}{\textbf{Malignant}}
 &\multicolumn{1}{c}{\textbf{Total}}\\
 \cline{3-5}
 \multicolumn{1}{c}{\multirow{3}{*}{\rotatebox{90}{\textbf{Actual}}}}
-&\textbf{Beniegn} &4981 & 1531 &  6512\\
+&\textbf{benign} &4981 & 1531 &  6512\\
 \cline{3-5}
 &\textbf{Malignant} &23 & 91 & 114\\
 \cline{3-5}
@@ -631,12 +629,12 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 \begin{subtable}{.5\linewidth}\centering
 {\begin{tabular}{cc|c|c|c|}
 &\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
-&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{Beniegn}}
+&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{benign}}
 &\multicolumn{1}{c}{\textbf{Malignant}}
 &\multicolumn{1}{c}{\textbf{Total}}\\
 \cline{3-5}
 \multicolumn{1}{c}{\multirow{3}{*}{\rotatebox{90}{\textbf{Actual}}}}
-&\textbf{Beniegn} & 5293 &  1219 &  6512\\
+&\textbf{benign} & 5293 &  1219 &  6512\\
 \cline{3-5}
 &\textbf{Malignant} & 12 & 102 & 114\\
 \cline{3-5}
@@ -680,7 +678,7 @@ For a more general assessment and comparison across all possible thresholds, we 
 \end{figure}
 
 
-Although it is difficult to compare the models visually from Figure 4.2(b), it's clear from both the plot and the associated table of ROC-AUC scores that both ensembles demonstrated outstanding predictive performance across the entire range of thresholds. They each exhibit an ability to successfully classify whether or not the skin-lesion is beniegn or malignant, and they appear to produce predictive results significantly better than a model that purely guesses (which is displayed by the black dotted line).
+Although it is difficult to compare the models visually from Figure 4.2(b), it's clear from both the plot and the associated table of ROC-AUC scores that both ensembles demonstrated outstanding predictive performance across the entire range of thresholds. They each exhibit an ability to successfully classify whether or not the skin-lesion is benign or malignant, and they appear to produce predictive results significantly better than a model that purely guesses (which is displayed by the black dotted line).
 
 The associated ROC-AUCs from Figure 4.2(a) above also tell us that the ensemble using the ResNeSt-269 network to extract features from the skin-lesion images was able to detect the presence of melanoma better than the ensemble using the generic CNN, across the whole raneg of thresholds. That is, at each threshold $t \in (0, 1)$, the aggregate score of sensitivity and specificity was the same or better for Ensemble \#2 than it was for Ensemble \#1. Using the split-attention network increased the total area under the ROC curve by over 9\%. This provides further evidence suggesting that the second ensemble model was able to successfully leverage the channel-wise attention design within the ResNeSt network to extract the most important features and most relevant cross-feature interactions from the skin-leasion images. Table 4.1 tells us that the balanced accuracy increases 
 
