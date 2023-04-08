@@ -58,6 +58,11 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
   Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
 \newblock ``Attention Is All You Need.'', 2017.
 
+\bibitem[Wu20]{MLnote}
+Ying~Nian Wu.
+\newblock ``A Note on Machine Learning Methods.'', 2020.
+\newblock Last Accessed: 2023-02-13.
+
 \bibitem[ZWZ20]{resnest}
 Hang Zhang, Chongruo Wu, Zhongyue Zhang, Yi~Zhu, Haibin Lin, Zhi Zhang, Yue
   Sun, Tong He, Jonas Mueller, R.~Manmatha, Mu~Li, and Alexander Smola.
