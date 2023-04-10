@@ -413,21 +413,21 @@ The framework of this first multi-network ensemble is very similar to the framew
 
 \subsection{ResNeSt}
 
-In 2015, the residual neural network, or \textit{ResNet}, revolutioned the world of convolutional neural networks \cite{resnet}. The ResNet model was designed by Kaiming He, and introduced in the paper: \textit{Deep Residual Learning for Image Recognition}. Prior to the residual network, deep neural networks faced the ``vanishing gradient'' difficultly while training. The ``vanishing gradient'' occurs when the gradients get very close to 0. In general, as the number of layers within a network increases, the gradients approach 0. Motivated by Taylor expansion, Kaiming introduced the technique known as a ``identity skip connection''. An identity skip connection reduces the effect of gradient vanishing regardless of the number of layers within the network, allowing for deeper networks to be built without negatively impacting training. 
+In 2015, the residual neural network, or \textit{ResNet}, revolutioned the world of convolutional neural networks \cite{resnet}. The ResNet model was designed by Kaiming He, and was introduced in the paper: \textit{Deep Residual Learning for Image Recognition}. Prior to the residual network, deep neural networks faced the ``vanishing gradient'' difficulty while training. The ``vanishing gradient'' occurs when the gradients get very close to 0. In general, as the number of layers within a network increases, the gradients approach 0. Motivated by Taylor expansion, Kaiming introduced the technique known as the ``identity skip connection'' or ``shortcut connection''. An identity skip connection reduces the effect of gradient vanishing regardless of the number of layers within a network, and consequently allows for deeper networks to be built without negatively impacting training. 
 
-In general, a residual network uses blocks of convolutional layers, in combination with an identity skip connection (more formally known as \textit{identity mapping}). Each block of convolutional layers is referred to as a \textit{residual block}. Suppose $\mathbf{h}^{(l)}$ is the input to a residual block and $\mathbf{s}^{(l+1)}$ is the output of the residual block. If we denote the series of applied convolutional layers (weighted sums), batch normalizations, and ReLU activations by $\mathcal{F}$, then $\mathbf{s}^{(l+1)} = \mathbf{h}^{(l)} + \mathcal{F}(\mathbf{h}^{(l)})$. Figure 3.6 illustrates this idea of a residual block with an identity skip connection. Note that the final ReLU activation is not applied until after the addition of the residual block transformations and the identity connection such that $\mathbf{h}^{(l+1)}$ can be found by applying the ReLU activation to $\mathbf{s}^{(l+1)}$. Additionally, if the dimensions of $\mathbf{h}^{(l)}$ and $\mathcal{F}(\mathbf{h}^{(l)})$ are not the same, a linear projection is used by the shortcut connections to match the dimensions.
+In general, a residual network uses blocks of convolutional layers, in combination with an identity skip connection (more formally known as \textit{identity mapping}). Each block of convolutional layers is referred to as a \textit{residual block}. Suppose $\mathbf{h}^{(l)}$ is the input to a residual block and $\mathbf{s}^{(l+1)}$ is the output of the residual block. If we denote the series of applied convolutional layers (weighted sums), batch normalizations, and ReLU activations by $\mathcal{F}$, then $\mathbf{s}^{(l+1)} = \mathbf{h}^{(l)} + \mathcal{F}(\mathbf{h}^{(l)})$. Figure 3.6 illustrates the idea of a residual block with an identity skip connection. Note that the final ReLU activation is not applied until after the addition of the residual block output and the identity connection such that $\mathbf{h}^{(l+1)}$ can be found by applying the ReLU activation to $\mathbf{s}^{(l+1)}$. Additionally, if the dimensions of $\mathbf{h}^{(l)}$ and $\mathcal{F}(\mathbf{h}^{(l)})$ are not the same, a linear projection is used by the shortcut connections to match the dimensions.
 
 
 \begin{figure}[h]
 \centering
-\includegraphics[height = 100mm, width= 60mm]{imgs/resblock.png}
+\includegraphics[height = 80mm, width= 50mm]{imgs/resblock.png}
 \caption{Residual Block Example}
 \label{fig:res_block}
 \end{figure}
 
-Many variants of the ResNet have emerged since its initial release in 2015. In 2020, Amazon introduced the \textit{ResNeSt} model in the paper, \textit{ResNeSt: Split-Attention Networks}. This model was built upon the ResNet meta-architecture, and many ResNeSt models contain the same number of layers as the original ResNet models. However, the network structure was also scaled up to provide even deeper versions, with significantly larger input crop-sizes. For instance, the ResNeSt-269 model has an input crop-size of $416 \times 416$ and has a total of 269 layers. This was particularly attractive for our application to melanoma detection since many of the original images were very large, and we wanted to limit further cropping to minimize further information loss within our training images.
+Many variants of the ResNet have emerged since its initial release in 2015. In 2020, Amazon introduced the \textit{ResNeSt} model in the paper, \textit{ResNeSt: Split-Attention Networks} \cite{resnest}. This model was built upon the ResNet meta-architecture, and many ResNeSt models contain the same number of layers as the original set of residual networks. However, the network structure was also scaled up to provide even deeper versions, with significantly larger input crop-sizes. For instance, the ResNeSt-269 model has an input crop-size of $416 \times 416$ and has a total of 269 layers. This was particularly attractive for our application to melanoma detection since many of the original images were very large, and we wanted to limit further cropping to minimize additional information loss within our training images.
 
-The ResNeSt adopted both the block-style architecture and the identity-skip, or \textit{shortcut}, connection from the ResNet model. As before, this mitigated potential vanishing gradient issues. Table 3.2 shows the basic structures of the ResNet-101 and the ResNeSt-101 networks. Since it is not shown in the table, we should note that a $2 \times 2$ average-pooling layer (stride of 2) is also applied to the identity connections in the ResNeSt's transitioning blocks. Average-pooling works very similar to max-pooling in that it simply replaces the value of each pixel by the average of the fixed-size patch surrounding the pixel, instead of the maximum. 
+ResNeSt adopted both the block-style architecture and the identity-skip, or shortcut, connection from the ResNet framework. As before, this mitigated potential vanishing gradient issues. Table 3.2 shows the basic structures of the ResNet-101 and the ResNeSt-101 networks. Since it is not shown in the table, we should note that a $2 \times 2$ average-pooling layer (stride of 2) is also applied to the identity connections in the ResNeSt's transitioning blocks. Average-pooling works very similar to max-pooling in that it simply replaces the value of each pixel by the average of the fixed-size patch surrounding the pixel, instead of the maximum. 
 
 \
 
@@ -440,7 +440,7 @@ The ResNeSt adopted both the block-style architecture and the identity-skip, or 
 \makecell{\textbf{Layer} \\ \textbf{Name}} & \makecell{\textbf{Output} \\ \textbf{Size}} & \textbf{ResNet101} & \textbf{ResNeSt101}\\ 
 \hline
 \hline
-Conv1\_x & $112 \times 112$ & $7 \times 7$, 64, stride 2 & [$3\times 3$], 64, stride 2\\
+Conv1\_x & $112 \times 112$ & $7 \times 7$, 64, stride 2 & [$3\times 3$]$\times 3$, 64, stride 2\\
 \hline
  &  & \multicolumn{2}{c}{$3 \times 3$ max pool, stride 2}\\
 \hline
@@ -460,7 +460,7 @@ Conv4\_x & $14 \times 14$ & $\begin{bmatrix} 1 \times 1, 256  \\ 3 \times 3, 256
 Conv5\_x & $7 \times 7$ & $\begin{bmatrix} 1 \times 1, 512  \\ 3 \times 3, 512 \\ 1 \times 1, 2048 \end{bmatrix} \times 3$ & [\texttt{ResNeSt Block}, 2048] $\times 3$\\
 &  & & \\
 \hline
-Linear & $1 \times 1$ & \multicolumn{2}{c}{$3 \times 3$ average pool, 1000 (fully connected)}\\
+Linear & $1 \times 1$ & \multicolumn{2}{c}{average pool, 1000 (fully connected)}\\
 \hline  
 \end{tabular}
 \label{tab:resnet_resnest_archs}
@@ -470,7 +470,7 @@ Linear & $1 \times 1$ & \multicolumn{2}{c}{$3 \times 3$ average pool, 1000 (full
 
 Clearly, the major difference between the ResNet and ResNeSt models lies within the design of the computational blocks. While the ResNet block contains a few convolutional layers, batch-normalizations, and ReLU activations, the ResNeSt block is much more involved. Each ResNeSt block has \textit{Split-Attention} sub-blocks that enable channel-wise attention across different subsets of channels. 
 
-We now describe the basic design the ResNeSt blocks, as described in the paper, \textit{ResNeSt: Split-Attention Networks} \cite{resnest}. Suppose the incoming input to a given block has shape $(H, W, C)$ where $H$ and $W$ are the spatial dimensions and $C$ is the number of the channels. At the beginning of each ResNeSt block, the $C$ channels are divided into $K$ groups. Here, $K$ is a tunable hyperparameter referred to as the cardinality, and each group is known as a cadinal group. Figure 3.7 illustrates this split to cardinal groups.
+We now describe the high-level design of the ResNeSt blocks, as described in the paper, \textit{ResNeSt: Split-Attention Networks} \cite{resnest}. Suppose the input to a given block has shape $(H, W, C)$ where $H$ and $W$ are the spatial dimensions, and $C$ is the number of the channels. At the beginning of each ResNeSt block, the $C$ channels are divided into $K$ groups. Here, $K$ is a tunable hyperparameter referred to as the \textit{cardinality}, and each group is known as a \textit{cadinal group}. Figure 3.7 illustrates this split to cardinal groups.
 
 \begin{figure}[h]
 \centering
@@ -479,7 +479,7 @@ We now describe the basic design the ResNeSt blocks, as described in the paper, 
 \label{fig:resnest_block}
 \end{figure}
 
-As expected, the block has the shortcut connection on the right-hand side and creates $K$ cardinal groups from the $C$ input channels. With each caridnal group, the set of $C/K$ channels is further split into $R$ groups. Therefore, the total number of feature groups is $G = KR$. Two convolutional layers ($1 \times 1$, $3 \times 3$) are then applied to each of the $R$ groups within a a caridnal group in parallel. The $R$ outputs within each cardinal group are then used together as input for the \textit{Split-Attention} block as shown in Figure 3.8.
+As expected, the block has a shortcut connection on the right-hand side and creates $K$ cardinal groups from the original $C$ input channels. With each cardinal group, the set of $C/K$ channels is further split into $R$ groups. Therefore, the total number of feature groups is $G = KR$. In parallel, two convolutional layers ($1 \times 1$, $3 \times 3$) are then applied to each of the $R$ groups within each cardinal group. The $R$ outputs within each cardinal group are then used together as input for the \textit{Split-Attention block} as shown in Figure 3.8.
 
 \begin{figure}[h]
 \centering
@@ -489,14 +489,14 @@ As expected, the block has the shortcut connection on the right-hand side and cr
 \end{figure}
 
 
-Let $U_i$ represent the output from the convolutional layers for the $i$th feature group, where $i \in \{1, 2, ..., G \}$. Using its $R$ outputs, the split-attention block first calculates the combined representation for the $k$th cardinal group: $$\hat{U}^k = \sum_{j = R(k-1)}^{Rk} U_j$$ where $\hat{U}^k \in \mathbb{R}^{H \times W \times C/K}$ and $k \in \{1, 2, ..., K\}$. This is step is indicated by fusing together of the $R$ inputs at the very top of the Figure 3.8. Furthermore, each cardinal groups's associated channel-wise statistics are then gathered using the global average pooling across the spatial dimensions and represented by the $s^k \in \mathbb{R}^{C/K}$. The $c$th component of the global pooling vector is calculated as follows: $$s_{c}^{k} = \frac{1}{H \times W} \sum_{i = 1}^{H} \sum_{j = 1}^{W} \hat{U}_{c}^{k}(i, j)$$ The global pooling vector is indicated by the ``Global Pooling'' step in Figure 3.8. 
+Let $U_i$ represent the output from the convolutional layers for the $i$th feature group, where $i \in \{1, 2, ..., G \}$. Using these outputs, each split-attention block calculates the combined representation for the $k$th cardinal group: $$\hat{U}^k = \sum_{j = R(k-1)+1}^{Rk} U_j$$ where $\hat{U}^k \in \mathbb{R}^{H \times W \times C/K}$ and $k \in \{1, 2, ..., K\}$. This step is indicated by the fusing together of the $R$ inputs at the very top of the Figure 3.8. Furthermore, each cardinal groups's associated channel-wise statistics are then gathered using the global average pooling across the spatial dimensions and may be represented by $s^k \in \mathbb{R}^{C/K}$. The $c$th component of this global pooling vector is calculated as follows: $$s_{c}^{k} = \frac{1}{H \times W} \sum_{i = 1}^{H} \sum_{j = 1}^{W} \hat{U}_{c}^{k}(i, j)$$ The calculation of the global pooling vector, $s^k$ is indicated by the ``Global Pooling'' step shown in Figure 3.8. 
 
 As illustrated, the gobal pooling vector is ultimately used to compute the weighted fusion of the $k$th cardinal group 
-representation, $V^k \in \mathbb{R}^{H \times W \times C/K}$. $V^k$ is computed from channel-wise soft attention such that each channel is a weighted sum over the corresponding $R$ splits. Formally, the $c$th channel is calculated as $$V_{c}^{k} = \sum_{i = 1}^{R} a_{i}^{k}(c) U_{R(k-1) + i}$$ where $a_{i}^{k}(c)$ represents the soft assignment weight such that: \[  a_{i}^{k}(c)= \begin{cases} \frac{exp(\mathcal{G}_{i}^c(s^k))}{\sum_{j=1}^{R} exp(\mathcal{G}_{j}^c(s^k))}, & \text{if } R > 1\\ \frac{1}{1 + exp(-\mathcal{G}_{i}^c(s^k))}, & \text{if} R = 1 \end{cases} \] Here, $\mathcal{G}_{i}^{c}$ denotes a mapping from the global context respresentation, $s_k$, to an associated weight for the $i$ feature group and $c$th channel. 
+representation, $V^k \in \mathbb{R}^{H \times W \times C/K}$. $V^k$ is computed from channel-wise soft attention such that each channel is a weighted sum over the corresponding $R$ splits. Formally, the $c$th channel is calculated as $$V_{c}^{k} = \sum_{i = 1}^{R} a_{i}^{k}(c) U_{R(k-1) + i}$$ where $a_{i}^{k}(c)$ represents the soft assignment weight such that: \[  a_{i}^{k}(c)= \begin{cases} \frac{exp(\mathcal{G}_{i}^c(s^k))}{\sum_{j=1}^{R} exp(\mathcal{G}_{j}^c(s^k))}, & \text{if } R > 1\\ \frac{1}{1 + exp(-\mathcal{G}_{i}^c(s^k))}, & \text{if } R = 1 \end{cases} \] Here, $\mathcal{G}_{i}^{c}$ denotes a mapping from the global context respresentation, $s_k$, to an associated weight for the $i$th feature group and $c$th channel. 
 
 Lastly, the cardinal group representations $V^k$ for $k=1, 2, ..., K$ are concatenated along their channel dimensions and a $1 \times 1$ convolutional layer is applied upon return to the ResNeSt block (this is generally performed to restore dimension if reduced at the beginning of the block \cite{resnet}). As illustrated in Figure 3.7, the shortcut connection $X$ is then added to the concatenated output from the Split-Attention blocks $V$. The sum, $V+X$, serves as the final output of the ResNeSt block.
 
-We should note that the techniques employed within split-attention block appear to draw heavily on the muliple-head attention and self-attention mechanisms from the 2017 paper, \textit{Attention Is All You Need} \cite{attention}. Although the transformer model is very different, many of the foundational ideas seem to overlap.
+We should note that some of the techniques employed within the split-attention block appear to draw heavily on the multiple-head attention and self-attention mechanisms from the 2017 paper, \textit{Attention Is All You Need} \cite{attention}. Although the transformer model is very different, many of the foundational ideas seem to overlap.
 
 \subsection{Ensemble \#2}
 
@@ -610,12 +610,12 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 \begin{subtable}{.5\linewidth}\centering
 {\begin{tabular}{cc|c|c|c|}
 &\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
-&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{benign}}
+&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\textbf{Benign}}
 &\multicolumn{1}{c}{\textbf{Malignant}}
 &\multicolumn{1}{c}{\textbf{Total}}\\
 \cline{3-5}
 \multicolumn{1}{c}{\multirow{3}{*}{\rotatebox{90}{\textbf{Actual}}}}
-&\textbf{benign} &4981 & 1531 &  6512\\
+&\textbf{Benign} &4981 & 1531 &  6512\\
 \cline{3-5}
 &\textbf{Malignant} &23 & 91 & 114\\
 \cline{3-5}
