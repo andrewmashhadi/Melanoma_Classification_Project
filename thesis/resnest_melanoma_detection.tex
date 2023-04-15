@@ -566,8 +566,8 @@ We should note that the optimal hyperparameters listed for Ensemble \#1 and Ense
 
 \section{Evaluation and Comparison}
 
-In this final results section, we use the dedicated test data to assess and compare the overall predictive performance of each
-multi-network ensemble. We started by examining the metrics of interest, true-positive rate and true-negative rate, computed at all possible thresholds. Figure 4.1 displays the specificity and specificity scores across the range of thresholds, $t \in (0, 1)$.
+In this final results section, we use the dedicated test data to assess and compare the overall predictive performance of both
+multi-network ensembles. We started by examining the metrics of interest, true-positive rate and true-negative rate, computed at all possible thresholds. Figure 4.1 displays the sensitivity and specificity scores across the range of thresholds, $t \in (0, 1)$.
 
 \begin{figure}[hbt!]
 \hspace*{\fill}
@@ -581,9 +581,9 @@ multi-network ensemble. We started by examining the metrics of interest, true-po
 \end{figure}
 
 
-As mentioned in the Section 3.3.9, since our ensembles are ultimately predicting the presence of a life-threatening condition, a false-negative is far more dangerous than a false-positive. Ideally, we want our ensembles to have the greatest possible true-positive rate without compromising the overall ``trust'' in its classifications. That is, our goal was to maximize the sensitivity without dropping the specificity too much. Figure 4.1 indicates that there may exist a distinct range of thresholds for each model that could accomplish this goal. From Figure 4.1(a) and Figure 4.1(b) we can see that the optimal threshold lies within $t \in (0.45, 0.75)$ for Ensemble \#1 since their appears to be the best balance of sensitivity and specificity in this range. Notice that for Ensemble \#2, Figure 4.1(a) indicates a sharp and sudden drop in sensitivity within the range of smaller thresholds. However, Figure 4.1(b) shows an equally sharp and sudden \textit{increase} in specificity within the same range of smaller thresholds. Therefore, we can see that the optimal threshold lies within $t \in (0, 0.05)$ for Ensemble \#2.
+As mentioned in Section 3.3.9, since our ensembles are ultimately predicting the presence of a life-threatening condition, a false-negative is far more dangerous than a false-positive. Ideally, we want our ensembles to have the greatest possible true-positive rate without compromising the overall ``trust'' in its classifications. Therefore, our goal was to maximize the sensitivity without dropping the specificity too much. Figure 4.1 indicates that there may exist a distinct range of thresholds for each model that could accomplish this goal. From Figure 4.1(a) and Figure 4.1(b), we can see that the optimal threshold lies within $t \in (0.45, 0.75)$ for Ensemble \#1 since there appears to be the best balance of sensitivity and specificity in this range. For Ensemble \#2, Figure 4.1(a) indicates a sharp and sudden drop in sensitivity within a lower range of thresholds. However, Figure 4.1(b) shows an equally sharp and sudden \textit{increase} in specificity within the same range of lower thresholds. Therefore, we can see that the optimal threshold lies within $t \in (0, 0.05)$ for Ensemble \#2.
 
-The geometric mean of the sensitivity and the specificity was then used to find the optimal threshold, $t^*$, for each model. For both models, we evaluated the $G_{mean}(t)$ at a variety of different thresholds between $t \in (0, 1)$, and stored the threshold that maximized the $G_{mean}(t)$. Using the optimal thresholds for each model, we created the following performance metrics and confusion matrices from our test set.
+The geometric mean of the sensitivity and the specificity was then used to find the optimal threshold, $t^*$, for each model. We evaluated $G_{mean}(t)$ at a variety of different thresholds $t \in (0, 1)$, and stored the threshold that maximized $G_{mean}(t)$. Using the optimal thresholds for each model, we created the following performance metrics and confusion matrices from our test set.
 
 \
 
@@ -606,7 +606,7 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 
 \begin{table}[hbt!]
 \footnotesize 
-\hspace{-1em}
+\hspace{-1.3em}
 \begin{subtable}{.5\linewidth}\centering
 {\begin{tabular}{cc|c|c|c|}
 &\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
@@ -645,19 +645,20 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 \caption{Confusion Matrices For Both Multi-Network Ensembles}
 \end{table}
     
-From the performance metrics and confusion matrices, we can see that both models demonstrate an excellent classification performance. However, the improvement from the ResNeSt-269 in Ensemble \#2 is very apparent. Using the deep split-attention network to process the skin-lesion images rather than a generic convolutional neural network has shown to drastically improve every metric listed in Table 4.1. Most notably, we can see that the balanced accuracy increases by over 7\% when using Ensemble \#2! This indicates that the Ensemble \#2 model was able to successfully leverage ResNeSt-269 architecture to extract the most important features from the skin-lesion images. Table 4.1 tells us that the balanced accuracy increases. 
+From the performance metrics and confusion matrices, we can see that both models demonstrate an excellent classification performance. However, the improvement from the ResNeSt-269 in Ensemble \#2 is very apparent. Using the deep split-attention network to process the skin-lesion images rather than a generic convolutional neural network has shown to drastically improve every metric listed in Table 4.1. Most notably, we can see that the balanced accuracy increases by over 7\% when using Ensemble \#2! This indicates that Ensemble \#2 was able to successfully leverage the ResNeSt-269 architecture to extract the most important features from the skin-lesion images.
 
 For a more general assessment and comparison across all possible thresholds, we also used the testing data to compute the ROC curves for each model (shown below) and their associated ROC-AUCs.
 
 \begin{figure}[hbt!]
-\hspace*{\fill}
+\makebox[\linewidth][c]{
 \footnotesize 
 \centering
+\hspace{2em}
 \vspace{0cm}
-\subcaptionbox{}{\hspace{1em}\vspace{1cm}\begin{tabular}{| c | c |} 
+\subcaptionbox{}{\hspace{1em}\vspace{1.1cm}\begin{tabular}{| c | c |} 
 \hline
 & \\
-\textbf{Model} & \makecell{\textbf{ROC} \\ \textbf{AUC}} \\ 
+\textbf{Model} & \makecell{\textbf{ROC} \textbf{AUC}} \\ 
 & \\
 \hline
 & \\
@@ -669,26 +670,27 @@ For a more general assessment and comparison across all possible thresholds, we 
 & \\
 \hline
 \end{tabular}}\hspace{1em}
-\subcaptionbox{}{\includegraphics[height = 95mm, width=110mm]{imgs/results_roc.png}} 
+\subcaptionbox{}{\includegraphics[height = 95mm, width=115mm]{imgs/results_roc.png}} 
 \hspace*{\fill}
+}
 \label{fig:roc}
 \caption{ROC-AUC and ROC Curves for Ensemble's \#1 \& \#2}
 \end{figure}
 
 
-Although it is difficult to compare the models visually from Figure 4.2(b), it's clear from both the plot and the associated table of ROC-AUC scores that both ensembles demonstrated outstanding predictive performance across the entire range of thresholds. They each exhibit an ability to successfully classify whether or not the skin-lesion is benign or malignant, and they appear to produce predictive results significantly better than a model that purely guesses (which is displayed by the black dotted line).
+Although it is difficult to evaluate the models visually from Figure 4.2(b), it's clear from the plot and the associated table of ROC-AUC scores that both ensembles demonstrated outstanding predictive performance across the entire range of thresholds. They each exhibit an ability to successfully classify whether or not the skin-lesion is benign or malignant, and they appear to produce predictive results significantly better than a model that purely guesses (which is displayed by the black dotted line).
 
-The associated ROC-AUCs from Figure 4.2(a) above also tell us that the ensemble using the ResNeSt-269 network to extract features from the skin-lesion images was able to detect the presence of melanoma better than the ensemble using the generic CNN, across the whole range of thresholds. That is, at each threshold $t \in (0, 1)$, the aggregate score of sensitivity and specificity was the same or better for Ensemble \#2 than it was for Ensemble \#1. Using the split-attention network increased the total area under the ROC curve by over 9\%. This provides further evidence suggesting that the second ensemble model was able to successfully leverage the channel-wise attention design within the ResNeSt network to extract the most important features and most relevant cross-feature interactions from the skin-lesion images. Table 4.1 tells us that the balanced accuracy increases 
+The associated ROC-AUCs from Figure 4.2(a) also tell us that the ensemble using the ResNeSt-269 network for feature extraction was able to detect the presence of melanoma better than the ensemble using the generic CNN, across the entire range of thresholds. That is, at each threshold $t \in (0, 1)$, the aggregate score of sensitivity and specificity was the same or better for Ensemble \#2 than it was for Ensemble \#1. Using the split-attention network increased the total area under the ROC curve by almost 8\%. This provides further evidence suggesting that the second ensemble model was able to successfully leverage the channel-wise attention design within the ResNeSt network to extract the most important features and most relevant cross-feature interactions from the skin-lesion images.
 
 \chapter{Conclusion and Future Work}
 
-We began this paper with a brief introduction to the ISIC 2020 dataset. We then performed a thorough exploratory data analysis for both skin-lesion images and the patient-level metadata. The design and implementation of the two multi-network ensembles used to detect the presence of melanoma were then discussed in detail. Ensemble \#1 used a generic convolutional neural network for the skin-lesion images and a multi-layer perceptron model for the patient-level metadata. However, Ensemble \#2 used the split-attention network architecture from the 269-layer ResNeSt model to extract the most important features from the image data, and also used the multi-layer perceptron model for the metadata. PyTorch was used for the implementation of each model.
+We began this paper with a brief introduction to the ISIC 2020 dataset. We then performed a thorough exploratory data analysis for both skin-lesion images and patient-level metadata. The design and implementation of the two multi-network ensembles used to detect the presence of melanoma were then discussed in detail. Ensemble \#1 used a generic convolutional neural network for the skin-lesion images and a multi-layer perceptron model for the patient-level metadata. Ensemble \#2 used a split-attention network architecture from the 269-layer ResNeSt model to extract the most important features from the image data, and also used the multi-layer perceptron model for the metadata. PyTorch was used for the implementation of each model.
 
-The test results demonstrated powerful predictive performance from both models. In fact, both ensembles achieved an outstanding ROC-AUC score over 0.85 and a balanced accuracy over 75\% (using the optimal threshold, $t^*$). However, the test results also indicated an improvement in predictive power of Ensemble \#2 when compared to Ensemble \#1. The ResNeSt's architecture was shown to significantly increase the sensitivity, specificity, and the area under the ROC curve. Therefore, Ensemble \#2 was able to successfully leverage the channel-wise attention from the ResNeSt blocks, as well as the deep design of the ResNeSt-269 network itself, to extract the most important features and the most relevant cross-feature interactions from the skin-lesion images. The evidence suggests that these extracted features were highly significant for predicting the presence of melanoma.
+The test results demonstrated powerful predictive performance from both models. In fact, both ensembles achieved an outstanding ROC-AUC score over 0.85 and a balanced accuracy over 75\% (using their optimal thresholds). However, the test results also indicated an improvement in the predictive power of Ensemble \#2 when compared to Ensemble \#1. The ResNeSt's architecture was shown to significantly increase the sensitivity, specificity, and the area under the ROC curve. Therefore, Ensemble \#2 was able to successfully leverage the channel-wise attention from the ResNeSt blocks, as well as the deep design of the ResNeSt-269 architecture, to extract the most important features and the most relevant cross-feature interactions from the skin-lesion images. The evidence suggests that the extracted features were highly significant for predicting the presence of melanoma.
 
-In conclusion, using the split-attention network within our multi-network ensemble model has demonstrated excellent predictive performance in detecting melanoma. The classification ability is comparable to many of the most powerful models used in melanoma detection today \cite{EffNet_MelDet}. 
+In conclusion, using the split-attention network within our ensemble model has demonstrated excellent predictive performance in detecting melanoma. The classification ability is comparable to many of the most powerful models used in melanoma detection today \cite{EffNet_MelDet}. 
 
-Future work could involve alternative models or pre-processing techniques for the patient-level metadata. For instance, some form of feature selection with a tree-based model for the metadata may lead to a better performance from our ensemble. Additionally, future work could also directly compare the performances between other commonly used pre-trained models, such as the \textit{EfficientNet}, for the image data. Using the same training, validation, and testing split would ensure a fair comparison between the models.
+Future work could involve alternative models or pre-processing techniques for the patient-level metadata. For instance, some form of feature selection or a tree-based model for the metadata may lead to a better performance from our ensemble. Additionally, future work could also directly compare the performances between ensembles using other well known pre-trained networks, such as the \textit{EfficientNet}, for the image data. Using the same training and testing split would ensure a fair comparison of the models.
 
 \bibliography{bib/resnest_melanoma_detection.bib}    % bibliography references
 \bibliographystyle{uclathes}
