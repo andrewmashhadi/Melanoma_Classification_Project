@@ -32,7 +32,7 @@
 
 Melanoma is one of the most aggressive forms of skin cancer. In 2023 alone, the American Cancer Society estimates that about 7,990 Americans will die from new melanoma cases. Image analysis tools that automate the diagnosis of melanoma will improve dermatologist's diagnostic accuracy and should provide a significantly better detection of melanoma. 
 
-In this paper, we present an application of modern deep learning architectures using the images of skin-lesions in combination with patient-level contextual information to detect the presence of melanoma. More specifically, we used the latest variant of the residual network, the ResNeSt model, to leverage its deep architecture and channel-wise attention mechanisms for melanoma detection. In parallel, we used a multi-layer perceptron model to process patient-level data, and fused its output with the extracted features from the ResNeSt model. To compare and contrast performances, we trained a similar model using a smaller, more generic, convolutional neural network instead of the larger ResNeSt network. After properly tuning all associated hyperparameters, our primary model obtained a balanced accuracy of 0.853 and a ROC-AUC score of 0.93. The split-attention network was shown to improve the total ROC-AUC by approximately 9\%, suggesting that our model was able to successfully leverage the ResNeSt design to extract the most important features and most relevant cross-feature interactions for the detection of melanoma.}
+In this paper, we present an application of modern deep learning architectures using the images of skin-lesions in combination with patient-level contextual information to detect the presence of melanoma. More specifically, we used the latest variant of the residual network, the ResNeSt model, to leverage its deep architecture and channel-wise attention mechanisms for melanoma detection. In parallel, we used a multi-layer perceptron model to process patient-level data, and fused its output with the extracted features from the ResNeSt model. To compare and contrast performances, we trained a similar model using a smaller, more generic, convolutional neural network in addition to the larger ResNeSt network. After properly tuning all associated hyperparameters, our primary model obtained a balanced accuracy of 0.853 and a ROC-AUC score of 0.93. The split-attention network was shown to improve the total ROC-AUC by approximately 9\%, suggesting that our model was able to successfully leverage the ResNeSt design to extract the most important features and most relevant cross-feature interactions for the detection of melanoma.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -88,7 +88,7 @@ For this paper, we used the ``ISIC 2020 Challenge Dataset''. This was the offici
     \item \textit{diagnosis}: additional details regarding the diagnosis
 \end{itemize}
 
-We should note that all associated malignant and benign diagnoses have been confimed using histopathology, expert agreement, or longitudinal follow-up \cite{ISIC}.
+We should note that all associated malignant and benign diagnoses have been confirmed using histopathology, expert agreement, or longitudinal follow-up \cite{ISIC}.
 
 The International Skin Imaging Collaboration (ISIC) was responsible for compiling the images from the Hospital Clínic de Barcelona, Medical University of Vienna, Memorial Sloan Kettering Cancer Center, Melanoma Institute Australia, University of Queensland, and the University of Athens Medical School to form this official dataset. It's important to note that the ISIC Archive contains the largest collection of quality-controlled dermoscopic images of skin-lesions available to the public. 
 
@@ -137,7 +137,7 @@ As mentioned above, we fixed the resolution of the images in our dataset to 512x
 \hspace*{\fill}
 \label{fig:mel_examples}
 \vspace{-1cm}
-\caption{Examples of Malignant Skin-lesions}
+\caption{Examples of Malignant Skin-lesions (\cite{ISIC})}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -149,7 +149,7 @@ As mentioned above, we fixed the resolution of the images in our dataset to 512x
 \hspace*{\fill}
 \label{fig:ben_examples}
 \vspace{-1cm}
-\caption{Examples of Benign Skin-lesions}
+\caption{Examples of Benign Skin-lesions (\cite{ISIC})}
 \end{figure}
 
 
@@ -425,7 +425,7 @@ In general, a residual network uses blocks of convolutional layers, in combinati
 \begin{figure}[h]
 \centering
 \includegraphics[height = 80mm, width= 55mm]{imgs/resblock.png}
-\caption{Residual Block Example}
+\caption{Residual Block Example (\cite{resnet})}
 \label{fig:res_block}
 \end{figure}
 
@@ -468,7 +468,7 @@ Linear & $1 \times 1$ & \multicolumn{2}{c}{average pool, 1000 (fully connected)}
 \hline  
 \end{tabular}
 \label{tab:resnet_resnest_archs}
-\caption{ResNet-101 and ResNeSt-101 Architecture}
+\caption{ResNet-101 and ResNeSt-101 Architecture (\cite{resnet}, \cite{resnest})}
 \end{table}
 
 
@@ -479,7 +479,7 @@ We now provide the high-level design of the ResNeSt blocks, as described in the 
 \begin{figure}[h]
 \centering
 \includegraphics[height = 100mm, width= 130mm]{imgs/resnest_block.png}
-\caption{ResNeSt Block}
+\caption{ResNeSt Block (\cite{resnest})}
 \label{fig:resnest_block}
 \end{figure}
 
@@ -488,7 +488,7 @@ As expected, the block has a shortcut connection on the right-hand side and crea
 \begin{figure}[h]
 \centering
 \includegraphics[height = 90mm, width= 100mm]{imgs/split_att.png}
-\caption{Split-Attention Block}
+\caption{Split-Attention Block (\cite{resnest})}
 \label{fig:split_att_block}
 \end{figure}
 
