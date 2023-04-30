@@ -3,12 +3,32 @@
 \bibitem[AI23]{AUG}
 Albumentations AI.
 \newblock ``Transforms.'', 2023.
-\newblock Last Accessed: 2023-03-20.
+\newblock \texttt{https://albumentations.ai/docs/ap
+  i\_reference/augmentations/transforms/ } (Last Accessed: 2023-03-20).
+
+\bibitem[Col20]{ISIC}
+International Skin~Imaging Collaboration.
+\newblock ``The SIIM-ISIC 2020 Challenge Dataset.'', 2020.
+\newblock \textbf{DOI}: \texttt{https://doi.org/10.34970/2020-ds01}.
+
+\bibitem[DDS09]{deng2009imagenet}
+Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li~Fei-Fei.
+\newblock ``Imagenet: A large-scale hierarchical image database.''
+\newblock In {\em 2009 IEEE conference on computer vision and pattern
+  recognition}, pp. 248--255. Ieee, 2009.
+
+\bibitem[DP23]{CDC}
+Centers for Disease~Control and Prevention.
+\newblock ``Basic Information About Skin Cancer.'', 2023.
+\newblock \texttt{https://www.cdc.gov/cancer/skin/basic\_info/index.htm} (Last
+  Accessed: 2023-03-20).
 
 \bibitem[Fou23]{SCF}
 Skin~Cancer Foundation.
 \newblock ``Melanoma Warning Signs.'', 2023.
-\newblock Last Accessed: 2023-03-20.
+\newblock \texttt{https://www.
+  skincancer.org/skin-cancer-information/melanoma/melanoma-warning-si
+  gns-and-images/} (Last Accessed: 2023-03-20).
 
 \bibitem[HTF01]{ESL}
 Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
@@ -23,17 +43,14 @@ Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 \bibitem[Ins23]{SEER}
 National~Cancer Institute.
 \newblock ``Cancer Stat Facts: Melanoma of the Skin.'', 2023.
-\newblock Last Accessed: 2023-03-20.
+\newblock \texttt{https://seer.cancer.gov/statfacts/html/melan.html} (Last
+  Accessed: 2023-03-20).
 
 \bibitem[IS15]{BatchNorm}
 Sergey Ioffe and Christian Szegedy.
 \newblock ``Batch Normalization: Accelerating Deep Network Training by Reducing
   Internal Covariate Shift.''
 \newblock {\em CoRR}, {\bfseries abs/1502.03167}, 2015.
-
-\bibitem[ISI20]{ISIC}
-``The ISIC 2020 Challenge Dataset.'', 2020.
-\newblock Last Accessed: 2023-02-13.
 
 \bibitem[LQW21]{EffNet_MelDet}
 Chaoyi Li, Zihan Qiao, Kehan Wang, and Jiang Hongxing.
@@ -42,10 +59,22 @@ Chaoyi Li, Zihan Qiao, Kehan Wang, and Jiang Hongxing.
   Artificial Intelligence and Internet of Things Engineering (ICBAIE)}, pp.
   127--130, 2021.
 
+\bibitem[PGM19]{NEURIPS2019_9015}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban
+  Desmaison, Andreas Kopf, Edward Yang, Zachary DeVito, Martin Raison, Alykhan
+  Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, and Soumith
+  Chintala.
+\newblock ``PyTorch: An Imperative Style, High-Performance Deep Learning
+  Library.''
+\newblock In {\em Advances in Neural Information Processing Systems 32}, pp.
+  8024--8035. Curran Associates, Inc., 2019.
+
 \bibitem[Soc23]{ACS}
 American~Cancer Society.
 \newblock ``Key Statistics for Melanoma Skin Cancer.'', 2023.
-\newblock Last Accessed: 2023-03-20.
+\newblock \texttt{https://www.cancer.org/cancer/melanoma-skin-cancer/about/key-
+  statistics.html} (Last Accessed: 2023-03-20).
 
 \bibitem[VPZ19]{VariousMethods}
 Eugenio Vocaturo, Diego Perna, and Ester Zumpano.
@@ -61,7 +90,14 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
 \bibitem[Wu20]{MLnote}
 Ying~Nian Wu.
 \newblock ``A Note on Machine Learning Methods.'', 2020.
-\newblock Last Accessed: 2023-02-13.
+\newblock \texttt{http://www.stat.ucla.edu/~ywu/MLnote2020.pdf} (Last Accessed:
+  2023-02-13).
+
+\bibitem[Zha20]{pt_resnest}
+Hang Zhang.
+\newblock ``PyTorch: RESNEST.'', 2020.
+\newblock \texttt{https://pytorch.org/hub/pytor ch/\_vision\_resnest/} (Last
+  Accessed: 2023-04-29).
 
 \bibitem[ZWZ20]{resnest}
 Hang Zhang, Chongruo Wu, Zhongyue Zhang, Yi~Zhu, Haibin Lin, Zhi Zhang, Yue
