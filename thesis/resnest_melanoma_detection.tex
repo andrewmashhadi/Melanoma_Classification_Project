@@ -87,7 +87,7 @@ For this paper, we used the ``ISIC 2020 Challenge Dataset''. This was the offici
     \item \textit{diagnosis}: additional details regarding the diagnosis
 \end{itemize}
 
-We should note that all associated malignant and benign diagnoses have been confirmed using histopathology, expert agreement, or longitudinal follow-up \cite{ISIC}.
+We should note that all associated malignant and benign diagnoses have been confirmed using histopathology, expert agreement, or longitudinal follow-up (\cite{ISIC}, \cite{ISIC2}).
 
 The International Skin Imaging Collaboration (ISIC) was responsible for compiling the images from the Hospital Clínic de Barcelona, Medical University of Vienna, Memorial Sloan Kettering Cancer Center, Melanoma Institute Australia, University of Queensland, and the University of Athens Medical School to form this official dataset. It is important to note that the ISIC Archive contains the largest collection of quality-controlled dermoscopic images of skin lesions available to the public. 
 
@@ -136,7 +136,7 @@ As mentioned above, we fixed the resolution of the images in our dataset to $512
 \hspace*{\fill}
 \label{fig:mel_examples}
 \vspace{-1cm}
-\caption{Examples of Malignant Skin Lesions (\cite{ISIC})}
+\caption{Examples of Malignant Skin Lesions (\cite{ISIC}, \cite{ISIC2})}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -148,7 +148,7 @@ As mentioned above, we fixed the resolution of the images in our dataset to $512
 \hspace*{\fill}
 \label{fig:ben_examples}
 \vspace{-1cm}
-\caption{Examples of Benign Skin Lesions (\cite{ISIC})}
+\caption{Examples of Benign Skin Lesions (\cite{ISIC}, \cite{ISIC2})}
 \end{figure}
 
 
@@ -613,7 +613,7 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 
 \begin{table}[hbt!]
 \footnotesize 
-\hspace{-1.3em}
+\hspace{-1em}
 \begin{subtable}{.5\linewidth}\centering
 {\begin{tabular}{cc|c|c|c|}
 &\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\
@@ -630,7 +630,7 @@ The geometric mean of the sensitivity and the specificity was then used to find 
 \cline{3-5}
 \end{tabular}}
 \caption{Ensemble \#1 (w/ Conv. Net)}
-\end{subtable}\hspace{1em}
+\end{subtable}\hspace{0.5em}
 \begin{subtable}{.5\linewidth}\centering
 {\begin{tabular}{cc|c|c|c|}
 &\multicolumn{1}{c}{}&\multicolumn{3}{c}{\textbf{Predicted}}\\

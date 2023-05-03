@@ -3,13 +3,14 @@
 \bibitem[AI23]{AUG}
 Albumentations AI.
 \newblock ``Transforms.'', 2023.
-\newblock \texttt{https://albumentations.ai/docs/ap
-  i\_reference/augmentations/transforms/ } (Last Accessed: 2023-03-20).
+\newblock \texttt{https://albumentations.ai/docs
+  /api\_reference/augmentations/transforms/ } (Last Accessed: 2023-03-20).
 
-\bibitem[Col20]{ISIC}
+\bibitem[Col]{ISIC}
 International Skin~Imaging Collaboration.
-\newblock ``The SIIM-ISIC 2020 Challenge Dataset.'', 2020.
-\newblock \textbf{DOI}: \texttt{https://doi.org/10.34970/2020-ds01}.
+\newblock The SIIM-ISIC 2020 Challenge Dataset. \textit{International Skin
+  Imaging Collaboration.} \textbf{DOI}:
+  \texttt{https://doi.org/10.34970/2020-ds01} (2020).
 
 \bibitem[DDS09]{deng2009imagenet}
 Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li~Fei-Fei.
@@ -69,6 +70,17 @@ Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
   Library.''
 \newblock In {\em Advances in Neural Information Processing Systems 32}, pp.
   8024--8035. Curran Associates, Inc., 2019.
+
+\bibitem[RKB21]{ISIC2}
+Veronica Rotemberg, Nicholas Kurtansky, Brigid Betz-Stablein, Liam Caffery,
+  Emmanouil Chousakos, Noel Codella, Marc Combalia, Stephen Dusza, Pascale
+  Guitera, David Gutman, Allan Halpern, Harald Kittler, Kivanc Kose, Steve
+  Langer, Konstantinos Lioprys, Josep Malvehy, Shenara Musthaq, Jabpani Nanda,
+  Ofer Reiter, George Shih, Alexander Stratigos, Philipp Tschandl, Jochen
+  Weber, and H.~Peter Soyer.
+\newblock ``A Patient-Centric Dataset of Images and Metadata for Identifying
+  Melanomas Using Clinical Context.'', Sci Data 8, 34 2021.
+\newblock \textbf{DOI}: \texttt{https://doi.org/10.1038/s41597-021-00815-z}.
 
 \bibitem[Soc23]{ACS}
 American~Cancer Society.
